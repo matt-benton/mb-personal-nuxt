@@ -1,7 +1,7 @@
 <template>
     <section class="about" id="about">
         <div class="section-container">
-            <img src="../assets/img/matt-benton.jpg" class="about__container--image" alt="Photo of myself">
+            <img src="/img/matt-benton.jpg" class="about__container--image" alt="Photo of myself">
             <p class="about__container--text">
                 When I originally finished college I was headed for a career in the field of education as a teacher. I had enthusiasm
                 for learning as well as a passion for crafting experiences that would enhance the knowledge of my

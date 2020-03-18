@@ -1,23 +1,23 @@
 <template>
     <div class="project">
         <div class="project__container project__container--image">
-            <!-- <div class="project__image-grid">
-                <img src="img/projects/bill-force-one/bill-force-one-lg.png" class="project__large-image" alt="Bill Force One large screen shot">
+            <div class="project__image-grid">
+                <img v-lazy="'/img/projects/bill-force-one/bill-force-one-lg.png'" class="project__large-image" alt="Bill Force One large screen shot">
                 <div class="project__thumbnails">
                     <div class="project__thumbnail">
-                        <img src="img/projects/bill-force-one/bill-force-one-sm.png" alt="Bill force one screen shot thumbnail" class="project__thumbnail-image" >
+                        <img v-lazy="'/img/projects/bill-force-one/bill-force-one-sm.png'" alt="Bill force one screen shot thumbnail" class="project__thumbnail-image" >
                     </div>
                     <div class="project__thumbnail">
-                        <img src="img/projects/bill-force-one/bill-force-one-ipad-sm.png" alt="Bill Force One screen shot thumbnail" class="project__thumbnail-image">
+                        <img v-lazy="'/img/projects/bill-force-one/bill-force-one-ipad-sm.png'" alt="Bill Force One screen shot thumbnail" class="project__thumbnail-image">
                     </div>
                     <div class="project__thumbnail">
-                        <img src="img/projects/bill-force-one/bill-force-one-landing-sm.png" alt="Bill Force One screen shot thumnbail" class="project__thumbnail-image">
+                        <img v-lazy="'/img/projects/bill-force-one/bill-force-one-landing-sm.png'" alt="Bill Force One screen shot thumnbail" class="project__thumbnail-image">
                     </div>
                     <div class="project__thumbnail">
-                        <img src="img/projects/bill-force-one/bill-force-one-edit-sm.png" alt="Bill Force One screen shot thumbnail" class="project__thumbnail-image">
+                        <img v-lazy="'/img/projects/bill-force-one/bill-force-one-edit-sm.png'" alt="Bill Force One screen shot thumbnail" class="project__thumbnail-image">
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
         <div class="project__container project__container--text">
             <h3 :class="`project__title text--${highlightColor}`">{{ project.title }}</h3>

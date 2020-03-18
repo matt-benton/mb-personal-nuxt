@@ -8,7 +8,7 @@
         />
 
         <!-- Bill Force One -->
-        <div class="project">
+        <!-- <div class="project">
             <div class="project__container project__container--image">
                 <div class="project__image-grid">
                     <img src="img/projects/bill-force-one/bill-force-one-lg.png" class="project__large-image" alt="Bill Force One large screen shot">
@@ -48,10 +48,10 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Hi.Ed -->
-        <div class="project">
+        <!-- <div class="project">
             <div class="project__container project__container--text">
                 <h3 class="project__title text--blue">Hi.Ed Student Portal</h3>
                 <h4 class="project__subtitle text--blue">A PHP application for tracking student grades and displaying NCAA eligibility</h4>
@@ -94,10 +94,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Screen Time Analyzer -->
-        <div class="project">
+        <!-- <div class="project">
             <div class="project__container project__container--image">
                 <div class="project__image-grid">
                     <img src="img/projects/screen-time-analyzer/screen-time-analyzer-dash-lg.png" class="project__large-image" alt="Screen Time Analyzer large screen shot">
@@ -143,10 +143,10 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Squizzit -->
-        <div class="project">
+        <!-- <div class="project">
             <div class="project__container project__container--text">
                 <h3 class="project__title text--pink">Squizzit</h3>
                 <h4 class="project__subtitle text--pink">An exquisite app for making, taking, and sharing quizzes.</h4>
@@ -178,10 +178,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Sprout -->
-        <div class="project">
+        <!-- <div class="project">
             <div class="project__container project__container--image">
                 <div class="project__image-grid">
                     <img src="img/projects/sprout/sprout-delivery-lg.png" class="project__large-image" alt="Sprout large screen shot">
@@ -207,7 +207,7 @@
                     This approach saves time and makes maintenance of the project a lot easier.
                 </p>
             </div>
-        </div>
+        </div> -->
     </section>
 </template>
 
