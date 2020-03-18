@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+// This is a container intended to be used in each section to maintain spacing and width consistency
+.section-container {
+    margin: 8rem auto;
+    max-width: 60rem;
+
+    @include respond(tab-land) {
+        margin: 6rem 5rem;
+    }
+
+    @include respond(tab-port) {
+        margin: 4rem 4rem;
+    }
+
+    @include respond(phone) {
+        margin: 0 auto;
+    }
+}

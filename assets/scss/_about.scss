@@ -1,0 +1,49 @@
+.about {
+    background: linear-gradient(to right, hsl(196, 64, 67), hsl(202, 83, 41));
+    color: var(--color-grey-light-1);
+    font-size: var(--font-small);
+    line-height: 2.2rem;
+    display: flex;
+    justify-content: center;
+
+    @include respond(phone) {
+        line-height: 1.6rem;
+        padding: var(--spacing-medium);
+    }
+
+    &__container {
+        @include respond(tab-port) {
+            margin: var(--spacing-large);
+        }
+
+        @include respond(phone) {
+            margin: 1rem auto;
+        }
+
+        &--image {
+            height: 20rem;
+            width: 20rem;
+            border-radius: 50%;
+            float: left;
+            shape-outside: circle();
+            margin: 1rem;
+            border: 2px solid white;
+            filter: saturate(1.2);
+
+            @include respond(tab-land) {
+                height: 18rem;
+                width: 18rem;
+            }
+
+            @include respond(tab-port) {
+                height: 10rem;
+                width: 10rem;
+                margin-left: 0;
+            }
+        }
+
+        &--text {
+            display: inline;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import "mixins";
+@import "layouts";
+@import "utilities";
+@import "header";
+@import "services";
+@import "about";
+@import "skills";
+@import "work";
+@import "modals";
+@import "variables";
+@import "values";
+@import "footer";
+@import "mobile-nav";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    // font-size: 62.5%;  // 1 rem = 10px
+
+    // @include respond(tab-land) {
+    //     font-size: 50%;
+    // }
+}
+
+body {
+    font-family: var(--font-default);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: var(--color-grey-dark-2);
+    text-decoration: none;
+
+    &::visited {
+        color: var(--color-grey-light-2);
+    }
+}
+
+::selection {
+    color: var(--color-pink);
+    background-color: var(--color-grey-dark-2);
+}

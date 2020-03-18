@@ -1,0 +1,42 @@
+:root {
+    --font-default: 'Muli', sans-serif;
+
+    --font-largest: 3.6rem;
+    --font-large: 2.4rem;
+    --font-medium: 1.6rem;
+    --font-small: 1.2rem;
+    --font-smaller: 1rem;
+    --font-extra-small: 0.8rem;
+
+    --color-grey-light-1: #f5f7fa;
+    --color-grey-light-2: #e4e7eb;
+    --color-grey-light-3: #cbd2d9;
+    --color-grey-light-4: #9aa5b1;
+    --color-grey-light-5: #7b8794;
+
+    --color-grey-dark-1: #1f2933;
+    --color-grey-dark-2: #323f4b;
+    --color-grey-dark-3: #3e4c59;
+    --color-grey-dark-4: #52606d;
+    --color-grey-dark-5: #616e7c;
+
+    --color-pink: #F58B8B;
+    --color-pink-transparent: hsla(0, 84%, 75%, .8);
+
+    --color-blue: #5ED0FA;
+    --color-blue-transparent: hsla(196, 94%, 67%, .8);
+
+    --color-green: #81BE72;
+    --color-green-transparent: hsla(108, 37%, 60%, .8);
+
+    --spacing-small: .5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2.8rem;
+    --spacing-larger: 4.2rem;
+    --spacing-largest: 6.4rem;
+
+    --line-height-small: 1.4rem;
+    --line-height-smaller: 1.8rem;
+    --line-height-medium: 2.8rem;
+    --line-height-large: 5.8rem;
+}

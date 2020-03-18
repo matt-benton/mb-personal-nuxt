@@ -1,0 +1,16 @@
+.values {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    font-size: var(--font-medium);
+    color: var(--color-grey-dark-3);
+    background-color: var(--color-grey-light-1);
+
+    &__container {
+
+        svg {
+            fill: var(--color-grey-dark-3);
+        }
+    }
+}
