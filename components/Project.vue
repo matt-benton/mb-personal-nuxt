@@ -2,7 +2,12 @@
     <div class="project">
         <div class="project__container project__container--image">
             <div class="project__image-grid">
-                <img v-lazy="`${selectedImage}-lg.png`" :alt="`${project.title} large screen shot`" class="project__large-image">
+                <img 
+                    v-lazy="`${selectedImage}-lg.png`" 
+                    :alt="`${project.title} large screen shot`" 
+                    class="project__large-image"
+                    @click="largeImageClicked"
+                />
                 <div class="project__thumbnails">
                     <div class="project__thumbnail" 
                         v-for="(image, index) in project.images" 
@@ -65,7 +70,10 @@ export default {
     methods: {
         selectImage(image) {
             this.selectedImage = image
-        }
+        },
+        largeImageClicked() {
+            this.$emit('large-image-clicked', this.selectedImage)
+        },
     },
     props: [
         'index',

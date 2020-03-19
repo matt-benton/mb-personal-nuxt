@@ -5,6 +5,7 @@
             :key="index"
             :index="index"
             :project="project"
+            @large-image-clicked="largeImageClicked($event)"
         />
 
         <!-- Bill Force One -->
@@ -223,6 +224,11 @@ export default {
     },
     components: {
         Project
+    },
+    methods: {
+        largeImageClicked(image) {
+            this.$emit('large-project-image-clicked', image)
+        }
     }
 }
 </script>
