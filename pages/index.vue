@@ -6,6 +6,7 @@
         <Skills />
         <Portfolio @large-project-image-clicked="showModal($event)" />
         <Modal :hidden="modal.hidden" :image="modal.image" @modal-closed="hideModal" />
+        <Footer />
     </div>
 </template>
 
@@ -16,6 +17,7 @@ import About from '~/components/About.vue'
 import Skills from '~/components/Skills.vue'
 import Portfolio from '~/components/Portfolio.vue'
 import Modal from '~/components/Modal.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
     data() {
@@ -33,6 +35,7 @@ export default {
         Skills,
         Portfolio,
         Modal,
+        Footer,
     },
     methods: {
         showModal(image) {
