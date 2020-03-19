@@ -2,9 +2,12 @@
     <div class="project">
         <div class="project__container project__container--image">
             <div class="project__image-grid">
-                <img v-lazy="`${project.images[0]}-lg.png`" :alt="`${project.title} large screen shot`" class="project__large-image">
+                <img v-lazy="`${selectedImage}-lg.png`" :alt="`${project.title} large screen shot`" class="project__large-image">
                 <div class="project__thumbnails">
-                    <div class="project__thumbnail" v-for="(image, index) in project.images" :key="index">
+                    <div class="project__thumbnail" 
+                        v-for="(image, index) in project.images" 
+                        :key="index"
+                        @click="selectImage(image)">
                         <img v-lazy="`${image}-sm.png`" alt="Bill Force One screen shot thumbnail" class="project__thumbnail-image">
                     </div>
                 </div>
@@ -31,6 +34,11 @@
 
 <script>
 export default {
+    data() {
+        return {
+            selectedImage: this.project.images[0],
+        }
+    },
     computed: {
         highlightColor() {
             /**
@@ -53,6 +61,11 @@ export default {
             }
 
         },
+    },
+    methods: {
+        selectImage(image) {
+            this.selectedImage = image
+        }
     },
     props: [
         'index',
