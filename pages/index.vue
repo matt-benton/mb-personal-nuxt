@@ -5,7 +5,7 @@
         <About />
         <Skills />
         <Portfolio @large-project-image-clicked="showModal($event)" />
-        <Modal :hidden="modal.hidden" :image="modal.image" />
+        <Modal :hidden="modal.hidden" :image="modal.image" @modal-closed="hideModal" />
     </div>
 </template>
 
@@ -38,10 +38,10 @@ export default {
         showModal(image) {
             this.modal.hidden = false
             this.modal.image = image
-        }
+        },
+        hideModal() {
+            this.modal.hidden = true
+        },
     }
 }
 </script>
-
-<style>
-</style>
