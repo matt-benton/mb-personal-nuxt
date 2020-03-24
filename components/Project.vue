@@ -1,22 +1,7 @@
 <template>
     <div class="project">
         <div class="project-container project-container-image">
-            <div class="project-image-grid">
-                <img 
-                    v-lazy="`${selectedImage}-lg.png`" 
-                    :alt="`${project.title} large screen shot`" 
-                    class="project-large-image"
-                    @click="largeImageClicked"
-                />
-                <div class="project-thumbnails">
-                    <div class="project-thumbnail" 
-                        v-for="(image, index) in project.images" 
-                        :key="index"
-                        @click="selectImage(image)">
-                        <img v-lazy="`${image}-sm.png`" alt="Bill Force One screen shot thumbnail" class="thumbnail-image">
-                    </div>
-                </div>
-            </div>
+            <ProjectImageGrid :images="project.images" :project-title="project.title" @large-image-clicked="largeImageClicked($event)" />
         </div>
         <div class="project-container project-container-text">
             <h3 :class="`project-title text--${highlightColor}`">{{ project.title }}</h3>
@@ -38,12 +23,9 @@
 </template>
 
 <script>
+import ProjectImageGrid from './ProjectImageGrid.vue'
+
 export default {
-    data() {
-        return {
-            selectedImage: this.project.images[0],
-        }
-    },
     computed: {
         highlightColor() {
             /**
@@ -68,17 +50,17 @@ export default {
         },
     },
     methods: {
-        selectImage(image) {
-            this.selectedImage = image
-        },
-        largeImageClicked() {
-            this.$emit('large-image-clicked', this.selectedImage)
+        largeImageClicked(image) {
+            this.$emit('large-image-clicked', image)
         },
     },
     props: [
         'index',
         'project',
     ],
+    components: {
+        ProjectImageGrid,
+    }
 }
 </script>
 
@@ -118,35 +100,6 @@ export default {
     line-height: var(--line-height-small);
 }
 
-.project-image-grid {
-    display: grid;
-    grid-template-rows: auto 1fr;
-}
-
-.project-large-image {
-    max-width: 100%;
-    max-height: 40rem;
-    border-radius: 2px;
-    cursor: pointer;
-    justify-self: center;
-}
-
-.project-thumbnails {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.project-thumbnail {
-    position: relative;
-    height: 8rem;
-    width: 8rem;
-    overflow: hidden;
-    cursor: pointer;
-    margin: var(--spacing-small);
-    border-radius: 5px;
-}
-
 .project-links {
     font-size: var(--font-small);
     font-weight: 700;
@@ -163,15 +116,6 @@ export default {
 
 .project-links a:hover {
     background-color: var(--color-grey-dark-5);
-}
-
-.thumbnail-image {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 100%;
-    width: auto;
-    transform: translate(-50%, -50%);
 }
 
 @media (max-width: 1024px) {
@@ -193,10 +137,6 @@ export default {
 @media (max-width: 768px) {
     .project-container {
         padding: var(--spacing-larger);
-    }
-
-    .project-thumbnail {
-        max-height: 8rem;
     }
 }
 
