@@ -1,9 +1,4 @@
 .header {
-    color: var(--color-grey-dark-1);
-    display: grid;
-    grid-template-rows: min-content 1fr;
-    padding: var(--spacing-large);
-
     &__nav {
         display: flex;
         justify-content: space-between;
@@ -88,69 +83,6 @@
                     color: var(--color-green);
                     border-bottom: 2px solid var(--color-green);
                 }
-            }
-        }
-    }
-
-    &__hero {
-        display: flex;
-        flex-direction: column;
-        padding: 16% 12%;
-        
-        @include respond(tab-port) {
-            padding-left: var(--spacing-small);
-            padding-right: var(--spacing-small);
-        }
-
-        @include respond(phone) {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        &--title {
-            font-size: var(--font-largest);
-            font-weight: 300;
-            margin-bottom: var(--spacing-medium);
-
-            @include respond(tab-port) {
-                font-size: var(--font-large);
-            }
-
-            @include respond(phone) {
-                margin-bottom: var(--spacing-medium);
-                font-size: var(--font-large);
-            }
-        }
-
-        &--subtitle {
-            font-size: var(--font-large);
-            font-weight: 300;
-            padding-bottom: var(--spacing-medium);
-
-            @include respond(tab-port) {
-                font-size: var(--font-medium);
-                padding-bottom: var(--spacing-large);
-            }
-
-            @include respond(phone) {
-                font-size: var(--font-medium);
-                padding-bottom: var(--spacing-small);
-
-            }
-        }
-
-        &--text {
-            font-size: var(--font-medium);
-            line-height: var(--line-height-medium);
-
-            @include respond(tab-port) {
-                font-size: var(--font-small);
-                line-height: var(--line-height-medium);
-            }
-
-            @include respond(phone) {
-                font-size: var(--font-small);
-                line-height: var(--line-height-smaller);
             }
         }
     }
