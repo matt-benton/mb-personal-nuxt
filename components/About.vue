@@ -1,7 +1,7 @@
 <template>
     <section class="about" id="about">
         <div class="section-container">
-            <img src="/img/matt-benton.jpg" class="about__container--image" alt="Photo of myself">
+            <img src="/img/matt-benton.jpg" class="about-image" alt="Photo of myself">
             <p class="about__container--text">
                 When I originally finished college I was headed for a career in the field of education as a teacher. I had enthusiasm
                 for learning as well as a passion for crafting experiences that would enhance the knowledge of my
@@ -19,3 +19,49 @@ export default {
     
 }
 </script>
+
+<style>
+
+.about {
+    background: linear-gradient(to right, rgb(117, 196,225), rgb(18, 128, 191));
+    color: var(--color-grey-light-1);
+    font-size: var(--font-small);
+    line-height: 2.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle();
+    margin: 1rem;
+    border: 2px solid white;
+    filter: saturate(1.2);
+}
+
+@media (max-width: 1024px) {
+    .about-image {
+        height: 18rem;
+        width: 18rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-image {
+        height: 10rem;
+        width: 10rem;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .about {
+        line-height: 1.6rem;
+        padding: var(--spacing-medium);
+    }
+}
+
+</style>
