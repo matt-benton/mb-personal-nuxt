@@ -1,8 +1,5 @@
 <template>
     <div class="header__nav">
-        <div class="header__nav--brand">
-            <span class="header__nav--brand-icon">mb</span>
-        </div>
         <div class="header__nav--mobile-icon" id="mobile-nav-icon">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
                 viewBox="0 0 20 20">

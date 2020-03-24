@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <Header />
-        <Services />
+        <!-- <Services /> -->
         <About />
         <Skills />
         <Portfolio @large-project-image-clicked="showModal($event)" />
