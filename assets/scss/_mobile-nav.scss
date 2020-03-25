@@ -23,7 +23,7 @@
     &__close {
         display: flex;
         display: -webkit-box;
-        justify-content: end;
+        justify-content: flex-end;
         padding: var(--spacing-large);
         fill: #fff;
     }
