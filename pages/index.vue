@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Meta />
         <div class="container">
             <Header />
             <!-- <Services /> -->
@@ -14,7 +13,6 @@
 </template>
 
 <script>
-import Meta from '~/components/Meta.vue'
 import Header from '~/components/Header.vue'
 import Services from '~/components/Services.vue'
 import About from '~/components/About.vue'
@@ -33,7 +31,6 @@ export default {
         }
     },
     components: {
-        Meta,
         Header,
         Services,
         About,
