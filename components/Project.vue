@@ -79,7 +79,7 @@ export default {
 .project-container {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-largest);
+    padding: var(--spacing-large);
     background-color: var(--color-grey-dark-3);
     flex: 1;
 }

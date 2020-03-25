@@ -45,7 +45,7 @@ export default {
 
 .project-large-image {
     max-width: 100%;
-    max-height: 40rem;
+    max-height: 20rem;
     border-radius: 2px;
     cursor: pointer;
     justify-self: center;
@@ -59,8 +59,8 @@ export default {
 
 .project-thumbnail {
     position: relative;
-    height: 8rem;
-    width: 8rem;
+    height: 5rem;
+    width: 5rem;
     overflow: hidden;
     cursor: pointer;
     margin: var(--spacing-small);
