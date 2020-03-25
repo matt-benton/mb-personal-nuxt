@@ -1,6 +1,5 @@
 <template>
     <header class="header">
-        <!-- <Navbar></Navbar> -->
         <div class="hero">
             <h1 class="hero-title">
                 Hi, my name is <b>Matt Benton</b> and I'm a <b>web developer</b> from Birmingham, Alabama
@@ -16,13 +15,8 @@
 </template>
 
 <script>
-import Navbar from './navbar'
-
 export default {
 
-    components: {
-        Navbar
-    }
 }
 </script>
 
