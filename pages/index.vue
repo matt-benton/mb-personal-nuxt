@@ -1,16 +1,20 @@
 <template>
-    <div class="container">
-        <Header />
-        <!-- <Services /> -->
-        <About />
-        <Skills />
-        <Portfolio @large-project-image-clicked="showModal($event)" />
-        <Modal :hidden="modal.hidden" :image="modal.image" @modal-closed="hideModal" />
-        <Footer />
+    <div>
+        <Meta />
+        <div class="container">
+            <Header />
+            <!-- <Services /> -->
+            <About />
+            <Skills />
+            <Portfolio @large-project-image-clicked="showModal($event)" />
+            <Modal :hidden="modal.hidden" :image="modal.image" @modal-closed="hideModal" />
+            <Footer />
+        </div>
     </div>
 </template>
 
 <script>
+import Meta from '~/components/Meta.vue'
 import Header from '~/components/Header.vue'
 import Services from '~/components/Services.vue'
 import About from '~/components/About.vue'
@@ -29,6 +33,7 @@ export default {
         }
     },
     components: {
+        Meta,
         Header,
         Services,
         About,
