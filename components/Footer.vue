@@ -4,7 +4,9 @@
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
-            <span class="contact-text">Contact Me: mattbenton10@gmail.com</span>
+            <span class="contact-line">
+                mattbenton10@gmail.com
+            </span>
         </div>
     </footer>
 </template>
@@ -51,7 +53,7 @@ export default {
     background-color: var(--color-green);
 }
 
-.contact-text {
+.contact-line {
     margin: 0 var(--spacing-large);
 }
 
