@@ -93,12 +93,17 @@ export default {}
 }
 
 @media (max-width: 640px) {
+    .header {
+        padding: var(--spacing-large) var(--spacing-medium);
+    }
+
     .hero {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: var(--spacing-small);
+        padding-right: var(--spacing-small);
     }
 
     .hero-title {
+        line-height: 2.8rem;
         margin-bottom: var(--spacing-medium);
         font-size: var(--font-large);
     }
