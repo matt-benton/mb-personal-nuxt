@@ -1,22 +1,41 @@
 <template>
     <div class="project">
         <div class="project-container project-container-image">
-            <ProjectImageGrid :images="project.images" :project-title="project.title" @large-image-clicked="largeImageClicked($event)" />
+            <ProjectImageGrid
+                :images="project.images"
+                :project-title="project.title"
+                @large-image-clicked="largeImageClicked($event)"
+            />
         </div>
         <div class="project-container project-container-text">
-            <h3 :class="`project-title text--${highlightColor}`">{{ project.title }}</h3>
-            <h4 :class="`project-subtitle text--${highlightColor}`">{{ project.subtitle }}</h4>
-            <p v-for="(paragraph, index) in project.descriptionParagraphs" :key="index" class="project-text">{{ paragraph }}</p>
+            <h3 :class="`project-title text--${highlightColor}`">
+                {{ project.title }}
+            </h3>
+            <h4 :class="`project-subtitle text--${highlightColor}`">
+                {{ project.subtitle }}
+            </h4>
+            <p
+                v-for="(paragraph, index) in project.descriptionParagraphs"
+                :key="index"
+                class="project-text"
+            >
+                {{ paragraph }}
+            </p>
             <div class="project-links">
-                <a v-if="project.githubUrl" :class="`text--${highlightColor}`" :href="project.githubUrl" target="_blank">
-                    View on Github
-                </a>
-                <a v-if="project.siteUrl" :class="`text--${highlightColor}`" :href="project.siteUrl" target="_blank">
-                    Visit Site
-                </a>
-                <a v-if="project.gitlabUrl" :class="`text--${highlightColor}`" :href="project.gitlabUrl" target="_blank">
-                    View on Gitlab
-                </a>
+                <a
+                    v-if="project.githubUrl"
+                    :class="`text--${highlightColor}`"
+                    :href="project.githubUrl"
+                    target="_blank"
+                    >View on Github</a
+                >
+                <a
+                    v-if="project.siteUrl"
+                    :class="`text--${highlightColor}`"
+                    :href="project.siteUrl"
+                    target="_blank"
+                    >Visit Site</a
+                >
             </div>
         </div>
     </div>
@@ -34,7 +53,7 @@ export default {
              */
             let i = this.index
 
-            while ((i - 3) > -1) {
+            while (i - 3 > -1) {
                 i = i - 3
             }
 
@@ -44,28 +63,23 @@ export default {
                 case 1:
                     return 'blue'
                 case 2:
-                    return 'green'                
+                    return 'green'
             }
-
-        },
+        }
     },
     methods: {
         largeImageClicked(image) {
             this.$emit('large-image-clicked', image)
-        },
+        }
     },
-    props: [
-        'index',
-        'project',
-    ],
+    props: ['index', 'project'],
     components: {
-        ProjectImageGrid,
+        ProjectImageGrid
     }
 }
 </script>
 
 <style>
-
 .project {
     display: flex;
     margin: var(--spacing-large) 0;
@@ -139,5 +153,4 @@ export default {
         padding: var(--spacing-larger);
     }
 }
-
 </style>
