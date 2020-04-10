@@ -153,4 +153,10 @@ export default {
         padding: var(--spacing-larger);
     }
 }
+
+@media (max-width: 640px) {
+    .project-container {
+        padding: var(--spacing-large) var(--spacing-medium);
+    }
+}
 </style>
