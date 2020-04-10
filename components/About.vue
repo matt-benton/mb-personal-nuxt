@@ -71,7 +71,7 @@ export default {}
 @media (max-width: 640px) {
     .about {
         line-height: 1.6rem;
-        padding: var(--spacing-medium);
+        padding: var(--spacing-large) var(--spacing-medium);
     }
 }
 </style>
