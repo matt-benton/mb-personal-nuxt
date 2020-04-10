@@ -20,16 +20,18 @@
     --color-grey-dark-4: #52606d;
     --color-grey-dark-5: #616e7c;
 
-    --color-pink: #F58B8B;
-    --color-pink-transparent: hsla(0, 84%, 75%, .8);
+    --color-pink: #f58b8b;
+    --color-pink-dark: rgb(209, 47, 74);
+    --color-pink-transparent: hsla(0, 84%, 75%, 0.8);
 
-    --color-blue: #5ED0FA;
-    --color-blue-transparent: hsla(196, 94%, 67%, .8);
+    --color-blue: #5ed0fa;
+    --color-blue-dark: rgb(18, 128, 191);
+    --color-blue-transparent: hsla(196, 94%, 67%, 0.8);
 
-    --color-green: #81BE72;
-    --color-green-transparent: hsla(108, 37%, 60%, .8);
+    --color-green: #81be72;
+    --color-green-transparent: hsla(108, 37%, 60%, 0.8);
 
-    --spacing-small: .5rem;
+    --spacing-small: 0.5rem;
     --spacing-medium: 1rem;
     --spacing-large: 2.8rem;
     --spacing-larger: 4.2rem;

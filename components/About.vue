@@ -1,29 +1,40 @@
 <template>
     <section class="about" id="about">
         <div class="section-container">
-            <img src="/img/matt-benton.jpg" class="about-image" alt="Photo of myself">
+            <img
+                src="/img/matt-benton.jpg"
+                class="about-image"
+                alt="Photo of myself"
+            />
             <p class="about__container--text">
-                When I originally finished college I was headed for a career in the field of education as a teacher. I had enthusiasm
-                for learning as well as a passion for crafting experiences that would enhance the knowledge of my
-                students. However not everything about education was for me and I spent several years learning to write code. I
-                returned to school to earn a CS degree.  Now, instead of learning pedagogy I have become a lifetime
-                learner of frameworks, libraries, and coding languages.  I absolutely love it - I write code almost every day and I hope to
-                one day achieve the momentous goal of creating the perfect pizza tracker. Aside from programming I enjoy music, books, videgames and riding my bike.
+                When I originally finished college I was headed for a career in
+                the field of education as a teacher. I had enthusiasm for
+                learning as well as a passion for crafting experiences that
+                would enhance the knowledge of my students. However not
+                everything about education was for me and I spent several years
+                learning to write code. I returned to school to earn a CS
+                degree. Now, instead of learning pedagogy I have become a
+                lifetime learner of frameworks, libraries, and coding languages.
+                I absolutely love it - I write code almost every day and I hope
+                to one day achieve the momentous goal of creating the perfect
+                pizza tracker. Aside from programming I enjoy music, books,
+                videgames and riding my bike.
             </p>
         </div>
     </section>
 </template>
 
 <script>
-export default {
-    
-}
+export default {}
 </script>
 
 <style>
-
 .about {
-    background: linear-gradient(to right, rgb(117, 196,225), rgb(18, 128, 191));
+    background: linear-gradient(
+        to right,
+        var(--color-blue),
+        var(--color-blue-dark)
+    );
     color: var(--color-grey-light-1);
     font-size: var(--font-small);
     line-height: 2.2rem;
@@ -63,5 +74,4 @@ export default {
         padding: var(--spacing-medium);
     }
 }
-
 </style>
