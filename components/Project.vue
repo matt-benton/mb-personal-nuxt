@@ -5,7 +5,13 @@
                 :images="project.images"
                 :project-title="project.title"
                 @large-image-clicked="largeImageClicked($event)"
+                v-if="windowWidth > 640"
             />
+            <ProjectImageList
+                v-else
+                :images="project.images"
+                :project-title="project.title"
+            ></ProjectImageList>
         </div>
         <div class="project-container project-container-text">
             <h3 :class="`project-title text--${highlightColor}`">
@@ -43,8 +49,17 @@
 
 <script>
 import ProjectImageGrid from './ProjectImageGrid.vue'
+import ProjectImageList from './ProjectImageList.vue'
 
 export default {
+    data() {
+        return {
+            windowWidth: 0,
+        }
+    },
+    mounted() {
+        this.windowWidth = window.innerWidth
+    },
     computed: {
         highlightColor() {
             /**
@@ -65,17 +80,18 @@ export default {
                 case 2:
                     return 'green'
             }
-        }
+        },
     },
     methods: {
         largeImageClicked(image) {
             this.$emit('large-image-clicked', image)
-        }
+        },
     },
     props: ['index', 'project'],
     components: {
-        ProjectImageGrid
-    }
+        ProjectImageGrid,
+        ProjectImageList,
+    },
 }
 </script>
 
