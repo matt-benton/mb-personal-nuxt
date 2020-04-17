@@ -1,12 +1,14 @@
 <template>
     <section class="work" id="work">
-        <Project 
-            v-for="(project, index) in projectContent"
-            :key="index"
-            :index="index"
-            :project="project"
-            @large-image-clicked="largeImageClicked($event)"
-        />
+        <div class="section-container">
+            <Project
+                v-for="(project, index) in projectContent"
+                :key="index"
+                :index="index"
+                :project="project"
+                @large-image-clicked="largeImageClicked($event)"
+            />
+        </div>
     </section>
 </template>
 
@@ -21,24 +23,23 @@ export default {
         }
     },
     components: {
-        Project
+        Project,
     },
     methods: {
         largeImageClicked(image) {
             this.$emit('large-project-image-clicked', image)
-        }
-    }
+        },
+    },
 }
 </script>
 
 <style>
-
 .work {
     background-color: var(--color-grey-dark-2);
     color: var(--color-grey-light-1);
     box-shadow: inset 0 5px 20px var(--color-grey-dark-3);
     z-index: 50;
-    padding: var(--spacing-large) var(--spacing-largest);
+    padding: var(--spacing-large) 0;
 }
 
 @media (max-width: 768px) {
@@ -46,5 +47,4 @@ export default {
         padding: 0 0;
     }
 }
-
 </style>

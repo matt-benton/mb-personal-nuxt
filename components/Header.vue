@@ -1,18 +1,20 @@
 <template>
     <header class="header">
-        <div class="hero">
-            <h1 class="hero-title">
-                Hi, my name is
-                <b>Matt Benton</b> and I'm a <b>web developer</b> from Birmingham, Alabama
-            </h1>
-            <h2 class="hero-subtitle">
-                I create web applications with clean interfaces, intuitive user experiences, and
-                reliability.
-            </h2>
-            <div class="button-container">
-                <a href="#work"><button class="btn">Check Out My Portfolio</button></a>
-                <a href="#skills"><button class="btn">See My Skills</button></a>
-                <a href="#footer"><button class="btn">Contact Me</button></a>
+        <div class="section-container">
+            <div class="hero">
+                <h1 class="hero-title">
+                    Hi, my name is
+                    <b>Matt Benton</b> and I'm a <b>web developer</b> from Birmingham, Alabama
+                </h1>
+                <h2 class="hero-subtitle">
+                    I create web applications with clean interfaces, intuitive user experiences, and
+                    reliability.
+                </h2>
+                <div class="button-container">
+                    <a href="#work"><button class="btn">Check Out My Portfolio</button></a>
+                    <a href="#skills"><button class="btn">See My Skills</button></a>
+                    <a href="#footer"><button class="btn">Contact Me</button></a>
+                </div>
             </div>
         </div>
     </header>
@@ -27,14 +29,13 @@ export default {}
     color: var(--color-grey-dark-1);
     display: grid;
     grid-template-rows: min-content 1fr;
-    padding: var(--spacing-large);
     margin: auto;
 }
 
 .hero {
     display: flex;
     flex-direction: column;
-    padding: 16% 10%;
+    padding: 16% 0;
 }
 
 .hero-title {
