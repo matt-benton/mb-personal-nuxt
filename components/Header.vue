@@ -3,17 +3,14 @@
         <div class="hero">
             <h1 class="hero-title">
                 Hi, my name is
-                <b>Matt Benton</b> and I'm a <b>web developer</b> from
-                Birmingham, Alabama
+                <b>Matt Benton</b> and I'm a <b>web developer</b> from Birmingham, Alabama
             </h1>
             <h2 class="hero-subtitle">
-                I create web applications with clean interfaces, intuitive user
-                experiences, and reliability.
+                I create web applications with clean interfaces, intuitive user experiences, and
+                reliability.
             </h2>
             <div class="button-container">
-                <a href="#work"
-                    ><button class="btn">Check Out My Portfolio</button></a
-                >
+                <a href="#work"><button class="btn">Check Out My Portfolio</button></a>
                 <a href="#skills"><button class="btn">See My Skills</button></a>
                 <a href="#footer"><button class="btn">Contact Me</button></a>
             </div>
@@ -31,6 +28,7 @@ export default {}
     display: grid;
     grid-template-rows: min-content 1fr;
     padding: var(--spacing-large);
+    margin: auto;
 }
 
 .hero {
