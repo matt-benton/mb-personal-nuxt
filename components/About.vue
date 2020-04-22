@@ -12,7 +12,7 @@
                     pedagogy I have become a lifetime learner of frameworks, libraries, and coding
                     languages. I absolutely love it - I write code almost every day and I hope to
                     one day achieve the momentous goal of creating the perfect pizza tracker. Aside
-                    from programming I enjoy music, books, videgames and riding my bike.
+                    from programming I enjoy music, books, videogames and riding my bike.
                 </p>
             </div>
         </div>
