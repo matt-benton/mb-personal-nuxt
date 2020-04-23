@@ -1,17 +1,23 @@
 <template>
     <div class="project-image-grid">
-        <img 
-            v-lazy="`${selectedImage}-lg.png`" 
-            :alt="`${projectTitle} large screen shot`" 
+        <img
+            v-lazy="`${selectedImage.src}-lg.png`"
+            :alt="`${projectTitle} large screen shot`"
             class="project-large-image"
             @click="largeImageClicked"
         />
         <div class="project-thumbnails">
-            <div class="project-thumbnail" 
-                v-for="(image, index) in images" 
+            <div
+                class="project-thumbnail"
+                v-for="(image, index) in images"
                 :key="index"
-                @click="selectImage(image)">
-                <img v-lazy="`${image}-sm.png`" :alt="`${projectTitle} screen shot thumbnail`" class="thumbnail-image">
+                @click="selectImage(image)"
+            >
+                <img
+                    v-lazy="`${image.src}-sm.png`"
+                    :alt="`${projectTitle} screen shot thumbnail`"
+                    class="thumbnail-image"
+                />
             </div>
         </div>
     </div>
@@ -37,7 +43,6 @@ export default {
 </script>
 
 <style>
-
 .project-image-grid {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -81,6 +86,4 @@ export default {
         max-height: 8rem;
     }
 }
-        
-
 </style>

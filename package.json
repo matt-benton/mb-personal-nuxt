@@ -11,6 +11,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "cloudinary-vue": "^1.0.1",
+    "current-script-polyfill": "^1.0.0",
     "nuxt": "^2.0.0",
     "vue-lazyload": "^1.3.3"
   },
