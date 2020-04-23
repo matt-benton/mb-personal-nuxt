@@ -20,10 +20,10 @@ export const projects = [
                 src: '/img/projects/bill-force-one/bill-force-one-edit',
                 cloudinaryPublicId: 'mb-personal/bill-force-one-edit-lg_adea08',
             },
-            {
-                src: '/img/projects/bill-force-one/bill-force-one-ipad',
-                cloudinaryPublicId: 'mb-personal/bill-force-one-ipad-lg_rzcydn',
-            },
+            // {
+            //     src: '/img/projects/bill-force-one/bill-force-one-ipad',
+            //     cloudinaryPublicId: 'mb-personal/bill-force-one-ipad-lg_rzcydn',
+            // },
         ],
     },
     {
@@ -51,10 +51,10 @@ export const projects = [
                 src: '/img/projects/hi-ed/hi-ed-registration-checklist',
                 cloudinaryPublicId: 'mb-personal/hi-ed-registration-checklist-lg_phirmr',
             },
-            {
-                src: '/img/projects/hi-ed/hi-ed-ncaa',
-                cloudinaryPublicId: 'mb-personal/hi-ed-ncaa-lg_tlx3bu',
-            },
+            // {
+            //     src: '/img/projects/hi-ed/hi-ed-ncaa',
+            //     cloudinaryPublicId: 'mb-personal/hi-ed-ncaa-lg_tlx3bu',
+            // },
         ],
     },
     {
@@ -74,10 +74,10 @@ export const projects = [
                 src: '/img/projects/screen-time-analyzer/screen-time-analyzer-day',
                 cloudinaryPublicId: 'mb-personal/screen-time-analyzer-day-lg_ppnqgf',
             },
-            {
-                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-form',
-                cloudinaryPublicId: 'mb-personal/screen-time-analyzer-form-lg_azs31x',
-            },
+            // {
+            //     src: '/img/projects/screen-time-analyzer/screen-time-analyzer-form',
+            //     cloudinaryPublicId: 'mb-personal/screen-time-analyzer-form-lg_azs31x',
+            // },
             {
                 src: '/img/projects/screen-time-analyzer/screen-time-analyzer-activities',
                 cloudinaryPublicId: 'mb-personal/screen-time-analyzer-activities-lg_nktdd4',

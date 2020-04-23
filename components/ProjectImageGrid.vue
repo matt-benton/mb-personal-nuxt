@@ -7,16 +7,14 @@
             @click="largeImageClicked"
         />
         <div class="project-thumbnails">
-            <div
-                class="project-thumbnail"
-                v-for="(image, index) in images"
-                :key="index"
-                @click="selectImage(image)"
-            >
-                <img
-                    v-lazy="`${image.src}-sm.png`"
-                    :alt="`${projectTitle} screen shot thumbnail`"
+            <div v-for="(image, index) in images" :key="index" @click="selectImage(image)">
+                <cldImage
                     class="thumbnail-image"
+                    :publicId="image.cloudinaryPublicId"
+                    height="100"
+                    width="100"
+                    crop="fill"
+                    :alt="`${projectTitle} screen shot thumbnail`"
                 />
             </div>
         </div>
@@ -60,30 +58,12 @@ export default {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.project-thumbnail {
-    position: relative;
-    height: 5rem;
-    width: 5rem;
-    overflow: hidden;
-    cursor: pointer;
-    margin: var(--spacing-small);
-    border-radius: 5px;
+    margin-top: 8px;
 }
 
 .thumbnail-image {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 100%;
-    width: auto;
-    transform: translate(-50%, -50%);
-}
-
-@media (max-width: 768px) {
-    .project-thumbnail {
-        max-height: 8rem;
-    }
+    margin: 3px;
+    overflow: hidden;
+    cursor: pointer;
 }
 </style>
