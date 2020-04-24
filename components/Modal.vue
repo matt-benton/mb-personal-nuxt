@@ -1,6 +1,10 @@
 <template>
     <section class="modal" :class="{ close: hidden }" @click="close($event)">
-        <img :src="`${image.src}`" alt="Full size project pop up image" class="full-screen-image" />
+        <img
+            :src="`${image.src ? image.src : ''}`"
+            alt="Full size project pop up image"
+            class="full-screen-image"
+        />
     </section>
 </template>
 
