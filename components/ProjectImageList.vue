@@ -1,16 +1,19 @@
 <template>
     <div class="project-list-images">
-        <img
-            class="project-list-image"
+        <cld-image
             v-for="(image, index) in images"
             :key="index"
-            v-lazy="`${image}-lg.png`"
-            :alt="`${projectTitle} screen shot`"
+            cloudName="dheway9t7"
+            :publicId="image.cloudinaryPublicId"
+            responsive="width"
+            class="project-list-image"
         />
     </div>
 </template>
 
 <script>
+import { cldImage } from 'cloudinary-vue'
+
 export default {
     props: ['images', 'projectTitle'],
 }
@@ -25,7 +28,6 @@ export default {
 }
 
 .project-list-image {
-    max-width: 100%;
-    max-height: 350px;
+    box-shadow: 0 2px 10px var(--color-grey-dark-2);
 }
 </style>

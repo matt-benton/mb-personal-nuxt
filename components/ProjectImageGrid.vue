@@ -1,17 +1,21 @@
 <template>
     <div class="project-image-grid">
-        <img 
-            v-lazy="`${selectedImage}-lg.png`" 
-            :alt="`${projectTitle} large screen shot`" 
+        <img
+            v-lazy="`${selectedImage.src}`"
+            :alt="`${projectTitle} large screen shot`"
             class="project-large-image"
             @click="largeImageClicked"
         />
         <div class="project-thumbnails">
-            <div class="project-thumbnail" 
-                v-for="(image, index) in images" 
-                :key="index"
-                @click="selectImage(image)">
-                <img v-lazy="`${image}-sm.png`" :alt="`${projectTitle} screen shot thumbnail`" class="thumbnail-image">
+            <div v-for="(image, index) in images" :key="index" @click="selectImage(image)">
+                <cldImage
+                    class="thumbnail-image"
+                    :publicId="image.cloudinaryPublicId"
+                    height="100"
+                    width="100"
+                    crop="fill"
+                    :alt="`${projectTitle} screen shot thumbnail`"
+                />
             </div>
         </div>
     </div>
@@ -37,7 +41,6 @@ export default {
 </script>
 
 <style>
-
 .project-image-grid {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -49,38 +52,20 @@ export default {
     border-radius: 2px;
     cursor: pointer;
     justify-self: center;
+    box-shadow: 0 2px 10px var(--color-grey-dark-1);
 }
 
 .project-thumbnails {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.project-thumbnail {
-    position: relative;
-    height: 5rem;
-    width: 5rem;
-    overflow: hidden;
-    cursor: pointer;
-    margin: var(--spacing-small);
-    border-radius: 5px;
+    margin-top: 8px;
 }
 
 .thumbnail-image {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 100%;
-    width: auto;
-    transform: translate(-50%, -50%);
+    margin: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 10px var(--color-grey-dark-2);
 }
-
-@media (max-width: 768px) {
-    .project-thumbnail {
-        max-height: 8rem;
-    }
-}
-        
-
 </style>
