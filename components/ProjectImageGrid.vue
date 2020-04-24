@@ -48,7 +48,7 @@ export default {
 
 .project-large-image {
     max-width: 100%;
-    max-height: 20rem;
+    height: 20rem;
     border-radius: 2px;
     cursor: pointer;
     justify-self: center;
