@@ -1,7 +1,7 @@
 <template>
     <div class="project-image-grid">
         <img
-            v-lazy="`${selectedImage.src}-lg.png`"
+            v-lazy="`${selectedImage.src}`"
             :alt="`${projectTitle} large screen shot`"
             class="project-large-image"
             @click="largeImageClicked"

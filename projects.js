@@ -9,21 +9,21 @@ export const projects = [
         githubUrl: 'https://github.com/matt-benton/bill-force-one',
         images: [
             {
-                src: '/img/projects/bill-force-one/bill-force-one',
+                src: '/img/projects/bill-force-one/bill-force-one.png',
                 cloudinaryPublicId: 'mb-personal/bill-force-one-lg_lyzc4f',
             },
             {
-                src: '/img/projects/bill-force-one/bill-force-one-landing',
+                src: '/img/projects/bill-force-one/bill-force-one-mobile.jpeg',
+                cloudinaryPublicId: 'mb-personal/bill-force-one-mobile_byojed',
+            },
+            {
+                src: '/img/projects/bill-force-one/bill-force-one-landing.png',
                 cloudinaryPublicId: 'mb-personal/bill-force-one-landing-lg_bg11x8',
             },
             {
-                src: '/img/projects/bill-force-one/bill-force-one-edit',
+                src: '/img/projects/bill-force-one/bill-force-one-edit.png',
                 cloudinaryPublicId: 'mb-personal/bill-force-one-edit-lg_adea08',
             },
-            // {
-            //     src: '/img/projects/bill-force-one/bill-force-one-ipad',
-            //     cloudinaryPublicId: 'mb-personal/bill-force-one-ipad-lg_rzcydn',
-            // },
         ],
     },
     {
@@ -36,25 +36,21 @@ export const projects = [
         siteUrl: 'https://hi-ed.walkerenterprisesala.com',
         images: [
             {
-                src: '/img/projects/hi-ed/hi-ed',
+                src: '/img/projects/hi-ed/hi-ed.png',
                 cloudinaryPublicId: 'mb-personal/hi-ed-lg_wm0z80',
             },
             {
-                src: '/img/projects/hi-ed/hi-ed-house',
+                src: '/img/projects/hi-ed/hi-ed-house.png',
                 cloudinaryPublicId: 'mb-personal/hi-ed-house-lg_lfarwz',
             },
             {
-                src: '/img/projects/hi-ed/hi-ed-vl-profile',
+                src: '/img/projects/hi-ed/hi-ed-vl-profile.png',
                 cloudinaryPublicId: 'mb-personal/hi-ed-vl-profile-lg_om9jau',
             },
             {
-                src: '/img/projects/hi-ed/hi-ed-registration-checklist',
+                src: '/img/projects/hi-ed/hi-ed-registration-checklist.png',
                 cloudinaryPublicId: 'mb-personal/hi-ed-registration-checklist-lg_phirmr',
             },
-            // {
-            //     src: '/img/projects/hi-ed/hi-ed-ncaa',
-            //     cloudinaryPublicId: 'mb-personal/hi-ed-ncaa-lg_tlx3bu',
-            // },
         ],
     },
     {
@@ -67,19 +63,15 @@ export const projects = [
         githubUrl: 'https://github.com/matt-benton/screen-time-analyzer',
         images: [
             {
-                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-dash',
+                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-dash.png',
                 cloudinaryPublicId: 'mb-personal/screen-time-analyzer-dash-lg_fpve5u',
             },
             {
-                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-day',
+                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-day.png',
                 cloudinaryPublicId: 'mb-personal/screen-time-analyzer-day-lg_ppnqgf',
             },
-            // {
-            //     src: '/img/projects/screen-time-analyzer/screen-time-analyzer-form',
-            //     cloudinaryPublicId: 'mb-personal/screen-time-analyzer-form-lg_azs31x',
-            // },
             {
-                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-activities',
+                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-activities.png',
                 cloudinaryPublicId: 'mb-personal/screen-time-analyzer-activities-lg_nktdd4',
             },
         ],
@@ -92,11 +84,11 @@ export const projects = [
         ],
         images: [
             {
-                src: '/img/projects/sprout/sprout',
+                src: '/img/projects/sprout/sprout.png',
                 cloudinaryPublicId: 'mb-personal/sprout-lg_uggydy',
             },
             {
-                src: '/img/projects/sprout/sprout-delivery',
+                src: '/img/projects/sprout/sprout-delivery.png',
                 cloudinaryPublicId: 'mb-personal/sprout-delivery-lg_n5lez4',
             },
         ],
@@ -110,19 +102,19 @@ export const projects = [
         githubUrl: 'https://github.com/matt-benton/squizzit',
         images: [
             {
-                src: '/img/projects/squizzit/squizzit-landing',
+                src: '/img/projects/squizzit/squizzit-landing.png',
                 cloudinaryPublicId: 'mb-personal/squizzit-landing-lg_svo2jh',
             },
             {
-                src: '/img/projects/squizzit/squizzit-edit',
+                src: '/img/projects/squizzit/squizzit-edit.png',
                 cloudinaryPublicId: 'mb-personal/squizzit-edit-lg_neukpy',
             },
             {
-                src: '/img/projects/squizzit/squizzit-take',
+                src: '/img/projects/squizzit/squizzit-take.png',
                 cloudinaryPublicId: 'mb-personal/squizzit-take-lg_gjfvrh',
             },
             {
-                src: '/img/projects/squizzit/squizzit-results',
+                src: '/img/projects/squizzit/squizzit-results.png',
                 cloudinaryPublicId: 'mb-personal/squizzit-results-lg_y7zzqu',
             },
         ],
