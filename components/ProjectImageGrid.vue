@@ -52,6 +52,7 @@ export default {
     border-radius: 2px;
     cursor: pointer;
     justify-self: center;
+    box-shadow: 0 2px 10px var(--color-grey-dark-1);
 }
 
 .project-thumbnails {
@@ -65,5 +66,6 @@ export default {
     margin: 3px;
     overflow: hidden;
     cursor: pointer;
+    box-shadow: 0 2px 10px var(--color-grey-dark-2);
 }
 </style>
