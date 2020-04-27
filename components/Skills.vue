@@ -4,8 +4,11 @@
             <div class="skills-container">
                 <div class="skills-left">
                     <p class="left-text">
-                        I have experience working with all of the following technology. My strongest
-                        skills are in PHP, Laravel, Javascript, HTML5, Vue and Bootstrap.
+                        I am a <b>JavaScript</b> and <b>PHP</b> developer with experience using
+                        various frameworks and libraries. I really love using <b>Vue.js</b> and
+                        <b>Laravel</b> for my projects. I also enjoy designing and writing my own
+                        <b>CSS</b>, but I have used lots of CSS libraries such as
+                        <b>Bootstrap</b> and <b>TailwindCSS</b> over the years.
                     </p>
                 </div>
                 <div class="skills-right">
@@ -106,6 +109,14 @@
                             />
                             bootstrap
                         </div>
+                        <div class="skills-grid-item">
+                            <img
+                                src="/img/logos/tailwindcss.png"
+                                class="skills-grid-logo"
+                                alt="tailwindcss logo"
+                            />
+                            tailwindcss
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,13 +132,12 @@ export default {}
 .skills {
     background-color: var(--color-grey-light-1);
     justify-content: space-evenly;
-    font-size: var(--font-medium);
+    font-size: var(--font-small);
 }
 
 .skills-container {
     display: flex;
     background-color: #fff;
-    box-shadow: 0 10px 25px var(--color-grey-light-3);
     padding: var(--spacing-large);
     margin: var(--spacing-large) 0;
 }
@@ -159,7 +169,7 @@ export default {}
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--spacing-medium);
+    padding: var(--spacing-small);
     margin: var(--spacing-small);
     border-radius: 5px;
     color: var(--color-grey-dark-2);
