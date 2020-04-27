@@ -99,7 +99,6 @@ export default {
 .project {
     display: flex;
     margin: var(--spacing-large) 0;
-    box-shadow: 0 2px 10px var(--color-grey-dark-1);
 }
 
 .project:last-of-type {
@@ -166,13 +165,8 @@ export default {
 
 @media (max-width: 768px) {
     .project-container {
-        padding: var(--spacing-larger);
-    }
-}
-
-@media (max-width: 640px) {
-    .project-container {
-        padding: var(--spacing-large) var(--spacing-medium);
+        padding: var(--spacing-large) 0;
+        background-color: var(--color-grey-dark-2);
     }
 }
 </style>
