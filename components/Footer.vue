@@ -18,6 +18,7 @@
                     cloudName="dheway9t7"
                     publicId="mb-personal/logos/linkedIn_pt5tr4"
                     height="30"
+                    secure="true"
                 />
             </a>
             <a href="https://codepen.io/matt-benton" target="_blank" class="social-link">
@@ -25,6 +26,7 @@
                     cloudName="dheway9t7"
                     publicId="mb-personal/logos/codepen_edxrcz"
                     height="30"
+                    secure="true"
                 />
             </a>
         </div>
