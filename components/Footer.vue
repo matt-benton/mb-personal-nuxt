@@ -9,13 +9,6 @@
             </span>
         </div>
         <div class="footer-row social-row">
-            <a href="https://codepen.io/matt-benton" target="_blank" class="social-link">
-                <cld-image
-                    cloudName="dheway9t7"
-                    publicId="mb-personal/logos/codepen_edxrcz"
-                    height="30"
-                />
-            </a>
             <a
                 href="https://www.linkedin.com/in/matt-benton-6895951a3/"
                 target="_blank"
@@ -24,6 +17,13 @@
                 <cld-image
                     cloudName="dheway9t7"
                     publicId="mb-personal/logos/linkedIn_pt5tr4"
+                    height="30"
+                />
+            </a>
+            <a href="https://codepen.io/matt-benton" target="_blank" class="social-link">
+                <cld-image
+                    cloudName="dheway9t7"
+                    publicId="mb-personal/logos/codepen_edxrcz"
                     height="30"
                 />
             </a>
