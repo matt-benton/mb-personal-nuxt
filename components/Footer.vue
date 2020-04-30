@@ -1,6 +1,6 @@
 <template>
     <footer class="footer" id="footer">
-        <div class="footer-row">
+        <div class="footer-row email-row">
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
@@ -8,13 +8,32 @@
                 mattbenton10@gmail.com
             </span>
         </div>
+        <div class="footer-row social-row">
+            <a
+                href="https://www.linkedin.com/in/matt-benton-6895951a3/"
+                target="_blank"
+                class="social-link"
+            >
+                <cld-image
+                    cloudName="dheway9t7"
+                    publicId="mb-personal/logos/linkedIn_pt5tr4"
+                    height="30"
+                />
+            </a>
+            <a href="https://codepen.io/matt-benton" target="_blank" class="social-link">
+                <cld-image
+                    cloudName="dheway9t7"
+                    publicId="mb-personal/logos/codepen_edxrcz"
+                    height="30"
+                />
+            </a>
+        </div>
     </footer>
 </template>
 
 <script>
-export default {
-
-}
+import { cldImage } from 'cloudinary-vue'
+export default {}
 </script>
 
 <style>
@@ -24,9 +43,12 @@ export default {
     background-color: var(--color-grey-dark-1);
     padding: 6%;
     border-top: 1px solid var(--color-grey-dark-5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.footer-row {
+.email-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -38,18 +60,18 @@ export default {
     width: 1.6rem;
     border-radius: 50%;
     display: inline-block;
-    margin: .8rem;
+    margin: 0.8rem;
 }
 
-.dot:nth-of-type(1) {
+.dot:nth-of-type(1n + 1) {
     background-color: var(--color-pink);
 }
 
-.dot:nth-of-type(2) {
+.dot:nth-of-type(2n + 1) {
     background-color: var(--color-blue);
 }
 
-.dot:nth-of-type(3) {
+.dot:nth-of-type(3n + 1) {
     background-color: var(--color-green);
 }
 
@@ -57,4 +79,16 @@ export default {
     margin: 0 var(--spacing-large);
 }
 
+.footer-row {
+    padding: var(--spacing-large) 0;
+}
+
+.social-row {
+    display: flex;
+    justify-content: center;
+}
+
+.social-link {
+    margin: 0 var(--spacing-medium);
+}
 </style>
