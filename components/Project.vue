@@ -29,18 +29,12 @@
             </p>
             <div class="project-links">
                 <a
-                    v-if="project.githubUrl"
+                    v-for="link in project.links"
+                    :key="link.title"
                     :class="`text--${highlightColor}`"
-                    :href="project.githubUrl"
+                    :href="link.url"
                     target="_blank"
-                    >View on Github</a
-                >
-                <a
-                    v-if="project.siteUrl"
-                    :class="`text--${highlightColor}`"
-                    :href="project.siteUrl"
-                    target="_blank"
-                    >Visit Site</a
+                    >{{ link.text }}</a
                 >
             </div>
         </div>
@@ -133,6 +127,7 @@ export default {
     font-size: var(--font-small);
     font-weight: 700;
     margin-top: var(--spacing-large);
+    display: flex;
 }
 
 .project-links a {
@@ -141,6 +136,7 @@ export default {
     background-color: var(--color-grey-dark-1);
     border: 0;
     cursor: pointer;
+    margin-right: var(--spacing-small);
 }
 
 .project-links a:hover {

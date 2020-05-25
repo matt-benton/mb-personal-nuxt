@@ -5,8 +5,18 @@ export const projects = [
             'A PHP application for monitoring when monthly bills are due and if they have been paid',
         descriptionParagraphs: [
             "I built this application to help me know how much money I was spending each month on recurring bills. It also helps me keep track of what is still due when I'm in the middle of the month. For instance, if it's the 21st of the month and I still have bills due, but I'm not sure how much money I have available to spend versus how much to reserve for bills, I can use Bill Force One to show me exactly how much I still owe for the month. Another added benefit is to simply keep up with due dates as well as whether a bill has autorecurring payments set up or not.",
+            'In May of 2020 I wrote a second version of this app.  The new version is a Vue single page app that uses GraphQL and Apollo to query data.  The API was written in PHP but this version relies much more on JavaScript than the original.',
         ],
-        githubUrl: 'https://github.com/matt-benton/bill-force-one',
+        links: [
+            {
+                url: 'https://github.com/matt-benton/bill-force-one',
+                text: 'View on Github',
+            },
+            {
+                url: 'https://github.com/matt-benton/bill-force-one-spa',
+                text: 'View SPA Version',
+            },
+        ],
         images: [
             {
                 src: '/img/projects/bill-force-one/bill-force-one.png',
@@ -33,7 +43,12 @@ export const projects = [
             'The Hi.Ed Student Portal was built starting in 2016 for Walker Enterprises as an application for tracking student grade progress and NCAA eligibility. It has interfaces for school system administrators, principals, and teachers to input and view student grades. For students and parents, a transcript is generated indicating student progress toward graduation and NCAA eligibility. Other features of this application include a marketplace for teachers to list and trade school supplies as well as a Virtual Life game that helps students manage bills and expenses.',
             'Bill Force One is mostly written in PHP with a little bit of JavaScript. Instead of using a CSS framework I designed the site and wrote all of the CSS myself.',
         ],
-        siteUrl: 'https://hi-ed.walkerenterprisesala.com',
+        links: [
+            {
+                url: 'https://hi-ed.walkerenterprisesala.com',
+                text: 'Visit Site',
+            },
+        ],
         images: [
             {
                 src: '/img/projects/hi-ed/hi-ed.png',
@@ -60,7 +75,12 @@ export const projects = [
             'I built this application in early 2019 to track how I was spending my time while working in front of a computer screen. It is a small app that lets you define and track certain aspects of your computer use, including which monitor(s) you are looking at, what chair you are sitting in, how long you go without taking a break, and what possible symptoms may arise while doing so. You can also define activities such as blogging, coding, gaming, etc. and the app will keep track of how much time you spend on each activity. I still use this application every day to maintain healthy screen habits.',
             'On the technical side, I built the Screen Time Analyzer with the intention of setting up a simple, well-focused PHP app that would do its job well. I also wanted to focus on improving my understanding of PHP, Laravel, and database structures.',
         ],
-        githubUrl: 'https://github.com/matt-benton/screen-time-analyzer',
+        links: [
+            {
+                url: 'https://github.com/matt-benton/screen-time-analyzer',
+                text: 'View on Github',
+            },
+        ],
         images: [
             {
                 src: '/img/projects/screen-time-analyzer/screen-time-analyzer-dash.png',
@@ -99,7 +119,12 @@ export const projects = [
         descriptionParagraphs: [
             'This project is a single page app that I built using Vue.  It uses Vuex for state management as well as TailwindCSS for styling.  The intent for this project was to practice and improve my JavaScript skills.  With Squizzit, you can create quizzes and share them with people you know.  They can log in, take the quiz, and see their results.',
         ],
-        githubUrl: 'https://github.com/matt-benton/squizzit',
+        links: [
+            {
+                url: 'https://github.com/matt-benton/squizzit',
+                text: 'View on Github',
+            },
+        ],
         images: [
             {
                 src: '/img/projects/squizzit/squizzit-landing.png',
