@@ -1,5 +1,8 @@
 <template>
     <div class="section-container">
+        <div class="row">
+            <a href="/"><button>mattbenton.io</button></a>
+        </div>
         <div class="blog-card-container">
             <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
                 <div class="card-header">

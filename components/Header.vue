@@ -14,6 +14,7 @@
                     <a href="#work" @click.prevent="scrollTo('#work')"
                         ><button class="btn">Check Out My Portfolio</button></a
                     >
+                    <a href="/blog"><button class="btn">Read My Blog</button></a>
                     <a href="#skills" @click.prevent="scrollTo('#skills')"
                         ><button class="btn">See My Skills</button></a
                     >
@@ -80,6 +81,11 @@ export default {
     .hero {
         padding: 16% 3%;
     }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -95,11 +101,6 @@ export default {
     .hero-subtitle {
         font-size: var(--font-medium);
         padding-bottom: var(--spacing-large);
-    }
-
-    .btn {
-        width: 100%;
-        margin-bottom: 10px;
     }
 }
 
