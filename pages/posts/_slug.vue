@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 article {
-    padding: 0 300px;
+    padding: 0 250px;
 }
 
 hr {
@@ -62,5 +62,11 @@ hr {
 
 .title {
     margin-bottom: var(--spacing-small);
+}
+
+@media (max-width: 1024px) {
+    article {
+        padding: 0;
+    }
 }
 </style>
