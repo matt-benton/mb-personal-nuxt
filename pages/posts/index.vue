@@ -62,6 +62,12 @@ export default {
     background-color: var(--color-grey-light-1);
     font-weight: 300;
     border-radius: 3px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.blog-preview-card:hover {
+    box-shadow: 0 5px 5px var(--color-grey-light-5);
+    transform: translateY(-10px);
 }
 
 .card-header {
