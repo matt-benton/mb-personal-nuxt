@@ -1,12 +1,21 @@
 <template>
     <div class="section-container">
-        <div>
-            <nuxt-link to="/"><button>mattbenton.io</button></nuxt-link>
+        <div class="top-row">
+            <nuxt-link to="/" as="a">
+                <svg>
+                    <path
+                        d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+                    />
+                </svg>
+                <span>Back to mattbenton.io</span>
+            </nuxt-link>
         </div>
         <div class="blog-card-container">
             <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
                 <div class="card-header">
-                    <h2>{{ article.title }}</h2>
+                    <nuxt-link :to="`/posts/_${article.slug}`">
+                        <h2>{{ article.title }}</h2>
+                    </nuxt-link>
                 </div>
                 <div class="card-body">
                     <p>{{ formatDate(article.date) }}</p>
@@ -20,7 +29,14 @@
                     {{ article.slug }}
                 </div>
                 <div class="card-footer">
-                    <nuxt-link :to="`/posts/_${article.slug}`">Read More -></nuxt-link>
+                    <nuxt-link :to="`/posts/_${article.slug}`">
+                        <span>Read More</span>
+                        <svg>
+                            <path
+                                d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+                            />
+                        </svg>
+                    </nuxt-link>
                 </div>
             </div>
         </div>
@@ -52,6 +68,13 @@ export default {
 </script>
 
 <style scoped>
+.top-row {
+    padding: var(--spacing-medium);
+    background-color: var(--color-grey-light-1);
+    margin: var(--spacing-medium) 0;
+    border-radius: 3px;
+}
+
 .blog-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -73,8 +96,11 @@ export default {
 .card-header {
     height: 9rem;
     border-radius: 5px 5px 0 0;
-    color: #fff;
     padding: var(--spacing-large);
+}
+
+.card-header h2 {
+    color: #fff;
 }
 
 .blog-preview-card:nth-of-type(even) .card-header {
@@ -94,8 +120,31 @@ export default {
     padding: var(--spacing-large);
 }
 
+.card-footer a {
+    display: flex;
+    align-items: center;
+}
+
+.card-footer a span {
+    margin-right: var(--spacing-small);
+}
+
+.top-row a {
+    display: flex;
+}
+
+.top-row span {
+    margin-left: var(--spacing-small);
+}
+
 p {
     line-height: var(--line-height-smaller);
     margin-bottom: var(--spacing-small);
+}
+
+svg {
+    height: var(--font-medium);
+    width: var(--font-medium);
+    fill: var(--color-grey-dark-5);
 }
 </style>
