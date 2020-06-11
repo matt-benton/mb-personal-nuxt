@@ -14,7 +14,7 @@
                     <a href="#work" @click.prevent="scrollTo('#work')"
                         ><button class="btn">Check Out My Portfolio</button></a
                     >
-                    <a href="/blog"><button class="btn">Read My Blog</button></a>
+                    <nuxt-link to="/posts"><button class="btn">Read My Blog</button></nuxt-link>
                     <a href="#skills" @click.prevent="scrollTo('#skills')"
                         ><button class="btn">See My Skills</button></a
                     >

@@ -1,7 +1,7 @@
 <template>
     <div class="section-container">
-        <div class="row">
-            <a href="/"><button>mattbenton.io</button></a>
+        <div>
+            <nuxt-link to="/"><button>mattbenton.io</button></nuxt-link>
         </div>
         <div class="blog-card-container">
             <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
@@ -17,9 +17,10 @@
                                 : article.preview
                         }}
                     </p>
+                    {{ article.slug }}
                 </div>
                 <div class="card-footer">
-                    <a href="#">Read More -></a>
+                    <nuxt-link :to="`/posts/_${article.slug}`">Read More -></nuxt-link>
                 </div>
             </div>
         </div>
@@ -59,16 +60,32 @@ export default {
 
 .blog-preview-card {
     background-color: var(--color-grey-light-1);
-    padding: var(--spacing-large);
     font-weight: 300;
+    border-radius: 3px;
 }
 
 .card-header {
-    height: 5rem;
+    height: 9rem;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    padding: var(--spacing-large);
+}
+
+.blog-preview-card:nth-of-type(even) .card-header {
+    background: linear-gradient(to left, var(--color-pink), var(--color-pink-dark));
+}
+
+.blog-preview-card:nth-of-type(odd) .card-header {
+    background: linear-gradient(to left, var(--color-blue), var(--color-blue-dark));
 }
 
 .card-body {
+    padding: var(--spacing-large);
     height: 13rem;
+}
+
+.card-footer {
+    padding: var(--spacing-large);
 }
 
 p {
