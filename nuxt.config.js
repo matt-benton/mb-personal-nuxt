@@ -21,6 +21,11 @@ export default {
                 href: 'https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap',
             },
             {
+                href:
+                    'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap',
+                rel: 'stylesheet',
+            },
+            {
                 rel: 'apple-touch-icon',
                 sizes: '180x180',
                 href: '/img/favicons/apple-touch-icon.png',
