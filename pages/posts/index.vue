@@ -77,7 +77,7 @@ export default {
 
 .blog-card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: var(--spacing-medium);
 }
 
@@ -86,6 +86,7 @@ export default {
     font-weight: 300;
     border-radius: 3px;
     transition: box-shadow 0.3s, transform 0.3s;
+    min-width: 350px;
 }
 
 .blog-preview-card:hover {
@@ -146,5 +147,11 @@ svg {
     height: var(--font-medium);
     width: var(--font-medium);
     fill: var(--color-grey-dark-5);
+}
+
+@media (max-width: 768px) {
+    .blog-card-container {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
