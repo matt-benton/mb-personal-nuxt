@@ -90,3 +90,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# nuxt content posts (remove when the blog branch is merged)
+content/*
