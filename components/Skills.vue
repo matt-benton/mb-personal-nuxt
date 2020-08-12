@@ -39,35 +39,11 @@
                         </div>
                         <div class="skills-grid-item">
                             <img
-                                src="/img/logos/sass-1-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
-                                alt="sass logo"
-                            />
-                            sass
-                        </div>
-                        <div class="skills-grid-item">
-                            <img
-                                src="/img/logos/jquery-1-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
-                                alt="jquery logo"
-                            />
-                            jquery
-                        </div>
-                        <div class="skills-grid-item">
-                            <img
                                 src="/img/logos/vue-9-logo-png-transparent-min.png"
                                 class="skills-grid-logo"
                                 alt="vue logo"
                             />
                             vue
-                        </div>
-                        <div class="skills-grid-item">
-                            <img
-                                src="/img/logos/angular-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
-                                alt="angularjs logo"
-                            />
-                            angularjs
                         </div>
                         <div class="skills-grid-item">
                             <img
@@ -92,30 +68,6 @@
                                 alt="laravel logo"
                             />
                             laravel
-                        </div>
-                        <div class="skills-grid-item">
-                            <img
-                                src="/img/logos/git-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
-                                alt="git logo"
-                            />
-                            git
-                        </div>
-                        <div class="skills-grid-item">
-                            <img
-                                src="/img/logos/bootstrap-4-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
-                                alt="bootstrap 4 logo"
-                            />
-                            bootstrap
-                        </div>
-                        <div class="skills-grid-item">
-                            <img
-                                src="/img/logos/tailwindcss.png"
-                                class="skills-grid-logo"
-                                alt="tailwindcss logo"
-                            />
-                            tailwindcss
                         </div>
                     </div>
                 </div>
@@ -142,6 +94,10 @@ export default {}
     margin: var(--spacing-large) 0;
 }
 
+.skills-container > div {
+    width: 50%;
+}
+
 .skills-left {
     display: flex;
     align-items: center;
@@ -161,8 +117,10 @@ export default {}
 }
 
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 1fr;
 }
 
 .skills-grid-item {
@@ -196,6 +154,10 @@ export default {}
 @media (max-width: 1024px) {
     .skills-container {
         flex-direction: column;
+    }
+
+    .skills-container > div {
+        width: 100%;
     }
 
     .skills-left {
