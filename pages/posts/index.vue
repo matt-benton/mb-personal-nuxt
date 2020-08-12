@@ -1,15 +1,6 @@
 <template>
     <div class="section-container">
-        <div class="top-row">
-            <nuxt-link to="/" as="a">
-                <svg>
-                    <path
-                        d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
-                    />
-                </svg>
-                <span>Back to mattbenton.io</span>
-            </nuxt-link>
-        </div>
+        <go-back-bar url="/" text="Back to mattbenton.io" />
         <div class="blog-card-container">
             <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
                 <div class="card-header">
@@ -45,6 +36,7 @@
 
 <script>
 import { format } from 'date-fns'
+import GoBackBar from '../../components/GoBackBar.vue'
 
 export default {
     data() {
@@ -64,17 +56,13 @@ export default {
             return format(new Date(dateString), 'MMMM d, yyyy')
         },
     },
+    components: {
+        'go-back-bar': GoBackBar,
+    },
 }
 </script>
 
 <style scoped>
-.top-row {
-    padding: var(--spacing-medium);
-    background-color: var(--color-grey-light-1);
-    margin: var(--spacing-medium) 0;
-    border-radius: 3px;
-}
-
 .blog-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -128,14 +116,6 @@ export default {
 
 .card-footer a span {
     margin-right: var(--spacing-small);
-}
-
-.top-row a {
-    display: flex;
-}
-
-.top-row span {
-    margin-left: var(--spacing-small);
 }
 
 p {

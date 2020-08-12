@@ -1,6 +1,6 @@
 <template>
     <div class="section-container">
-        <nuxt-link to="/posts">Back to Posts</nuxt-link>
+        <go-back-bar url="/posts" text="Back to Posts" />
         <article>
             <hr />
             <div>
@@ -14,6 +14,7 @@
 
 <script>
 import { format } from 'date-fns'
+import GoBackBar from '../../components/GoBackBar.vue'
 
 export default {
     async asyncData({ $content, params }) {
@@ -31,6 +32,9 @@ export default {
         formatDate(dateString) {
             return format(new Date(dateString), 'MMMM d, yyyy')
         },
+    },
+    components: {
+        'go-back-bar': GoBackBar,
     },
 }
 </script>
