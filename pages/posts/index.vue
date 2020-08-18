@@ -17,7 +17,6 @@
                                 : article.description
                         }}
                     </p>
-                    {{ article.slug }}
                 </div>
                 <div class="card-footer">
                     <nuxt-link :to="`/posts/_${article.slug}`">
@@ -41,7 +40,7 @@ import GoBackBar from '../../components/GoBackBar.vue'
 export default {
     data() {
         return {
-            descriptionLength: 120,
+            descriptionLength: 300,
         }
     },
     async asyncData({ $content }) {
@@ -65,7 +64,8 @@ export default {
 <style scoped>
 .blog-card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
     grid-gap: var(--spacing-medium);
 }
 
@@ -74,7 +74,7 @@ export default {
     font-weight: 300;
     border-radius: 3px;
     transition: box-shadow 0.3s, transform 0.3s;
-    min-width: 350px;
+    width: 650px;
 }
 
 .blog-preview-card:hover {
