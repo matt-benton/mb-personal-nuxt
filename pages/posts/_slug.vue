@@ -5,7 +5,7 @@
             <hr />
             <div>
                 <h1 class="title">{{ article.title }}</h1>
-                <h5 class="date-text">{{ formatDate(article.date) }}</h5>
+                <h5 class="date-text">{{ formatDate(article.createdAt) }}</h5>
                 <nuxt-content :document="article"></nuxt-content>
             </div>
         </article>
@@ -41,13 +41,33 @@ export default {
 
 <style scoped>
 article {
-    padding: 0 250px;
+    margin: 0 auto 200px auto;
+    width: 650px;
 }
 
 hr {
     border: none;
-    border-top: 3px solid var(--color-pink-dark);
+    border-top: 3px solid var(--color-blue-dark);
     margin: var(--spacing-medium) 0;
+}
+
+h1 {
+    font-size: var(--font-large);
+}
+
+img {
+    border: 1px solid var(--color-grey-light-3);
+    max-width: 100%;
+}
+
+.nuxt-content h2 {
+    margin-bottom: var(--spacing-medium);
+    margin-top: var(--spacing-large);
+}
+
+.nuxt-content h3 {
+    margin-bottom: var(--spacing-small);
+    margin-top: var(--spacing-medium);
 }
 
 .nuxt-content p {
@@ -68,9 +88,21 @@ hr {
     margin-bottom: var(--spacing-small);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+    h1 {
+        font-size: var(--font-medium);
+    }
+
+    .nuxt-content h2 {
+        font-size: var(--font-small);
+    }
+
+    .nuxt-content h3 {
+        font-size: var(--font-smaller);
+    }
+
     article {
-        padding: 0;
+        width: 95%;
     }
 }
 </style>

@@ -9,12 +9,12 @@
                     </nuxt-link>
                 </div>
                 <div class="card-body">
-                    <p>{{ formatDate(article.date) }}</p>
-                    <p v-if="article.preview">
+                    <p>{{ formatDate(article.createdAt) }}</p>
+                    <p v-if="article.description">
                         {{
-                            article.preview.length > previewLength
-                                ? article.preview.substring(0, previewLength) + '...'
-                                : article.preview
+                            article.description.length > descriptionLength
+                                ? article.description.substring(0, descriptionLength) + '...'
+                                : article.description
                         }}
                     </p>
                     {{ article.slug }}
@@ -41,7 +41,7 @@ import GoBackBar from '../../components/GoBackBar.vue'
 export default {
     data() {
         return {
-            previewLength: 120,
+            descriptionLength: 120,
         }
     },
     async asyncData({ $content }) {
