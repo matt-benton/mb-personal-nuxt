@@ -1,5 +1,5 @@
 <template>
-    <div class="section-container">
+    <div>
         <go-back-bar url="/" text="Back to mattbenton.io" />
         <div class="blog-card-container">
             <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
@@ -40,7 +40,7 @@ import GoBackBar from '../../components/GoBackBar.vue'
 export default {
     data() {
         return {
-            descriptionLength: 300,
+            descriptionLength: 240,
         }
     },
     async asyncData({ $content }) {
@@ -130,8 +130,8 @@ svg {
 }
 
 @media (max-width: 768px) {
-    .blog-card-container {
-        grid-template-columns: 1fr;
+    .blog-preview-card {
+        width: 95%;
     }
 }
 </style>
