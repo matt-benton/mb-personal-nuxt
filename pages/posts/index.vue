@@ -11,11 +11,7 @@
                 <div class="card-body">
                     <p>{{ formatDate(article.createdAt) }}</p>
                     <p v-if="article.description">
-                        {{
-                            article.description.length > descriptionLength
-                                ? article.description.substring(0, descriptionLength) + '...'
-                                : article.description
-                        }}
+                        {{ article.description }}
                     </p>
                 </div>
                 <div class="card-footer">
@@ -38,11 +34,6 @@ import { format } from 'date-fns'
 import GoBackBar from '../../components/GoBackBar.vue'
 
 export default {
-    data() {
-        return {
-            descriptionLength: 240,
-        }
-    },
     async asyncData({ $content }) {
         const articles = await $content('articles').fetch()
 
@@ -102,7 +93,6 @@ export default {
 
 .card-body {
     padding: var(--spacing-large);
-    height: 13rem;
 }
 
 .card-footer {
