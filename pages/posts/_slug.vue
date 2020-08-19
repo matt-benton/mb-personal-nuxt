@@ -1,6 +1,6 @@
 <template>
     <div class="section-container">
-        <go-back-bar url="/posts" text="Back to Posts" />
+        <blog-nav />
         <article>
             <hr />
             <div>
@@ -14,7 +14,7 @@
 
 <script>
 import { format } from 'date-fns'
-import GoBackBar from '../../components/GoBackBar.vue'
+import BlogNav from '../../components/BlogNav.vue'
 
 export default {
     async asyncData({ $content, params }) {
@@ -34,7 +34,7 @@ export default {
         },
     },
     components: {
-        'go-back-bar': GoBackBar,
+        'blog-nav': BlogNav,
     },
 }
 </script>

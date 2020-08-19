@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <go-back-bar url="/" text="Back to mattbenton.io" />
+    <div class="section-container">
+        <blog-nav />
         <div class="blog-card-container">
             <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
                 <div class="card-header">
@@ -31,7 +31,7 @@
 
 <script>
 import { format } from 'date-fns'
-import GoBackBar from '../../components/GoBackBar.vue'
+import BlogNav from '../../components/BlogNav.vue'
 
 export default {
     async asyncData({ $content }) {
@@ -47,7 +47,7 @@ export default {
         },
     },
     components: {
-        'go-back-bar': GoBackBar,
+        'blog-nav': BlogNav,
     },
 }
 </script>
