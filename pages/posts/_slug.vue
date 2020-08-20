@@ -7,6 +7,7 @@
                 <h1 class="title">{{ article.title }}</h1>
                 <h5 class="date-text">{{ formatDate(article.createdAt) }}</h5>
                 <nuxt-content :document="article"></nuxt-content>
+                <prev-next :prev="prev" :next="next" />
             </div>
         </article>
     </div>
@@ -15,17 +16,22 @@
 <script>
 import { format } from 'date-fns'
 import BlogNav from '../../components/BlogNav.vue'
+import PrevNext from '../../components/PrevNext.vue'
 
 export default {
     async asyncData({ $content, params }) {
-        const articles = await $content('articles')
-            .where({ slug: params.slug.substring(1) })
-            .fetch()
+        const article = await $content('articles', params.slug).fetch()
 
-        const article = articles[0]
+        const [prev, next] = await $content('articles')
+            .only(['title', 'slug'])
+            .sortBy('createdAt', 'asc')
+            .surround(params.slug)
+            .fetch()
 
         return {
             article,
+            prev,
+            next,
         }
     },
     methods: {
@@ -35,13 +41,14 @@ export default {
     },
     components: {
         'blog-nav': BlogNav,
+        'prev-next': PrevNext,
     },
 }
 </script>
 
 <style scoped>
 article {
-    margin: 0 auto 200px auto;
+    margin: 0 auto 100px auto;
     width: 650px;
 }
 

@@ -4,7 +4,7 @@
         <div class="blog-card-container">
             <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
                 <div class="card-header">
-                    <nuxt-link :to="`/posts/_${article.slug}`">
+                    <nuxt-link :to="`/posts/${article.slug}`">
                         <h2>{{ article.title }}</h2>
                     </nuxt-link>
                 </div>
