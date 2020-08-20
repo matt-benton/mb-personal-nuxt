@@ -1,8 +1,5 @@
 .editorconfig
 
-# these are test blog posts, don't commit them
-content/articles/*
-
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
