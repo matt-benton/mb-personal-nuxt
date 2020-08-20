@@ -1,9 +1,9 @@
 ---
 title: Tips for Becoming a Better Problem Solver
-description: Description
+description: It is widely-accepted knowledge the good developers have to have good problem solving skills. Let's face it - programming is difficult and even the best of us run into problems fairly often.  When you're a programmer, you will be faced with a challenge and it will  be up to you to solve it.  It's important to understand good methods for handling things when you do come across a problem that is giving you a hard time.
 ---
 
-It is widely-accepted knowledge that good developers have to have good problem solving skills. Let's face it - programming is difficult and even the best of us run into problems that we have to solve fairly often. These problems occur because we're trying something new (maybe a library of framework) that we don't understand, or we're building a feature that has conflicting needs and we need to make a decision about what to prioritize, or maybe we are just having to untangle some messy code that we didn't write (because we never write messy code of course). The point is, the landscape is complicated when you're a programmer. Sometimes (a lot of times), you will be faced with a challenge and it will be up to you to solve it. It's important to understand good methods for handling things when you do come across something that is giving you a hard time.
+It is widely-accepted knowledge that good developers have to have good problem solving skills. Let's face it - programming is difficult and even the best of us run into problems fairly often. These problems occur because we're trying something new (maybe a library of framework) that we don't understand, or we're building a feature that has conflicting needs and we need to make a decision about what to prioritize. Maybe we are just having to untangle some messy code that we didn't write (because we never write messy code of course). The point is the landscape is complicated when you're a programmer. Sometimes (a lot of times), you will be faced with a challenge and it will be up to you to solve it. It's important to understand good methods for handling things when you do come across a problem that is giving you a hard time.
 
 ## <a href="#use-a-linter" id="use-a-linter">Use a Linter</a>
 
