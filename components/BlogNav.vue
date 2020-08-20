@@ -8,11 +8,18 @@
 <style scoped>
 ul {
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 ul li {
-    margin-left: var(--spacing-large);
+    width: 120px;
+    margin: 0 var(--spacing-medium);
     padding: var(--spacing-medium) 0;
+    text-align: center;
+}
+
+ul li a:hover {
+    font-weight: 700;
+    color: var(--color-blue-dark);
 }
 </style>

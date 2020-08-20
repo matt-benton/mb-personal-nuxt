@@ -55,7 +55,7 @@ article {
 hr {
     border: none;
     border-top: 3px solid var(--color-blue-dark);
-    margin: var(--spacing-medium) 0;
+    margin-bottom: var(--spacing-medium);
 }
 
 h1 {
