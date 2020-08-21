@@ -1,15 +1,16 @@
 <template>
-    <div class="section-container">
+    <div>
         <blog-nav />
-        <article>
-            <hr />
-            <div>
-                <h1 class="title">{{ article.title }}</h1>
-                <h5 class="date-text">{{ formatDate(article.createdAt) }}</h5>
-                <nuxt-content :document="article"></nuxt-content>
-                <prev-next :prev="prev" :next="next" />
-            </div>
-        </article>
+        <div class="section-container">
+            <article>
+                <div>
+                    <h1 class="title">{{ article.title }}</h1>
+                    <h5 class="date-text">{{ formatDate(article.createdAt) }}</h5>
+                    <nuxt-content :document="article"></nuxt-content>
+                    <prev-next :prev="prev" :next="next" />
+                </div>
+            </article>
+        </div>
     </div>
 </template>
 
@@ -47,15 +48,13 @@ export default {
 </script>
 
 <style scoped>
-article {
-    margin: 0 auto 100px auto;
-    width: 650px;
+.section-container {
+    margin-top: var(--spacing-large);
 }
 
-hr {
-    border: none;
-    border-top: 3px solid var(--color-blue-dark);
-    margin-bottom: var(--spacing-medium);
+article {
+    margin: 0 auto;
+    width: 650px;
 }
 
 h1 {

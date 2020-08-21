@@ -9,6 +9,7 @@
 ul {
     display: flex;
     justify-content: center;
+    background: linear-gradient(to left, var(--color-blue) 10%, 30%, var(--color-blue-dark) 90%);
 }
 
 ul li {
@@ -18,8 +19,11 @@ ul li {
     text-align: center;
 }
 
+ul li a {
+    color: #fff;
+}
+
 ul li a:hover {
     font-weight: 700;
-    color: var(--color-blue-dark);
 }
 </style>

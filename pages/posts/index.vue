@@ -1,37 +1,39 @@
 <template>
-    <div class="section-container">
+    <div>
         <blog-nav />
-        <p>
-            <i>
-                Welcome to my blog. This is where I post helpful articles about web development. The
-                purpose of this blog is to share what I know about JavaScript, CSS, PHP, and other
-                tools in web dev. I aim to explore many different topics as the blog evolves. It is
-                very young right now and I'm still trying things, but I'm excited to see what it
-                turns into. Follow along and find out with me.
-            </i>
-        </p>
-        <div class="blog-card-container">
-            <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
-                <div class="card-header">
-                    <nuxt-link :to="`/posts/${article.slug}`">
-                        <h3>{{ article.title }}</h3>
-                    </nuxt-link>
-                </div>
-                <div class="card-body">
-                    <p>{{ formatDate(article.createdAt) }}</p>
-                    <p v-if="article.description">
-                        {{ article.description }}
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <nuxt-link :to="`/posts/${article.slug}`">
-                        <span>Read More</span>
-                        <svg>
-                            <path
-                                d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
-                            />
-                        </svg>
-                    </nuxt-link>
+        <div class="section-container">
+            <p>
+                <i>
+                    Welcome to my blog. This is where I post helpful articles about web development.
+                    The purpose of this blog is to share what I know about JavaScript, CSS, PHP, and
+                    other tools in web dev. I aim to explore many different topics as the blog
+                    evolves. It is very young right now and I'm still trying things, but I'm excited
+                    to see what it turns into. Follow along and find out with me.
+                </i>
+            </p>
+            <div class="blog-card-container">
+                <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
+                    <div class="card-header">
+                        <nuxt-link :to="`/posts/${article.slug}`">
+                            <h3>{{ article.title }}</h3>
+                        </nuxt-link>
+                    </div>
+                    <div class="card-body">
+                        <p>{{ formatDate(article.createdAt) }}</p>
+                        <p v-if="article.description">
+                            {{ article.description }}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <nuxt-link :to="`/posts/${article.slug}`">
+                            <span>Read More</span>
+                            <svg>
+                                <path
+                                    d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+                                />
+                            </svg>
+                        </nuxt-link>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,6 +64,10 @@ export default {
 </script>
 
 <style scoped>
+.container {
+    margin: ;
+}
+
 p {
     line-height: var(--line-height-smaller);
     margin-bottom: var(--spacing-small);
