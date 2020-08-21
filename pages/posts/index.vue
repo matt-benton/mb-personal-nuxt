@@ -5,7 +5,7 @@
             <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
                 <div class="card-header">
                     <nuxt-link :to="`/posts/${article.slug}`">
-                        <h2>{{ article.title }}</h2>
+                        <h3>{{ article.title }}</h3>
                     </nuxt-link>
                 </div>
                 <div class="card-body">
@@ -15,7 +15,7 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <nuxt-link :to="`/posts/_${article.slug}`">
+                    <nuxt-link :to="`/posts/${article.slug}`">
                         <span>Read More</span>
                         <svg>
                             <path
@@ -53,11 +53,17 @@ export default {
 </script>
 
 <style scoped>
+p {
+    line-height: var(--line-height-smaller);
+    margin-bottom: var(--spacing-small);
+    font-size: var(--font-smaller);
+}
+
 .blog-card-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
-    grid-gap: var(--spacing-medium);
+    grid-gap: var(--spacing-large);
 }
 
 .blog-preview-card {
@@ -65,38 +71,51 @@ export default {
     font-weight: 300;
     border-radius: 3px;
     transition: box-shadow 0.3s, transform 0.3s;
-    width: 650px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.blog-preview-card > * {
+    padding: var(--spacing-medium);
 }
 
 .blog-preview-card:hover {
     box-shadow: 0 5px 5px var(--color-grey-light-5);
-    transform: translateY(-10px);
+    transform: translateY(-2px);
 }
 
 .card-header {
-    height: 9rem;
-    border-radius: 5px 5px 0 0;
-    padding: var(--spacing-large);
+    display: flex;
+    justify-content: center;
 }
 
-.card-header h2 {
+.card-header h3 {
     color: #fff;
 }
 
-.blog-preview-card:nth-of-type(even) .card-header {
+.blog-preview-card:nth-of-type(3n + 1) .card-header {
     background: linear-gradient(to left, var(--color-pink), var(--color-pink-dark));
 }
 
-.blog-preview-card:nth-of-type(odd) .card-header {
+.blog-preview-card:nth-of-type(3n + 2) .card-header {
     background: linear-gradient(to left, var(--color-blue), var(--color-blue-dark));
 }
 
+.blog-preview-card:nth-of-type(3n + 3) .card-header {
+    background: linear-gradient(to left, var(--color-green), var(--color-green-dark));
+}
+
 .card-body {
-    padding: var(--spacing-large);
+    padding-left: var(--spacing-large);
+    padding-right: var(--spacing-large);
+    flex: 3;
 }
 
 .card-footer {
-    padding: var(--spacing-large);
+    display: flex;
+    justify-content: center;
 }
 
 .card-footer a {
@@ -108,20 +127,25 @@ export default {
     margin-right: var(--spacing-small);
 }
 
-p {
-    line-height: var(--line-height-smaller);
-    margin-bottom: var(--spacing-small);
-}
-
 svg {
     height: var(--font-medium);
     width: var(--font-medium);
     fill: var(--color-grey-dark-5);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .blog-card-container {
+        grid-template-columns: 1fr;
+    }
+
     .blog-preview-card {
         width: 95%;
+    }
+}
+
+@media (max-width: 640px) {
+    .card-body {
+        padding: var(--spacing-medium);
     }
 }
 </style>
