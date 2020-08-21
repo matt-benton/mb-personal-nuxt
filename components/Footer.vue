@@ -5,7 +5,7 @@
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="contact-line">
-                mattbenton10@gmail.com
+                mattbenton@hey.com
             </span>
         </div>
         <div class="footer-row social-row">

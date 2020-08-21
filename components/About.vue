@@ -38,8 +38,8 @@ export default {}
 }
 
 .about-image {
-    height: 20rem;
-    width: 20rem;
+    height: 22rem;
+    width: 22rem;
     border-radius: 50%;
     float: left;
     shape-outside: circle();

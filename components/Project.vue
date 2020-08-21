@@ -120,7 +120,7 @@ export default {
 .project-text {
     font-size: var(--font-small);
     margin-bottom: var(--spacing-medium);
-    line-height: var(--line-height-small);
+    line-height: var(--line-height-smaller);
 }
 
 .project-links {

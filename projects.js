@@ -1,38 +1,34 @@
 export const projects = [
     {
-        title: 'Bill Force One',
-        subtitle:
-            'A PHP application for monitoring when monthly bills are due and if they have been paid',
+        title: 'Flow Bill Tracking',
+        subtitle: 'A web app for tracking monthly and annually recurring bills',
         descriptionParagraphs: [
-            "I built this application to help me know how much money I was spending each month on recurring bills. It also helps me keep track of what is still due when I'm in the middle of the month. For instance, if it's the 21st of the month and I still have bills due, but I'm not sure how much money I have available to spend versus how much to reserve for bills, I can use Bill Force One to show me exactly how much I still owe for the month. Another added benefit is to simply keep up with due dates as well as whether a bill has autorecurring payments set up or not.",
-            'In May of 2020 I wrote a second version of this app.  The new version is a Vue single page app that uses GraphQL and Apollo to query data.  The API was written in PHP but this version relies much more on JavaScript than the original.',
+            'Flow Bill Tracking is a web application to help people keep up with their bills. Users can store all of their recurring expenses and track if they have been paid yet or not.  In addition, Flow helps keep up with the total amount of spending from month to month.  It also tracks how much is still owed after some bills have been paid.',
+            'Users of Flow should find they have a better understanding of their money flow, from due dates to amounts to whether or not a bill is automatically deducted from their bank account.',
+            'I built Flow using Laravel and Vue.  I designed it and wrote the CSS myself.',
         ],
         links: [
             {
-                url: 'https://github.com/matt-benton/bill-force-one',
-                text: 'View on Github',
-            },
-            {
-                url: 'https://github.com/matt-benton/bill-force-one-spa',
-                text: 'View SPA Version',
+                url: 'https://flowbilltracking.com',
+                text: 'Visit Site',
             },
         ],
         images: [
             {
-                src: '/img/projects/bill-force-one/bill-force-one.png',
-                cloudinaryPublicId: 'mb-personal/bill-force-one-lg_lyzc4f',
+                src: '/img/projects/flow-bill-tracking/flow_bill_tracking_bills.png',
+                cloudinaryPublicId: 'mb-personal/flow_bill_tracking_bills',
             },
             {
-                src: '/img/projects/bill-force-one/bill-force-one-mobile.jpeg',
-                cloudinaryPublicId: 'mb-personal/bill-force-one-mobile_byojed',
+                src: '/img/projects/flow-bill-tracking/flow_bill_tracking_bills_dark.png',
+                cloudinaryPublicId: 'mb-personal/flow_bill_tracking_bills_dark_n4l1pj.png',
             },
             {
-                src: '/img/projects/bill-force-one/bill-force-one-landing.png',
-                cloudinaryPublicId: 'mb-personal/bill-force-one-landing-lg_bg11x8',
+                src: '/img/projects/flow-bill-tracking/flow_bill_tracking_edit.png',
+                cloudinaryPublicId: 'mb-personal/flow_bill_tracking_edit_ds8maa.png',
             },
             {
-                src: '/img/projects/bill-force-one/bill-force-one-edit.png',
-                cloudinaryPublicId: 'mb-personal/bill-force-one-edit-lg_adea08',
+                src: '/img/projects/flow-bill-tracking/flow_bill_tracking_mobile.png',
+                cloudinaryPublicId: 'mb-personal/flow_bill_tracking_mobile_z4irjz.png',
             },
         ],
     },
@@ -41,7 +37,6 @@ export const projects = [
         subtitle: 'A PHP application for tracking student grades and displaying NCAA eligibility',
         descriptionParagraphs: [
             'The Hi.Ed Student Portal was built starting in 2016 for Walker Enterprises as an application for tracking student grade progress and NCAA eligibility. It has interfaces for school system administrators, principals, and teachers to input and view student grades. For students and parents, a transcript is generated indicating student progress toward graduation and NCAA eligibility. Other features of this application include a marketplace for teachers to list and trade school supplies as well as a Virtual Life game that helps students manage bills and expenses.',
-            'Bill Force One is mostly written in PHP with a little bit of JavaScript. Instead of using a CSS framework I designed the site and wrote all of the CSS myself.',
         ],
         links: [
             {
