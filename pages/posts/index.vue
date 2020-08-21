@@ -1,6 +1,12 @@
 <template>
     <div class="section-container">
         <blog-nav />
+        <p>
+            Welcome to my blog. This is where I post helpful articles about web development. The
+            purpose of this blog is to share what I know about JavaScript, CSS, PHP, and other tools
+            in web dev. I also like to write about the healthy habits of being a developer such as
+            learning, problem solving, and staying focused.
+        </p>
         <div class="blog-card-container">
             <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
                 <div class="card-header">
@@ -57,6 +63,14 @@ p {
     line-height: var(--line-height-smaller);
     margin-bottom: var(--spacing-small);
     font-size: var(--font-smaller);
+    max-width: 600px;
+}
+
+.section-container > p {
+    margin: var(--spacing-large) auto;
+    font-size: var(--font-small);
+    color: var(--color-grey-dark-4);
+    padding: var(--spacing-medium);
 }
 
 .blog-card-container {
