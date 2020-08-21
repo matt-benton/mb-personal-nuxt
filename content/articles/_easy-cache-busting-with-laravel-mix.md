@@ -1,6 +1,7 @@
 ---
 title: Easy Cache Busting with Laravel Mix
 description: Web browsers cache files downloaded for websites to optimize performance. This is great for using the web but it means updated files may be blocked from reaching users. We can use Laravel Mix to easily bust the cache and force the browser to download the most current versions of our assets.
+createdAt: '2020-08-19'
 ---
 
 Recently I ran into a troubling issue with a project I have in production. After I pushed some updates to the site's CSS files, I visited the url to make sure everything still looked ok. I noticed that even though the HTML was properly updated with my new code, my CSS styles were still outdated.

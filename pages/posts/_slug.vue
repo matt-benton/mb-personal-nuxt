@@ -47,7 +47,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+/* IMPORTANT: NUXT WILL NOT ALLOW THESE TO BE SCOPED */
 .section-container {
     margin-top: var(--spacing-large);
 }
