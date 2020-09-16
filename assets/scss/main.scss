@@ -1,14 +1,16 @@
-@import "mixins";
-@import "layouts";
-@import "utilities";
-@import "header";
-@import "services";
-@import "modals";
-@import "variables";
-@import "values";
-@import "mobile-nav";
+@import 'mixins';
+@import 'layouts';
+@import 'utilities';
+@import 'header';
+@import 'services';
+@import 'modals';
+@import 'variables';
+@import 'values';
+@import 'mobile-nav';
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;

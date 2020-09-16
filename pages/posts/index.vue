@@ -69,9 +69,10 @@ export default {
 }
 
 p {
-    line-height: var(--line-height-smaller);
+    line-height: 1.8;
     margin-bottom: var(--spacing-small);
     font-size: var(--font-smaller);
+    font-family: var(--font-secondary);
     max-width: 600px;
 }
 

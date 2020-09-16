@@ -78,12 +78,16 @@ img {
 }
 
 .nuxt-content p {
-    font-family: 'Lato', sans-serif;
+    font-family: var(--font-secondary);
     font-weight: 300;
     color: var(--color-grey-dark-2);
     margin-bottom: var(--spacing-medium);
-    line-height: var(--line-height-smaller);
+    line-height: 1.8;
     font-size: var(--font-small);
+}
+
+.nuxt-content p a {
+    color: var(--color-blue-dark);
 }
 
 .date-text {
