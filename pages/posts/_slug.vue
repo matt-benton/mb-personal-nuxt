@@ -49,22 +49,10 @@ export default {
 
 <style>
 /* IMPORTANT: NUXT WILL NOT ALLOW THESE TO BE SCOPED */
-.section-container {
-    margin-top: var(--spacing-large);
-}
 
 article {
     margin: 0 auto;
     width: 650px;
-}
-
-h1 {
-    font-size: var(--font-large);
-}
-
-img {
-    border: 1px solid var(--color-grey-light-3);
-    max-width: 100%;
 }
 
 .nuxt-content h2 {

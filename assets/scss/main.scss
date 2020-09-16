@@ -33,6 +33,15 @@ ul {
     list-style-type: none;
 }
 
+h1 {
+    font-size: var(--font-large);
+}
+
+img {
+    border: 1px solid var(--color-grey-light-3);
+    max-width: 100%;
+}
+
 a {
     color: var(--color-grey-dark-2);
     text-decoration: none;

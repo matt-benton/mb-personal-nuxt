@@ -37,12 +37,14 @@
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import { format } from 'date-fns'
 import BlogNav from '../../components/BlogNav.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
     async asyncData({ $content }) {
@@ -61,6 +63,7 @@ export default {
     },
     components: {
         'blog-nav': BlogNav,
+        Footer,
     },
 }
 </script>
@@ -71,6 +74,11 @@ p {
     margin-bottom: var(--spacing-small);
     font-size: var(--font-smaller);
     max-width: 600px;
+}
+
+.section-container {
+    padding-top: var(--spacing-small);
+    padding-bottom: var(--spacing-large);
 }
 
 .section-container > p {
