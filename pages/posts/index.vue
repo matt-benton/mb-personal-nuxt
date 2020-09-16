@@ -64,15 +64,10 @@ export default {
 </script>
 
 <style scoped>
-.container {
-    margin: ;
-}
-
 p {
-    line-height: 1.8;
+    line-height: var(--line-height-smaller);
     margin-bottom: var(--spacing-small);
     font-size: var(--font-smaller);
-    font-family: var(--font-secondary);
     max-width: 600px;
 }
 
