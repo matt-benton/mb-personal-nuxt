@@ -1,10 +1,10 @@
 ---
-title: Tips For Writing Better If Statements
+title: Tips For Writing Better "If" Statements
 description: ''
 createdAt: '2020-09-16'
 ---
 
-If statements are programming 101. We don't get very far without them. If statements help us check the state of our software and then do something based on the result. **If** our state is equal to _this_, do _this_, **else** do _something different_.
+"If" statements are programming 101. We don't get very far without them. They help us check the state of our software and then do something based on the result. **If** our state is equal to _this_, do _this_, **else** do _something different_.
 
 ```javascript
 if (someCondition === true) {
@@ -14,7 +14,7 @@ if (someCondition === true) {
 }
 ```
 
-But if statements can get out of hand sometimes. Imagine having to read something like this and figure out what it's supposed to be doing.
+But "if" statements can get out of hand sometimes. Imagine having to read something like this and figure out what it's supposed to be doing.
 
 ```javascript
 if (
@@ -32,13 +32,13 @@ if (
 }
 ```
 
-You would have to use a significant amount of time and brainpower to even figure out what is going on here. Even though this would be working code that solves a problem, it's really hard to read and understand. Other developers who didn't write this code would have a difficult time with it. Even someone who wrote this code and had to look at it again a few weeks later wouldn't understand it either.
+You would have to use a significant amount of time and brainpower to figure out what is going on here. Even though this would be working code, it's really hard to read and understand. Other developers who didn't write this code would have a difficult time with it. Even someone who wrote this code and had to look at it again a few weeks later wouldn't understand it right away.
 
-Most of the time we don't try to avoid writing if statements like this. But when things get complicated it just sort of happens, especially if you don't know what you can do to make it better. So what I am going to do here is offer some tips to improve complicated if statements to make them easier to understand.
+Most of the time we don't mean to write "if" statements like this. But when things get complicated it just sort of happens, especially if you don't know what you can do to make it better. So I am going to offer some tips to improve complicated if statements to make them easier to read understand. These tips will help you write cleaner, more readable "if" statements that will be easier to understand and leave you with less bugs in your applications.
 
 ## <a href="#avoid-nested-if-statements" id="avoid-nested-if-statements">Avoid Nested If Statements</a>
 
-Nested if statements are sometimes necessary, but they add extra lines and indentions to our code. Consider the following example where we have a function for checking if a pizza is vegetarian. First we are checking to see if the pizza has any toppings, then we are checking to see if those toppings include sausage. We are performing these steps separately in two different steps, nested inside of each other.
+Nested if statements are sometimes necessary, but they add extra lines and indentations to our code. Consider the following example where we have a function for checking if a pizza is vegetarian. First we are checking to see if the pizza has any toppings, then we are checking to see if those toppings include sausage. We are performing these checks separately in two different steps, nested inside of each other.
 
 ```javascript
 const isVegetarian = function(pizza) {
@@ -52,7 +52,7 @@ const isVegetarian = function(pizza) {
 }
 ```
 
-We can make this a lot cleaner by adding both conditions to the parent if statement and adding `&&` in between them. Now we have reduced the number of lines of code in our function from seven to five. We also don't have to try to hold the meaning of the first if statement in our brain while we are reading the second one.
+We can make this cleaner by adding both conditions to the parent "if" statement and adding `&&` in between them. Now we have reduced the number of lines of code inside our function from seven to five. We also don't have to try to hold the meaning of the first if statement in our brain while we are reading the second one.
 
 ```javascript
 const isVegetarian = function(pizza) {
@@ -68,7 +68,7 @@ This makes it much easier to read this function, understand what it's doing, and
 
 ## <a href="#avoid-using-else" id="avoid-using-else">Avoid Using Else</a>
 
-Just because we can use `else` with our if statement, that doesn't mean it's always necessary. Many times just an if with no else will do.
+Just because we can use `else` with our "if" statement, that doesn't mean it's always necessary. Many times just an "if" with no "else" will do.
 
 In the following example, we are calculating the cost of the toppings on the pizza. If the customer adds more than two toppings, we charge 50 cents for each topping. If the customer does not add more than two toppings, we don't charge for toppings.
 
@@ -92,7 +92,7 @@ if (pizza.toppings.length > 2) {
 }
 ```
 
-This code does the exact same thing without using the `else` statement. The `toppingsCost` variable is set to 0 and it remains 0 unless the amount of toppings are more than two. Only if the amount of toppings is greater than 2 is the `toppingsCost` variable changed.
+This code does the exact same thing without using the `else` statement. The `toppingsCost` variable is set to 0 and it remains 0 unless the amount of toppings is more than two. Only if the amount of toppings is greater than 2 is the `toppingsCost` variable changed.
 
 ## <a href="#think-positive" id="think-positive">Think Positive</a>
 
@@ -130,7 +130,7 @@ if (hasSides(order)) {
 }
 ```
 
-Next, in our if statement, we look for a positive result by checking if the number of drinks and breadsticks are greater than 0.
+Next, in our if statement, we look for a positive result by checking if the number of drinks and breadsticks is greater than 0.
 
 ## <a href="#extract-a-complicated-conditional-into-its-own-function" id="extract-a-complicated-conditional-into-its-own-function">Extract a Complicated Conditional Into Its Own Function
 
@@ -147,7 +147,7 @@ if (
 }
 ```
 
-To make this more readable, we can make a new function called `isMondaySpecial`. Then we can copy the conditional and paste it into our function, which will return true if the order meets the criteria. Now in our if statement we can call `isMondaySpecial` and know exactly what it is checking because of the descriptive function name. `isMondaySpecial` can also be reused in other parts of our application.
+To make this more readable, we can make a new function called `isMondaySpecial`. Then we can copy the conditional and paste it into our function, which will return true if the order meets the criteria. Now in our "if" statement we can call `isMondaySpecial` and know exactly what it is checking because of the descriptive function name. `isMondaySpecial` can also be reused in other parts of our application.
 
 ```javascript
 const isMondaySpecial = function(order) {
