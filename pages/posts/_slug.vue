@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="post-bg">
         <blog-nav />
         <div class="section-container">
             <article>
@@ -49,15 +49,35 @@ export default {
 
 <style>
 /* IMPORTANT: NUXT WILL NOT ALLOW THESE TO BE SCOPED */
+.post-bg {
+    background-color: var(--color-grey-dark-2);
+}
 
 article {
     margin: 0 auto;
-    width: 650px;
+    width: 900px;
+    background-color: var(--color-grey-dark-3);
+    padding: var(--spacing-largest);
+}
+
+.title {
+    margin-bottom: var(--spacing-small);
+    color: var(--color-blue);
+}
+
+.date-text {
+    font-weight: 300;
+    margin-bottom: var(--spacing-medium);
+    color: var(--color-blue);
 }
 
 .nuxt-content h2 {
     margin-bottom: var(--spacing-medium);
     margin-top: var(--spacing-large);
+}
+
+.nuxt-content h2 a {
+    color: var(--color-blue);
 }
 
 .nuxt-content h3 {
@@ -68,23 +88,14 @@ article {
 .nuxt-content p {
     font-family: var(--font-secondary);
     font-weight: 300;
-    color: var(--color-grey-dark-2);
+    color: #fff;
     margin-bottom: var(--spacing-medium);
     line-height: 1.8;
     font-size: var(--font-small);
 }
 
 .nuxt-content p a {
-    color: var(--color-blue-dark);
-}
-
-.date-text {
-    font-weight: 300;
-    margin-bottom: var(--spacing-medium);
-}
-
-.title {
-    margin-bottom: var(--spacing-small);
+    color: var(--color-blue);
 }
 
 @media (max-width: 768px) {

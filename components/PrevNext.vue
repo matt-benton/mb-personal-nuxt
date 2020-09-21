@@ -31,9 +31,9 @@ div {
 
 a {
     font-size: var(--font-extra-small);
-    color: var(--color-blue-dark);
-    background-color: var(--color-grey-light-1);
-    border-radius: 10px;
+    color: var(--color-blue);
+    background-color: var(--color-grey-dark-4);
+    border-radius: 15px;
     padding: var(--spacing-small);
 }
 

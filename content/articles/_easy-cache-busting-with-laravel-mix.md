@@ -10,13 +10,13 @@ How could this be? Alarmed, I opened the devtools to see if any of the changes I
 
 As a matter of fact, I was. When I visited my website, assets from the site had already been stored by the browser because I had visited the site before. Instead of grabbing the new, updated assets, my browser simply reused the ones that it already had. This is called caching, and it is an important browser behavior for optimizing performance. But it means that when developers make updates, they need to "bust" the cache of users who access their site.
 
-## What is caching and why do browsers do it?
+## <a href="#what-is-caching-and-why-do-browsers-do-it" id="what-is-caching-and-why-do-browsers-do-it">What is caching and why do browsers do it?</a>
 
 Browsers store previously fetched resources (like CSS and JavaScript files) so they don't have to be retrieved every time a user visits a site or navigates to a different page within the site. This is great because it means webpages load faster and are more responsive. It also saves data because assets don't have to be re-downloaded every time a user visits a site or navigates to a page within the site.
 
 For web developers though, it means we have to do one extra thing and make sure the browser knows that it needs to replace the outdated cached resources with new ones.
 
-## Laravel Mix and Cache Busting
+## <a href="#laravel-mix-and-cache-busting" id="laravel-mix-and-cache-busting">Laravel Mix and Cache Busting</a>
 
 If you use Laravel Mix, this is really easy. You can add cache busting by putting the following code in your `webpack.mix.js` file.
 

@@ -4,17 +4,17 @@ description: The CSS box model determines how HTML elements are laid out on a pa
 createdAt: '2020-08-14'
 ---
 
-## What is it? Why is it important?
+## <a href="#what-is-it-why-is-it-important" id="what-is-it-why-is-it-important">What is it? Why is it important?</a>
 
 The CSS box model determines how HTML elements are laid out on a page. Any displayable element you can think of - whether it's a `p`, `div`, `input`, `body`, or `img` - they all adhere to the box model. For this reason the box model is a fundamental part of CSS. Understanding it will help you place HTML elements more precisely. It will also make debugging a lot easier, especially when the placement of your elements doesn't look right.
 
-## What is the box model composed of?
+## <a href="#what-is-the-box-model-composed-of" id="what-is-the-box-model-composed-of">What is the box model composed of?</a>
 
 The box model consists of four parts - content, padding, border, and margin. Manipulating these properties in your CSS will achieve different effects, so it's important to understand the difference between each of them.
 
 ![Image](/img/blog/box-model.png)
 
-### Content
+### <a href="#content" id="content">Content</a>
 
 To see what manipulating each part of the box model does, we will use a very familiar element - the button. Here we have a simple button with some text inside of it. We will start by setting all of its box properties to 0.
 
@@ -46,7 +46,7 @@ button {
 
 We remove the margin, padding, and border which leaves us with the content. This is the main part of an element. It could be text, an image, an icon, or in most cases another element. In this case the content is our button text. **Note that the content is not the button itself**. The button is actually our box.
 
-### Padding
+### <a href="#padding" id="padding">Padding</a>
 
 Now that we have our content, let's add some padding.
 
@@ -75,7 +75,7 @@ button {
 
 Padding controls the space immediately around the content. It's the area **inside** of the border. Increasing the padding will not actually increase the distance between one box and another - that's what margin is for. What it will do is give more space inside of the box between the content and the border.
 
-### Border
+### <a href="#border" id="border">Border</a>
 
 Right now we don't have a border, so why don't we add one?
 
@@ -106,7 +106,7 @@ button {
 
 The border can be used to add extra space to the box, but it is not necessarily used that way. Padding and margin should be used to space out a box; the border is really just the outline. We do get some decorative options with the border as we can change not only the width of the border but also the color and style. By adding a border to our button we give it more definition from the area around it, which makes it stand out more. Here I also added a `border-radius: 5px` to round out the corners a little bit.
 
-### Margin
+### <a href="#margin" id="margin">Margin</a>
 
 For margin we are going to have two buttons.
 
@@ -155,7 +155,7 @@ button {
 
 By increasing the margin we have now added space on the **outside** of our box. Adding 3px to the left and right of each button means we now have 6px of space between the two buttons, **because each button is its own box**. So remember that margin controls space on the outside of the element and padding controls space on the inside.
 
-## The Plot Thickens... What is box-sizing?
+## <a href="#what-is-box-sizing" id="what-is-box-sizing">The Plot Thickens... What is box-sizing?</a>
 
 Below we have two standard div elements that each represent a card. They have been assigned the exact same height, width, padding, and border sizes.
 
