@@ -85,6 +85,10 @@ article {
     margin-top: var(--spacing-medium);
 }
 
+.nuxt-content h3 a {
+    color: var(--color-blue);
+}
+
 .nuxt-content p {
     font-family: var(--font-secondary);
     font-weight: 300;
