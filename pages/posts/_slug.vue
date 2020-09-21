@@ -1,7 +1,7 @@
 <template>
     <div class="post-bg">
         <blog-nav />
-        <div class="section-container">
+        <div>
             <article>
                 <div>
                     <h1 class="title">{{ article.title }}</h1>
@@ -106,9 +106,23 @@ article {
     font-family: 'Roberto Mono', monospace;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    article {
+        width: 90%;
+    }
+
+    .nuxt-content p {
+        font-size: var(--font-smaller);
+    }
+
     h1 {
         font-size: var(--font-medium);
+    }
+}
+
+@media (max-width: 768px) {
+    .post-bg {
+        width: 100%;
     }
 
     .nuxt-content h2 {
@@ -120,7 +134,15 @@ article {
     }
 
     article {
-        width: 95%;
+        margin: 0 auto;
+        padding: var(--spacing-large) var(--spacing-small);
+    }
+}
+
+@media (max-width: 640px) {
+    article {
+        width: 100%;
+        margin: 0;
     }
 }
 </style>
