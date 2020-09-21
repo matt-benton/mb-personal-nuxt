@@ -1,6 +1,6 @@
 ---
 title: Tips For Writing Better "If" Statements
-description: ''
+description: If statements are programming 101. We don't get very far without them. They help us check the state of our software and then do something based on the result. I am going to offer some tips to improve complicated "if" statements to make them easier to read. These tips will help you write cleaner, more readable "if" statements that will be easier to understand and leave you with less bugs in your applications.
 createdAt: '2020-09-16'
 ---
 
