@@ -1,15 +1,13 @@
 <template>
-    <div>
+    <div class="component-body">
         <blog-nav />
         <div class="section-container">
             <p>
-                <i>
-                    Welcome to my blog. This is where I post helpful articles about web development.
-                    The purpose of this blog is to share what I know about JavaScript, CSS, PHP, and
-                    other tools in web dev. I aim to explore many different topics as the blog
-                    evolves. It is very young right now and I'm still trying things, but I'm excited
-                    to see what it turns into. Follow along and find out with me.
-                </i>
+                Welcome to my blog. This is where I post helpful articles about web development. The
+                purpose of this blog is to share what I know about JavaScript, CSS, PHP, and other
+                tools in web dev. I aim to explore many different topics as the blog evolves. It is
+                very young right now and I'm still trying things, but I'm excited to see what it
+                turns into. Follow along and find out with me.
             </p>
             <div class="blog-card-container">
                 <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
@@ -69,10 +67,13 @@ export default {
 </script>
 
 <style scoped>
+.component-body {
+    background-color: var(--color-grey-dark-2);
+}
+
 p {
     line-height: var(--line-height-smaller);
     margin-bottom: var(--spacing-small);
-    font-size: var(--font-smaller);
     max-width: 600px;
 }
 
@@ -84,8 +85,9 @@ p {
 .section-container > p {
     margin: var(--spacing-large) auto;
     font-size: var(--font-small);
-    color: var(--color-grey-dark-4);
-    padding: var(--spacing-medium);
+    color: var(--color-grey-light-1);
+    padding: var(--spacing-large);
+    background-color: var(--color-grey-dark-3);
 }
 
 .blog-card-container {
@@ -96,23 +98,16 @@ p {
 }
 
 .blog-preview-card {
-    background-color: var(--color-grey-light-1);
     font-weight: 300;
-    border-radius: 3px;
-    transition: box-shadow 0.3s, transform 0.3s;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
     overflow: hidden;
+    background-color: var(--color-grey-dark-3);
+    color: #fff;
 }
 
 .blog-preview-card > * {
     padding: var(--spacing-medium);
-}
-
-.blog-preview-card:hover {
-    box-shadow: 0 5px 5px var(--color-grey-light-5);
-    transform: translateY(-2px);
 }
 
 .card-header {
@@ -150,6 +145,7 @@ p {
 .card-footer a {
     display: flex;
     align-items: center;
+    color: var(--color-blue);
 }
 
 .card-footer a span {
@@ -159,10 +155,15 @@ p {
 svg {
     height: var(--font-medium);
     width: var(--font-medium);
-    fill: var(--color-grey-dark-5);
+    fill: var(--color-blue);
 }
 
 @media (max-width: 1024px) {
+    .section-container {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
     .blog-card-container {
         grid-template-columns: 1fr;
     }
