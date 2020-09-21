@@ -31,6 +31,11 @@ export default {
                 rel: 'stylesheet',
             },
             {
+                href:
+                    'https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap',
+                rel: 'stylesheet',
+            },
+            {
                 rel: 'apple-touch-icon',
                 sizes: '180x180',
                 href: '/img/favicons/apple-touch-icon.png',
@@ -80,5 +85,12 @@ export default {
          ** You can extend webpack config here
          */
         extend(config, ctx) {},
+    },
+    content: {
+        markdown: {
+            prism: {
+                theme: 'prism-themes/themes/prism-nord.css',
+            },
+        },
     },
 }

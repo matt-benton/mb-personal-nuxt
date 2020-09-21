@@ -98,6 +98,10 @@ article {
     color: var(--color-blue);
 }
 
+.nuxt-content-highlight span {
+    font-family: 'Roberto Mono', monospace;
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: var(--font-medium);
