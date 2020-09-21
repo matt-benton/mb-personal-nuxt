@@ -167,10 +167,6 @@ svg {
     .blog-card-container {
         grid-template-columns: 1fr;
     }
-
-    .blog-preview-card {
-        width: 95%;
-    }
 }
 
 @media (max-width: 640px) {
