@@ -32,13 +32,13 @@ if (
 }
 ```
 
-You would have to use a significant amount of time and brainpower to figure out what is going on here. Even though this would be working code, it's really hard to read and understand. Other developers who didn't write this code would have a difficult time with it. Even someone who wrote this code and had to look at it again a few weeks later wouldn't understand it right away.
+You would have to use a significant amount of time and brainpower to figure out what is going on here. Even though this would be working code, it's really hard to read and understand. Other developers who didn't write this code would have a difficult time with it. Even someone who wrote this code and had to read it again a few weeks later wouldn't understand it right away.
 
-Most of the time we don't mean to write "if" statements like this. But when things get complicated it just sort of happens, especially if you don't know what you can do to make it better. So I am going to offer some tips to improve complicated if statements to make them easier to read understand. These tips will help you write cleaner, more readable "if" statements that will be easier to understand and leave you with less bugs in your applications.
+Most of the time we don't mean to write "if" statements like this. But when things get complicated it just sort of happens, especially if we don't know what we can do to make it better. So I am going to offer some tips to improve complicated "if" statements to make them easier to read and understand. These tips will help you write cleaner, more readable "if" statements that will be easier to understand and leave you with less bugs in your applications.
 
 ## <a href="#avoid-nested-if-statements" id="avoid-nested-if-statements">Avoid Nested If Statements</a>
 
-Nested if statements are sometimes necessary, but they add extra lines and indentations to our code. Consider the following example where we have a function for checking if a pizza is vegetarian. First we are checking to see if the pizza has any toppings, then we are checking to see if those toppings include sausage. We are performing these checks separately in two different steps, nested inside of each other.
+Nested if statements are sometimes necessary but they add extra lines and indentations to our code. Consider the following example where we have a function for checking if a pizza is vegetarian. First we are checking to see if the pizza has any toppings, then we are checking to see if those toppings include sausage. We are performing these checks separately, in two different steps, nested inside of each other.
 
 ```javascript
 const isVegetarian = function(pizza) {
@@ -68,7 +68,7 @@ This makes it much easier to read this function, understand what it's doing, and
 
 ## <a href="#avoid-using-else" id="avoid-using-else">Avoid Using Else</a>
 
-Just because we can use `else` with our "if" statement, that doesn't mean it's always necessary. Many times just an "if" with no "else" will do.
+Just because we can use "else" with our "if" statement, that doesn't mean it's always necessary. Many times just an "if" with no "else" will do.
 
 In the following example, we are calculating the cost of the toppings on the pizza. If the customer adds more than two toppings, we charge 50 cents for each topping. If the customer does not add more than two toppings, we don't charge for toppings.
 
@@ -96,7 +96,7 @@ This code does the exact same thing without using the `else` statement. The `top
 
 ## <a href="#think-positive" id="think-positive">Think Positive</a>
 
-It's much easier to understand the sentence "This is the right way to the beach" than "This isn't the wrong way to the beach." The sentences say pretty much the same thing but the first is more direct and clear in its meaning. Writing if statements is very similar. You can ask if something is true, you can also ask if something is the reverse of true.
+It's much easier to understand the sentence "This is the right way to the beach" than "This isn't the wrong way to the beach." Both sentences say pretty much the same thing but the first is more direct and clear in its meaning. Writing if statements is very similar. You can ask if something is true, you can also ask if something is the reverse of true.
 
 The bang operator (`!`) allows us to take whatever condition we are looking for in our if statement and reverse it. It can be very convenient to throw a bang in there, but it can be confusing as well. In the following example we are trying to determine if a pizza order has no sides. Try reading the if statement outloud.
 
@@ -110,7 +110,7 @@ const hasNoSides = function(order) {
 }
 ```
 
-We have a lot of negatives in this whole function. We are checking for _no_ sides. We are then looking to see if the lengths are _not equal_, and if these conditions are true, we return _false_.
+We have a lot of negatives in this whole function. We are checking for _no_ sides. We are then looking to see if the lengths are _not equal_; and if one of these conditions are true, we return _false_.
 
 It's pretty confusing and since we are flipping the logic constantly it makes it difficult to be sure that the code is actually doing what it is supposed to do.
 
@@ -130,11 +130,11 @@ if (hasSides(order)) {
 }
 ```
 
-Next, in our if statement, we look for a positive result by checking if the number of drinks and breadsticks is greater than 0.
+Next, in our "if" statement, we look for a positive result by checking if the number of drinks and breadsticks is greater than 0. This means that when the "if" statement is true, the result of the function is true, giving the whole function a more consistent meaning.
 
-## <a href="#extract-a-complicated-conditional-into-its-own-function" id="extract-a-complicated-conditional-into-its-own-function">Extract a Complicated Conditional Into Its Own Function
+## <a href="#extract-a-complicated-conditional-into-its-own-function" id="extract-a-complicated-conditional-into-its-own-function">Extract a Complicated Conditional Into Its Own Function</a>
 
-Sometimes we can get into writing some pretty complicated conditional logic in our if statement. In this example we are checking to see if an order meets our Monday Special criteria.
+Sometimes we can get into writing some pretty complicated conditional logic in our "if" statement. In this example we are checking to see if an order meets our Monday Special criteria.
 
 ```javascript
 if (
@@ -166,4 +166,4 @@ if (isMondaySpecial(order)) {
 
 If we were to come back and read this code later we would know exactly what it is doing without having to read all of the code, because the name of the function tells us.
 
-Writing better if statements is a great way to clean up your code and produce better, easier to understand logic. They make it easier for anyone reading your code and reduce the likelihood of bugs. Take the time to write good if statements, in the long-run you'll be happy that you did.
+Writing better "if" statements is a great way to clean up your code and produce better, easier to understand logic. They make it easier for anyone reading your code and reduce the likelihood of bugs. Take the time to write good "if" statements and in the long-run you'll be happy that you did.
