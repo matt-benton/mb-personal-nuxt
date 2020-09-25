@@ -117,10 +117,6 @@ article {
     .nuxt-content p {
         font-size: var(--font-smaller);
     }
-
-    h1 {
-        font-size: var(--font-medium);
-    }
 }
 
 @media (max-width: 768px) {
