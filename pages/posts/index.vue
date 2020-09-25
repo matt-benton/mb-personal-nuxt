@@ -85,6 +85,7 @@ p {
 .section-container > p {
     margin: var(--spacing-large) auto;
     font-size: var(--font-small);
+    font-weight: 300;
     color: var(--color-grey-light-1);
     padding: var(--spacing-large);
     background-color: var(--color-grey-dark-3);
@@ -170,8 +171,17 @@ svg {
 }
 
 @media (max-width: 640px) {
-    .card-body {
+    .blog-preview-card > * {
         padding: var(--spacing-medium);
+    }
+
+    .section-container > p {
+        font-size: var(--font-smaller);
+        padding: var(--spacing-medium);
+    }
+
+    .blog-card-container {
+        grid-gap: var(--spacing-medium);
     }
 }
 </style>
