@@ -137,15 +137,15 @@ article {
     }
 
     article {
-        margin: 0 auto;
-        padding: var(--spacing-large) var(--spacing-small);
+        padding: var(--spacing-large) var(--spacing-larger);
+        width: 100%;
+        margin: 0;
     }
 }
 
 @media (max-width: 640px) {
     article {
-        width: 100%;
-        margin: 0;
+        padding: var(--spacing-large) var(--spacing-small);
     }
 }
 </style>
