@@ -63,6 +63,7 @@ article {
 .title {
     margin-bottom: var(--spacing-small);
     color: var(--color-blue);
+    font-weight: 300;
 }
 
 .date-text {
@@ -74,6 +75,7 @@ article {
 .nuxt-content h2 {
     margin-bottom: var(--spacing-medium);
     margin-top: var(--spacing-large);
+    font-weight: 300;
 }
 
 .nuxt-content h2 a {
@@ -83,6 +85,7 @@ article {
 .nuxt-content h3 {
     margin-bottom: var(--spacing-small);
     margin-top: var(--spacing-medium);
+    font-weight: 300;
 }
 
 .nuxt-content h3 a {
