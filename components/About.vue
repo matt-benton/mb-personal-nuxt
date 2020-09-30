@@ -1,9 +1,9 @@
 <template>
-    <section class="about" id="about">
+    <section id="about">
         <div class="section-container">
             <div class="about-content-container">
-                <img src="/img/matt-benton.jpg" class="about-image" alt="Photo of myself" />
-                <p class="about__container--text">
+                <img src="/img/matt-benton.jpg" alt="Photo of myself" />
+                <p>
                     When I originally finished college I was headed for a career in the field of
                     education as a teacher. I had enthusiasm for learning as well as a passion for
                     crafting experiences that would enhance the knowledge of my students. However
@@ -23,11 +23,11 @@
 export default {}
 </script>
 
-<style>
-.about {
+<style scoped>
+section {
     background: linear-gradient(to right, var(--color-blue), var(--color-blue-dark));
     color: var(--color-grey-light-1);
-    font-size: var(--font-small);
+    font-size: var(--text-base);
     line-height: 2.2rem;
     display: flex;
     justify-content: center;
@@ -37,9 +37,9 @@ export default {}
     padding: 5rem 9rem;
 }
 
-.about-image {
-    height: 22rem;
-    width: 22rem;
+img {
+    height: 26rem;
+    width: 26rem;
     border-radius: 50%;
     float: left;
     shape-outside: circle();
@@ -53,14 +53,14 @@ export default {}
         padding: 0;
     }
 
-    .about-image {
+    img {
         height: 18rem;
         width: 18rem;
     }
 }
 
 @media (max-width: 768px) {
-    .about-image {
+    img {
         height: 10rem;
         width: 10rem;
         margin-left: 0;
@@ -68,7 +68,7 @@ export default {}
 }
 
 @media (max-width: 640px) {
-    .about {
+    section {
         line-height: 1.6rem;
         padding: var(--spacing-large) var(--spacing-medium);
     }

@@ -20,22 +20,15 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1 rem = 10px
-
-    // @include respond(tab-land) {
-    //     font-size: 50%;
-    // }
 }
 
 body {
     font-family: var(--font-default);
+    font-weight: 300;
 }
 
 ul {
     list-style-type: none;
-}
-
-h1 {
-    font-size: var(--font-large);
 }
 
 img {
