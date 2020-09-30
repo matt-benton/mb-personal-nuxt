@@ -2,11 +2,11 @@
     <header class="header">
         <div class="section-container">
             <div class="hero">
-                <h1 class="hero-title">
+                <h1>
                     Hi, my name is
                     <b>Matt Benton</b> and I'm a <b>web developer</b> from Birmingham, Alabama
                 </h1>
-                <h2 class="hero-subtitle">
+                <h2>
                     I create web applications with clean interfaces, intuitive user experiences, and
                     reliability.
                 </h2>
@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .header {
     color: var(--color-grey-dark-1);
     display: grid;
@@ -51,14 +51,15 @@ export default {
     padding: 16% 0;
 }
 
-.hero-title {
-    font-size: var(--font-largest);
+.header h1 {
+    font-size: var(--text-5xl);
     font-weight: 300;
     margin-bottom: var(--spacing-medium);
 }
 
-.hero-subtitle {
-    font-size: var(--font-large);
+.header h2 {
+    font-size: var(--text-3xl);
+    color: var(--text-muted);
     font-weight: 300;
     padding-bottom: var(--spacing-medium);
 }
@@ -66,7 +67,7 @@ export default {
 .btn {
     background-color: var(--color-blue-dark);
     color: white;
-    font-size: 22px;
+    font-size: var(--text-lg);
     padding: 18px 28px;
     border: none;
     cursor: pointer;
@@ -94,12 +95,7 @@ export default {
         padding-right: var(--spacing-small);
     }
 
-    .hero-title {
-        font-size: var(--font-large);
-    }
-
-    .hero-subtitle {
-        font-size: var(--font-medium);
+    .header h2 {
         padding-bottom: var(--spacing-large);
     }
 }
@@ -114,14 +110,11 @@ export default {
         padding-right: var(--spacing-small);
     }
 
-    .hero-title {
-        line-height: 2.8rem;
+    .header h1 {
         margin-bottom: var(--spacing-medium);
-        font-size: var(--font-large);
     }
 
-    .hero-subtitle {
-        font-size: var(--font-medium);
+    .header h2 {
         padding-bottom: var(--spacing-small);
     }
 }
