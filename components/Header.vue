@@ -52,17 +52,17 @@ header {
 }
 
 header h1 {
-    font-size: var(--text-5xl);
+    font-size: var(--text-6xl);
     font-weight: 300;
-    margin-bottom: var(--spacing-large);
+    margin-bottom: var(--sp-5);
     line-height: 1;
 }
 
 header h2 {
-    font-size: var(--text-3xl);
+    font-size: var(--text-4xl);
     color: var(--text-muted);
     font-weight: 300;
-    margin-bottom: var(--spacing-large);
+    margin-bottom: var(--sp-4);
     line-height: 1;
 }
 
@@ -92,32 +92,8 @@ header h2 {
 }
 
 @media (max-width: 768px) {
-    .hero {
-        padding-left: var(--spacing-small);
-        padding-right: var(--spacing-small);
-    }
-
-    header h2 {
-        padding-bottom: var(--spacing-large);
-    }
 }
 
 @media (max-width: 640px) {
-    header {
-        padding: var(--spacing-large) var(--spacing-medium);
-    }
-
-    .hero {
-        padding-left: var(--spacing-small);
-        padding-right: var(--spacing-small);
-    }
-
-    header h1 {
-        margin-bottom: var(--spacing-medium);
-    }
-
-    header h2 {
-        padding-bottom: var(--spacing-small);
-    }
 }
 </style>
