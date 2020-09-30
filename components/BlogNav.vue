@@ -10,6 +10,8 @@ ul {
     display: flex;
     justify-content: center;
     background: linear-gradient(to left, var(--color-blue) 10%, 30%, var(--color-blue-dark) 90%);
+    font-size: var(--text-base);
+    font-weight: 400;
 }
 
 ul li {

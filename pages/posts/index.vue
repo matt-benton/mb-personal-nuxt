@@ -72,7 +72,7 @@ export default {
 }
 
 p {
-    line-height: var(--line-height-smaller);
+    line-height: var(--line-height-medium);
     margin-bottom: var(--spacing-small);
     max-width: 600px;
 }
@@ -99,7 +99,6 @@ p {
 }
 
 .blog-preview-card {
-    font-weight: 300;
     display: flex;
     flex-direction: column;
     overflow: hidden;

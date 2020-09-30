@@ -25,6 +25,8 @@ html {
 body {
     font-family: var(--font-default);
     font-weight: 300;
+    font-size: var(--text-base);
+    line-height: var(--line-height-medium);
 }
 
 ul {
