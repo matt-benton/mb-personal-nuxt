@@ -1,5 +1,5 @@
 <template>
-    <section class="skills" id="skills">
+    <section id="skills">
         <div class="section-container">
             <div class="skills-container">
                 <div class="skills-left">
@@ -16,7 +16,6 @@
                         <div class="skills-grid-item">
                             <img
                                 src="/img/logos/html-5-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
                                 alt="html5 logo"
                             />
                             html
@@ -24,7 +23,6 @@
                         <div class="skills-grid-item">
                             <img
                                 src="/img/logos/css-3-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
                                 alt="css3 logo"
                             />
                             css
@@ -32,7 +30,6 @@
                         <div class="skills-grid-item">
                             <img
                                 src="/img/logos/javascript-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
                                 alt="javascript logo"
                             />
                             javascript
@@ -40,7 +37,6 @@
                         <div class="skills-grid-item">
                             <img
                                 src="/img/logos/vue-9-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
                                 alt="vue logo"
                             />
                             vue
@@ -48,7 +44,6 @@
                         <div class="skills-grid-item">
                             <img
                                 src="/img/logos/php-1-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
                                 alt="php logo"
                             />
                             php
@@ -56,7 +51,6 @@
                         <div class="skills-grid-item">
                             <img
                                 src="/img/logos/mysql-5-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
                                 alt="mysql logo"
                             />
                             mysql
@@ -64,7 +58,6 @@
                         <div class="skills-grid-item">
                             <img
                                 src="/img/logos/laravel-1-logo-png-transparent-min.png"
-                                class="skills-grid-logo"
                                 alt="laravel logo"
                             />
                             laravel
@@ -80,11 +73,12 @@
 export default {}
 </script>
 
-<style>
-.skills {
+<style scoped>
+section {
     background-color: var(--color-grey-light-1);
     justify-content: space-evenly;
-    font-size: var(--font-small);
+    font-size: var(--text-lg);
+    line-height: var(--line-height-medium);
 }
 
 .skills-container {
@@ -107,7 +101,6 @@ export default {}
 .left-text {
     color: var(--color-grey-dark-3);
     font-weight: 300;
-    line-height: 2.2rem;
 }
 
 .skills-right {
@@ -145,10 +138,11 @@ export default {}
     background-color: var(--color-green-transparent);
 }
 
-.skills-grid-logo {
-    max-height: var(--font-large);
-    max-width: var(--font-large);
+img {
+    max-height: var(--text-2xl);
+    max-width: var(--text-2xl);
     margin-right: 1rem;
+    border: none;
 }
 
 @media (max-width: 1024px) {
@@ -176,7 +170,7 @@ export default {}
 }
 
 @media (max-width: 640px) {
-    .skills {
+    section {
         padding: 0 0;
     }
 
