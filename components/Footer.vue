@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer" id="footer">
+    <footer id="footer">
         <div class="footer-row email-row">
             <span class="dot"></span>
             <span class="dot"></span>
@@ -39,8 +39,8 @@ export default {}
 </script>
 
 <style>
-.footer {
-    font-size: var(--font-small);
+footer {
+    font-size: var(--text-base);
     color: var(--color-grey-light-1);
     background-color: var(--color-grey-dark-1);
     padding: 6%;
@@ -58,8 +58,8 @@ export default {}
 }
 
 .dot {
-    height: 1.6rem;
-    width: 1.6rem;
+    height: var(--text-xl);
+    width: var(--text-xl);
     border-radius: 50%;
     display: inline-block;
     margin: 0.8rem;
