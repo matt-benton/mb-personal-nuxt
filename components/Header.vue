@@ -48,7 +48,7 @@ header {
 .hero {
     display: flex;
     flex-direction: column;
-    padding: 16% 0;
+    padding: var(--sp-8) 0;
 }
 
 header h1 {
@@ -70,7 +70,7 @@ header h2 {
     background-color: var(--color-blue-dark);
     color: white;
     font-size: var(--text-lg);
-    padding: 18px 28px;
+    padding: var(--sp-4) var(--sp-5);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -82,12 +82,12 @@ header h2 {
 
 @media (max-width: 1024px) {
     .hero {
-        padding: 16% 3%;
+        padding: var(--sp-6) 3%;
     }
 
     .btn {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: var(--sp-2);
     }
 }
 
