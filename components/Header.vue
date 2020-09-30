@@ -1,5 +1,5 @@
 <template>
-    <header class="header">
+    <header>
         <div class="section-container">
             <div class="hero">
                 <h1>
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-.header {
+header {
     color: var(--color-grey-dark-1);
     display: grid;
     grid-template-rows: min-content 1fr;
@@ -51,17 +51,19 @@ export default {
     padding: 16% 0;
 }
 
-.header h1 {
+header h1 {
     font-size: var(--text-5xl);
     font-weight: 300;
-    margin-bottom: var(--spacing-medium);
+    margin-bottom: var(--spacing-large);
+    line-height: 1;
 }
 
-.header h2 {
+header h2 {
     font-size: var(--text-3xl);
     color: var(--text-muted);
     font-weight: 300;
-    padding-bottom: var(--spacing-medium);
+    margin-bottom: var(--spacing-large);
+    line-height: 1;
 }
 
 .btn {
@@ -95,13 +97,13 @@ export default {
         padding-right: var(--spacing-small);
     }
 
-    .header h2 {
+    header h2 {
         padding-bottom: var(--spacing-large);
     }
 }
 
 @media (max-width: 640px) {
-    .header {
+    header {
         padding: var(--spacing-large) var(--spacing-medium);
     }
 
@@ -110,11 +112,11 @@ export default {
         padding-right: var(--spacing-small);
     }
 
-    .header h1 {
+    header h1 {
         margin-bottom: var(--spacing-medium);
     }
 
-    .header h2 {
+    header h2 {
         padding-bottom: var(--spacing-small);
     }
 }
