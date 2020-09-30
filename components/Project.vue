@@ -14,17 +14,13 @@
             ></ProjectImageList>
         </div>
         <div class="project-container project-container-text">
-            <h3 :class="`project-title text--${highlightColor}`">
+            <h3 :class="`text--${highlightColor}`">
                 {{ project.title }}
             </h3>
-            <h4 :class="`project-subtitle text--${highlightColor}`">
+            <h4 :class="`text--${highlightColor}`">
                 {{ project.subtitle }}
             </h4>
-            <p
-                v-for="(paragraph, index) in project.descriptionParagraphs"
-                :key="index"
-                class="project-text"
-            >
+            <p v-for="(paragraph, index) in project.descriptionParagraphs" :key="index">
                 {{ paragraph }}
             </p>
             <div class="project-links">
@@ -89,7 +85,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .project {
     display: flex;
     margin: var(--spacing-large) 0;
@@ -107,24 +103,23 @@ export default {
     flex: 1;
 }
 
-.project-title {
-    font-size: var(--font-large);
+h3 {
+    font-size: var(--text-3xl);
     margin-bottom: var(--spacing-small);
 }
 
-.project-subtitle {
-    font-size: var(--font-medium);
+h4 {
+    font-size: var(--text-xl);
     margin-bottom: var(--spacing-large);
 }
 
-.project-text {
-    font-size: var(--font-small);
+p {
+    font-size: var(--text-base);
     margin-bottom: var(--spacing-medium);
-    line-height: var(--line-height-smaller);
 }
 
 .project-links {
-    font-size: var(--font-small);
+    font-size: var(--text-base);
     font-weight: 700;
     margin-top: var(--spacing-large);
     display: flex;
