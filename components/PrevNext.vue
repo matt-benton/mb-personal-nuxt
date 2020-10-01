@@ -26,23 +26,23 @@ export default {
 div {
     display: flex;
     justify-content: space-between;
-    margin: var(--spacing-larger) 0;
 }
 
 a {
-    font-size: var(--font-extra-small);
+    font-size: var(--text-xs);
     color: var(--color-blue);
     background-color: var(--color-grey-dark-4);
     border-radius: 15px;
-    padding: var(--spacing-small);
+    padding: var(--sp-1) var(--sp-3);
+    line-height: 1.65;
 }
 
 a:first-of-type {
-    margin-right: var(--spacing-small);
+    margin-right: var(--sp-1);
 }
 
 a:last-of-type {
-    margin-left: var(--spacing-small);
+    margin-left: var(--sp-1);
 }
 
 a:hover {
