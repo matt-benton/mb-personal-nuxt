@@ -85,7 +85,6 @@ section {
     display: flex;
     background-color: #fff;
     padding: var(--sp-7);
-    margin: var(--sp-7) 0;
 }
 
 .skills-container > div {

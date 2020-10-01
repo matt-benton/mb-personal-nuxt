@@ -88,40 +88,45 @@ export default {
 <style scoped>
 .project {
     display: flex;
-    margin: var(--spacing-large) 0;
+    margin: var(--sp-7) 0;
+}
+
+.project:first-of-type {
+    margin: 0;
 }
 
 .project:last-of-type {
-    border-bottom: none;
+    margin: 0;
 }
 
 .project-container {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-large);
+    padding: var(--sp-7);
     background-color: var(--color-grey-dark-3);
     flex: 1;
 }
 
 h3 {
-    font-size: var(--text-3xl);
-    margin-bottom: var(--spacing-small);
+    font-size: var(--text-4xl);
+    margin-bottom: var(--sp-4);
 }
 
 h4 {
     font-size: var(--text-xl);
-    margin-bottom: var(--spacing-large);
+    margin-bottom: var(--sp-2);
+    line-height: 1.2;
 }
 
 p {
     font-size: var(--text-base);
-    margin-bottom: var(--spacing-medium);
+    margin-bottom: var(--sp-3);
+    line-height: 1.5;
 }
 
 .project-links {
     font-size: var(--text-base);
     font-weight: 700;
-    margin-top: var(--spacing-large);
     display: flex;
 }
 
@@ -131,7 +136,7 @@ p {
     background-color: var(--color-grey-dark-1);
     border: 0;
     cursor: pointer;
-    margin-right: var(--spacing-small);
+    margin-right: var(--sp-2);
 }
 
 .project-links a:hover {

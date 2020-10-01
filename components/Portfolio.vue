@@ -1,5 +1,5 @@
 <template>
-    <section class="work" id="work">
+    <section id="work">
         <div class="section-container">
             <Project
                 v-for="(project, index) in projectContent"
@@ -34,12 +34,11 @@ export default {
 </script>
 
 <style>
-.work {
+section {
     background-color: var(--color-grey-dark-2);
     color: var(--color-grey-light-1);
-    box-shadow: inset 0 5px 20px var(--color-grey-dark-3);
     z-index: 50;
-    padding: var(--spacing-large) 0;
+    padding: var(--sp-7) 0;
 }
 
 @media (max-width: 768px) {
