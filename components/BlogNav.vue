@@ -16,8 +16,8 @@ ul {
 
 ul li {
     width: 120px;
-    margin: 0 var(--spacing-medium);
-    padding: var(--spacing-medium) 0;
+    margin: 0 var(--sp-5);
+    padding: var(--sp-2) 0;
     text-align: center;
 }
 

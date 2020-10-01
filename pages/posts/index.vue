@@ -25,7 +25,12 @@
                     <div class="card-footer">
                         <nuxt-link :to="`/posts/${article.slug}`">
                             <span>Read More</span>
-                            <svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1"
+                                viewBox="0 0 24 24"
+                            >
                                 <path
                                     d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
                                 />
@@ -72,22 +77,20 @@ export default {
 }
 
 p {
-    line-height: var(--line-height-medium);
-    margin-bottom: var(--spacing-small);
+    line-height: 1.6;
+    margin-bottom: var(--sp-2);
     max-width: 600px;
 }
 
 .section-container {
-    padding-top: var(--spacing-small);
-    padding-bottom: var(--spacing-large);
+    padding-bottom: var(--sp-7);
 }
 
 .section-container > p {
-    margin: var(--spacing-large) auto;
-    font-size: var(--font-small);
+    margin: var(--sp-7) auto;
     font-weight: 300;
     color: var(--color-grey-light-1);
-    padding: var(--spacing-large);
+    padding: var(--sp-7);
     background-color: var(--color-grey-dark-3);
 }
 
@@ -95,7 +98,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    grid-gap: var(--spacing-large);
+    grid-gap: var(--sp-7);
 }
 
 .blog-preview-card {
@@ -107,7 +110,7 @@ p {
 }
 
 .blog-preview-card > * {
-    padding: var(--spacing-medium);
+    padding: var(--sp-4);
 }
 
 .card-header {
@@ -132,8 +135,8 @@ p {
 }
 
 .card-body {
-    padding-left: var(--spacing-large);
-    padding-right: var(--spacing-large);
+    padding-left: var(--sp-7);
+    padding-right: var(--sp-7);
     flex: 3;
 }
 
@@ -146,15 +149,19 @@ p {
     display: flex;
     align-items: center;
     color: var(--color-blue);
+    position: relative;
 }
 
 .card-footer a span {
-    margin-right: var(--spacing-small);
+    padding-right: var(--sp-5);
 }
 
 svg {
-    height: var(--font-medium);
-    width: var(--font-medium);
+    position: absolute;
+    right: 0;
+    top: 6px;
+    height: var(--text-lg);
+    width: var(--text-lg);
     fill: var(--color-blue);
 }
 
@@ -171,16 +178,16 @@ svg {
 
 @media (max-width: 640px) {
     .blog-preview-card > * {
-        padding: var(--spacing-medium);
+        padding: var(--sp-4);
     }
 
     .section-container > p {
         font-size: var(--font-smaller);
-        padding: var(--spacing-medium);
+        padding: var(--sp-4);
     }
 
     .blog-card-container {
-        grid-gap: var(--spacing-medium);
+        grid-gap: var(--sp-4);
     }
 }
 </style>
