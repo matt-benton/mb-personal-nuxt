@@ -84,8 +84,8 @@ section {
 .skills-container {
     display: flex;
     background-color: #fff;
-    padding: var(--spacing-large);
-    margin: var(--spacing-large) 0;
+    padding: var(--sp-7);
+    margin: var(--sp-7) 0;
 }
 
 .skills-container > div {
@@ -95,7 +95,7 @@ section {
 .skills-left {
     display: flex;
     align-items: center;
-    padding: var(--spacing-large);
+    padding: var(--sp-6);
 }
 
 .left-text {
@@ -106,7 +106,7 @@ section {
 .skills-right {
     display: flex;
     align-items: center;
-    padding: var(--spacing-large);
+    padding: var(--sp-6);
 }
 
 .skills-grid {
@@ -120,8 +120,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--spacing-small);
-    margin: var(--spacing-small);
+    padding: var(--sp-2);
+    margin: var(--sp-2);
     border-radius: 5px;
     color: var(--color-grey-dark-2);
 }
@@ -141,7 +141,7 @@ section {
 img {
     max-height: var(--text-2xl);
     max-width: var(--text-2xl);
-    margin-right: 1rem;
+    margin-right: var(--sp-3);
     border: none;
 }
 

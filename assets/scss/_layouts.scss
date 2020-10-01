@@ -6,8 +6,7 @@
 // This is a container intended to be used in each section to maintain spacing and width consistency
 .section-container {
     margin: 0 auto;
-    padding: 0 1rem;
-    max-width: 80rem;
+    max-width: 1000px;
 
     @media (max-width: 1024px) {
         margin: 6rem 2rem;
