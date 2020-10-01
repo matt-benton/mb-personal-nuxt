@@ -38,7 +38,7 @@ import { cldImage } from 'cloudinary-vue'
 export default {}
 </script>
 
-<style>
+<style scoped>
 footer {
     font-size: var(--text-base);
     color: var(--color-grey-light-1);
@@ -62,7 +62,7 @@ footer {
     width: var(--text-xl);
     border-radius: 50%;
     display: inline-block;
-    margin: 0.8rem;
+    margin: var(--sp-2);
 }
 
 .dot:nth-of-type(1n + 1) {
@@ -78,11 +78,11 @@ footer {
 }
 
 .contact-line {
-    margin: 0 var(--spacing-large);
+    margin: 0 var(--sp-3);
 }
 
 .footer-row {
-    padding: var(--spacing-large) 0;
+    padding: var(--sp-6) 0;
 }
 
 .social-row {
@@ -91,6 +91,6 @@ footer {
 }
 
 .social-link {
-    margin: 0 var(--spacing-medium);
+    margin: 0 var(--sp-3);
 }
 </style>
