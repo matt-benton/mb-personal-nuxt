@@ -43,6 +43,7 @@ header {
     display: grid;
     grid-template-rows: min-content 1fr;
     margin: auto;
+    width: 750px;
 }
 
 .hero {
@@ -52,18 +53,18 @@ header {
 }
 
 header h1 {
-    font-size: var(--text-6xl);
+    font-size: var(--text-5xl);
     font-weight: 300;
     margin-bottom: var(--sp-5);
-    line-height: 1;
+    line-height: 1.3;
 }
 
 header h2 {
-    font-size: var(--text-4xl);
+    font-size: var(--text-3xl);
     color: var(--text-muted);
     font-weight: 300;
-    margin-bottom: var(--sp-4);
-    line-height: 1;
+    margin-bottom: var(--sp-5);
+    line-height: 1.2;
 }
 
 .btn {

@@ -1,6 +1,6 @@
 <template>
     <section id="about">
-        <div class="section-container">
+        <div class="about-container">
             <img src="/img/matt-benton.jpg" alt="Photo of myself" />
             <p>
                 When I originally finished college I was headed for a career in the field of
@@ -32,9 +32,13 @@ section {
     padding: var(--sp-8) 0;
 }
 
+.about-container {
+    width: 750px;
+}
+
 img {
-    height: var(--sp-11);
-    width: var(--sp-11);
+    height: 28rem;
+    width: 28rem;
     border-radius: 50%;
     float: left;
     shape-outside: circle();
