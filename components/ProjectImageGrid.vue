@@ -11,8 +11,8 @@
                 <cldImage
                     class="thumbnail-image"
                     :publicId="image.cloudinaryPublicId"
-                    height="100"
-                    width="100"
+                    height="70"
+                    width="70"
                     crop="fill"
                     :alt="`${projectTitle} screen shot thumbnail`"
                 />
@@ -48,7 +48,7 @@ export default {
 
 .project-large-image {
     max-width: 100%;
-    height: 20rem;
+    height: 24rem;
     border-radius: 2px;
     cursor: pointer;
     justify-self: center;

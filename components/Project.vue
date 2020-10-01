@@ -88,15 +88,7 @@ export default {
 <style scoped>
 .project {
     display: flex;
-    margin: var(--sp-7) 0;
-}
-
-.project:first-of-type {
-    margin: 0;
-}
-
-.project:last-of-type {
-    margin: 0;
+    border-bottom: 1px solid var(--color-grey-dark-2);
 }
 
 .project-container {
