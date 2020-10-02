@@ -64,8 +64,12 @@ img {
 
 @media (max-width: 640px) {
     section {
-        line-height: 1.6rem;
-        padding: var(--spacing-large) var(--spacing-medium);
+        padding: var(--sp-8) 5%;
+    }
+
+    img {
+        height: 18rem;
+        width: 18rem;
     }
 }
 </style>

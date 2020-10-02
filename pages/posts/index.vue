@@ -181,8 +181,11 @@ svg {
         padding: var(--sp-4);
     }
 
+    .section-container {
+        padding: 0 5% var(--sp-7) 5%;
+    }
+
     .section-container > p {
-        font-size: var(--font-smaller);
         padding: var(--sp-4);
     }
 

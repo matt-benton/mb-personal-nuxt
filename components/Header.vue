@@ -43,7 +43,7 @@ header {
     display: grid;
     grid-template-rows: min-content 1fr;
     margin: auto;
-    width: 750px;
+    max-width: 750px;
 }
 
 .hero {
@@ -96,5 +96,8 @@ header h2 {
 }
 
 @media (max-width: 640px) {
+    .hero {
+        padding: var(--sp-8) 5%;
+    }
 }
 </style>

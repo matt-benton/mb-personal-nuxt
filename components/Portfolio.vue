@@ -41,9 +41,9 @@ section {
     padding: var(--sp-7) 0;
 }
 
-@media (max-width: 768px) {
-    .work {
-        padding: 0 0;
+@media (max-width: 640px) {
+    section {
+        padding: var(--sp-8) 5%;
     }
 }
 </style>

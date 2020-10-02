@@ -157,4 +157,14 @@ p {
         background-color: var(--color-grey-dark-2);
     }
 }
+
+@media (max-width: 640px) {
+    .project-container {
+        padding: var(--sp-7) 0;
+    }
+
+    .project:last-of-type > .project-container-image {
+        padding: 0;
+    }
+}
 </style>

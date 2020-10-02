@@ -142,7 +142,11 @@ article {
 
 @media (max-width: 640px) {
     article {
-        padding: var(--spacing-large) var(--sp-2);
+        padding: var(--sp-7) 5%;
+    }
+
+    h1 {
+        margin-top: 0;
     }
 }
 </style>

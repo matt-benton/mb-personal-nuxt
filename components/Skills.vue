@@ -170,23 +170,7 @@ img {
 
 @media (max-width: 640px) {
     section {
-        padding: 0 0;
-    }
-
-    .skills-left {
-        padding: var(--spacing-medium);
-    }
-
-    .skills-right {
-        padding: var(--spacing-medium);
-    }
-
-    .left-text {
-        line-height: var(--line-height-medium);
-    }
-
-    .skills-grid-item {
-        padding: var(--spacing-small);
+        padding: var(--sp-8) 5%;
     }
 }
 </style>
