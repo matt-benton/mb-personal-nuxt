@@ -92,9 +92,6 @@ header h2 {
     }
 }
 
-@media (max-width: 768px) {
-}
-
 @media (max-width: 640px) {
     .hero {
         padding: var(--sp-8) 5%;

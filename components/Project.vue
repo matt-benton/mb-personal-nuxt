@@ -153,8 +153,16 @@ p {
 
 @media (max-width: 768px) {
     .project-container {
-        padding: var(--spacing-large) 0;
+        padding: var(--sp-7) 0;
         background-color: var(--color-grey-dark-2);
+    }
+
+    .project:last-of-type {
+        border-bottom: none;
+    }
+
+    .project:last-of-type > .project-container-image {
+        padding-bottom: 0;
     }
 }
 
@@ -164,7 +172,7 @@ p {
     }
 
     .project:last-of-type > .project-container-image {
-        padding: 0;
+        padding-bottom: 0;
     }
 }
 </style>

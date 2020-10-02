@@ -33,12 +33,19 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 section {
     background-color: var(--color-grey-dark-2);
     color: var(--color-grey-light-1);
     z-index: 50;
     padding: var(--sp-7) 0;
+}
+
+@media (max-width: 768px) {
+    .section-container {
+        margin: 0;
+        padding: 0 5%;
+    }
 }
 
 @media (max-width: 640px) {

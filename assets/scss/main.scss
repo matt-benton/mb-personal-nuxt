@@ -56,6 +56,12 @@ a {
     border: none !important;
 }
 
+@media (max-width: 768px) {
+    html {
+        font-size: 54%;
+    }
+}
+
 @media (max-width: 640px) {
     html {
         font-size: 45%;

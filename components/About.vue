@@ -55,18 +55,17 @@ img {
 }
 
 @media (max-width: 768px) {
-    img {
-        height: 10rem;
-        width: 10rem;
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 640px) {
     section {
         padding: var(--sp-8) 5%;
     }
 
+    img {
+        height: 25rem;
+        width: 25rem;
+    }
+}
+
+@media (max-width: 640px) {
     img {
         height: 18rem;
         width: 18rem;

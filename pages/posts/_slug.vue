@@ -125,16 +125,8 @@ article {
         width: 100%;
     }
 
-    .nuxt-content h2 {
-        font-size: var(--font-small);
-    }
-
-    .nuxt-content h3 {
-        font-size: var(--font-smaller);
-    }
-
     article {
-        padding: var(--spacing-large) var(--sp-9);
+        padding: var(--sp-7) 5%;
         width: 100%;
         margin: 0;
     }

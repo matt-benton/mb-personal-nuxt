@@ -144,7 +144,7 @@ img {
     border: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 640px) {
     .skills-container {
         flex-direction: column;
     }
@@ -153,22 +153,6 @@ img {
         width: 100%;
     }
 
-    .skills-left {
-        margin-right: 0;
-    }
-
-    .skills-right {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .skills-container {
-        padding: var(--spacing-small);
-    }
-}
-
-@media (max-width: 640px) {
     section {
         padding: var(--sp-8) 5%;
     }
