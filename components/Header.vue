@@ -39,17 +39,18 @@ export default {
 
 <style scoped>
 header {
+    background-image: url('/img/shape-bg.svg');
+    background-size: cover;
     color: var(--color-grey-dark-1);
     display: grid;
     grid-template-rows: min-content 1fr;
-    margin: auto;
-    max-width: 750px;
 }
 
 .hero {
     display: flex;
     flex-direction: column;
     padding: var(--sp-8) 0;
+    max-width: 750px;
 }
 
 header h1 {
@@ -89,6 +90,12 @@ header h2 {
     .btn {
         width: 100%;
         margin-bottom: var(--sp-2);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background-image: url('/img/shape-bg-768.svg');
     }
 }
 
