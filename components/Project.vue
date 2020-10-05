@@ -14,24 +14,26 @@
             ></ProjectImageList>
         </div>
         <div class="project-container project-container-text">
-            <h3 :class="`text--${highlightColor}`">
-                {{ project.title }}
-            </h3>
-            <h4 :class="`text--${highlightColor}`">
-                {{ project.subtitle }}
-            </h4>
-            <p v-for="(paragraph, index) in project.descriptionParagraphs" :key="index">
-                {{ paragraph }}
-            </p>
-            <div class="project-links">
-                <a
-                    v-for="link in project.links"
-                    :key="link.title"
-                    :class="`text--${highlightColor}`"
-                    :href="link.url"
-                    target="_blank"
-                    >{{ link.text }}</a
-                >
+            <div>
+                <h3 :class="`text--${highlightColor}`">
+                    {{ project.title }}
+                </h3>
+                <h4 :class="`text--${highlightColor}`">
+                    {{ project.subtitle }}
+                </h4>
+                <p v-for="(paragraph, index) in project.descriptionParagraphs" :key="index">
+                    {{ paragraph }}
+                </p>
+                <div class="project-links">
+                    <a
+                        v-for="link in project.links"
+                        :key="link.title"
+                        :class="`text--${highlightColor}`"
+                        :href="link.url"
+                        target="_blank"
+                        >{{ link.text }}</a
+                    >
+                </div>
             </div>
         </div>
     </div>
@@ -99,6 +101,11 @@ export default {
     flex: 1;
 }
 
+.project-container-text > div {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
 h3 {
     font-size: var(--text-4xl);
     margin-bottom: var(--sp-4);
@@ -106,13 +113,13 @@ h3 {
 
 h4 {
     font-size: var(--text-xl);
-    margin-bottom: var(--sp-2);
+    margin-bottom: var(--sp-4);
     line-height: 1.2;
 }
 
 p {
     font-size: var(--text-base);
-    margin-bottom: var(--sp-3);
+    margin-bottom: var(--sp-4);
     line-height: 1.5;
 }
 

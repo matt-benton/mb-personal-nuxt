@@ -51,6 +51,7 @@ header {
     flex-direction: column;
     padding: var(--sp-8) 0;
     max-width: 750px;
+    margin: 0 auto;
 }
 
 header h1 {
