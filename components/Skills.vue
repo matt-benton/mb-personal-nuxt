@@ -85,6 +85,7 @@ section {
     display: flex;
     background-color: #fff;
     padding: var(--sp-7);
+    margin: var(--sp-7) 0;
 }
 
 .skills-container > div {
@@ -147,6 +148,7 @@ img {
 @media (max-width: 640px) {
     .skills-container {
         flex-direction: column;
+        margin: 0;
     }
 
     .skills-container > div {
