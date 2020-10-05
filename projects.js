@@ -15,6 +15,10 @@ export const projects = [
         ],
         images: [
             {
+                src: '/img/projects/flow-bill-tracking/flow_bill_tracking_landing.png',
+                cloudinaryPublicId: 'mb-personal/flow-landing-page_lh95wg.png',
+            },
+            {
                 src: '/img/projects/flow-bill-tracking/flow_bill_tracking_bills.png',
                 cloudinaryPublicId: 'mb-personal/flow_bill_tracking_bills',
             },
@@ -25,10 +29,6 @@ export const projects = [
             {
                 src: '/img/projects/flow-bill-tracking/flow_bill_tracking_edit.png',
                 cloudinaryPublicId: 'mb-personal/flow_bill_tracking_edit_ds8maa.png',
-            },
-            {
-                src: '/img/projects/flow-bill-tracking/flow_bill_tracking_mobile.png',
-                cloudinaryPublicId: 'mb-personal/flow_bill_tracking_mobile_z4irjz.png',
             },
         ],
     },
