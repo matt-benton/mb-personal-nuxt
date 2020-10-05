@@ -151,16 +151,17 @@ p {
 
     .project-container-text {
         order: 1;
+        padding-bottom: var(--sp-5);
     }
 
     .project-container-image {
         order: 2;
+        padding-top: var(--sp-5);
     }
 }
 
 @media (max-width: 768px) {
     .project-container {
-        padding: var(--sp-7) 0;
         background-color: var(--color-grey-dark-2);
     }
 
@@ -175,7 +176,8 @@ p {
 
 @media (max-width: 640px) {
     .project-container {
-        padding: var(--sp-7) 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .project:last-of-type > .project-container-image {
