@@ -101,6 +101,14 @@ header h2 {
 }
 
 @media (max-width: 640px) {
+    header h1 {
+        font-size: var(--text-4xl);
+    }
+
+    header h2 {
+        font-size: var(--text-2xl);
+    }
+
     .hero {
         padding: var(--sp-8) 5%;
     }

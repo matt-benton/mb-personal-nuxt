@@ -60,13 +60,6 @@ img {
     }
 
     img {
-        height: 25rem;
-        width: 25rem;
-    }
-}
-
-@media (max-width: 640px) {
-    img {
         height: 18rem;
         width: 18rem;
     }

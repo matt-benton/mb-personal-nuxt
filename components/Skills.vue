@@ -145,10 +145,18 @@ img {
     border: none;
 }
 
+@media (max-width: 768px) {
+    .skills-container > div {
+        padding: var(--sp-2);
+    }
+}
+
 @media (max-width: 640px) {
     .skills-container {
         flex-direction: column;
         margin: 0;
+        padding: 0;
+        background-color: var(--color-grey-light-1);
     }
 
     .skills-container > div {

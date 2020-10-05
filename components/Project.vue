@@ -180,6 +180,14 @@ p {
         padding-right: 0;
     }
 
+    h3 {
+        font-size: var(--text-3xl);
+    }
+
+    h4 {
+        font-size: var(--text-lg);
+    }
+
     .project:last-of-type > .project-container-image {
         padding-bottom: 0;
     }

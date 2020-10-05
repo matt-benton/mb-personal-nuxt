@@ -138,8 +138,21 @@ article {
         width: 100%;
     }
 
-    h1 {
+    .title {
+        font-size: var(--text-2xl);
         margin-top: 0;
+    }
+
+    .nuxt-content h2 {
+        font-size: var(--text-xl);
+    }
+
+    .nuxt-content h3 {
+        font-size: var(--text-lg);
+    }
+
+    .nuxt-content h4 {
+        font-size: var(--text-base);
     }
 }
 </style>
