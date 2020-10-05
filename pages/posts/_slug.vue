@@ -127,14 +127,15 @@ article {
 
     article {
         padding: var(--sp-7) 5%;
-        width: 100%;
-        margin: 0;
+        margin: 0 auto;
+        width: 80%;
     }
 }
 
 @media (max-width: 640px) {
     article {
         padding: var(--sp-7) 5%;
+        width: 100%;
     }
 
     h1 {
