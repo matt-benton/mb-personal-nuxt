@@ -102,9 +102,9 @@ p {
 }
 
 .blog-preview-card {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr min-content;
     background-color: var(--color-grey-dark-3);
     color: #fff;
 }
@@ -116,6 +116,7 @@ p {
 .card-header {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .card-header h3 {
@@ -137,7 +138,6 @@ p {
 .card-body {
     padding-left: var(--sp-7);
     padding-right: var(--sp-7);
-    flex: 3;
 }
 
 .card-footer {
