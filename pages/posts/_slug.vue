@@ -54,6 +54,10 @@ export default {
     background-color: var(--color-grey-dark-2);
 }
 
+.nuxt-content-container {
+    margin-bottom: var(--sp-7);
+}
+
 article {
     margin: 0 auto;
     width: 900px;
@@ -65,6 +69,7 @@ article {
     margin-bottom: var(--sp-2);
     color: var(--color-blue);
     font-weight: 300;
+    line-height: 1.3;
 }
 
 .date-text {
@@ -75,7 +80,7 @@ article {
 
 .nuxt-content h2 {
     margin-bottom: var(--sp-2);
-    margin-top: var(--sp-7);
+    margin-top: var(--sp-6);
     font-weight: 300;
 }
 
@@ -97,7 +102,7 @@ article {
     font-family: var(--font-secondary);
     font-weight: 300;
     color: #fff;
-    margin-bottom: var(--sp-5);
+    margin-bottom: var(--sp-4);
     line-height: 1.8;
     font-size: var(--font-small);
 }
