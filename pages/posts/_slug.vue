@@ -68,12 +68,10 @@ article {
 .title {
     margin-bottom: var(--sp-2);
     color: var(--color-blue);
-    font-weight: 300;
     line-height: 1.3;
 }
 
 .date-text {
-    font-weight: 300;
     margin-bottom: var(--sp-5);
     color: var(--color-blue);
 }
@@ -81,7 +79,6 @@ article {
 .nuxt-content h2 {
     margin-bottom: var(--sp-2);
     margin-top: var(--sp-6);
-    font-weight: 300;
 }
 
 .nuxt-content h2 a {
@@ -91,7 +88,6 @@ article {
 .nuxt-content h3 {
     margin-bottom: var(--sp-2);
     margin-top: var(--sp-5);
-    font-weight: 300;
 }
 
 .nuxt-content h3 a {
