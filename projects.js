@@ -3,9 +3,9 @@ export const projects = [
         title: 'Flow Bill Tracking',
         subtitle: 'A web app for tracking monthly and annually recurring bills',
         descriptionParagraphs: [
-            'Flow Bill Tracking is a web application to help people keep up with their bills. Users can store all of their recurring expenses and track if they have been paid yet or not.  In addition, Flow helps keep up with the total amount of spending from month to month.  It also tracks how much is still owed after some bills have been paid.',
+            'Flow Bill Tracking is a web application for helping people keep up with their bills. Users can store all of their recurring expenses and track if they have been paid yet or not.  In addition, Flow helps keep up with the total amount of spending from month to month.  It also tracks how much is still owed after some bills have been paid.',
             'Users of Flow should find they have a better understanding of their money flow, from due dates to amounts to whether or not a bill is automatically deducted from their bank account.',
-            'I built Flow using Laravel and Vue.  I designed it and wrote the CSS myself.',
+            'I built Flow using Laravel and Vue.  I designed and styled it using plain CSS.',
         ],
         links: [
             {
