@@ -1,31 +1,45 @@
 <template>
-    <div class="project-image-grid">
-        <img
-            v-lazy="`${selectedImage.src}`"
-            :alt="`${projectTitle} large screen shot`"
-            class="project-large-image"
-            @click="largeImageClicked"
-        />
-        <div class="project-thumbnails">
-            <div v-for="(image, index) in images" :key="index" @click="selectImage(image)">
-                <cldImage
-                    class="thumbnail-image"
-                    :publicId="image.cloudinaryPublicId"
-                    height="70"
-                    width="70"
-                    crop="fill"
-                    :alt="`${projectTitle} screen shot thumbnail`"
-                />
+    <div>
+        <div class="project-image-grid">
+            <img
+                v-lazy="`${selectedImage.src}`"
+                :alt="`${projectTitle} large screen shot`"
+                class="project-large-image"
+                @click="showModal(selectedImage)"
+            />
+            <div class="project-thumbnails">
+                <div v-for="(image, index) in images" :key="index" @click="selectImage(image)">
+                    <cldImage
+                        class="thumbnail-image"
+                        :publicId="image.cloudinaryPublicId"
+                        height="70"
+                        width="70"
+                        crop="fill"
+                        :alt="`${projectTitle} screen shot thumbnail`"
+                    />
+                </div>
             </div>
         </div>
+        <Modal
+            :hidden="modal.hidden"
+            :image="selectedImage"
+            @modal-closed="hideModal"
+            @next-image="nextImage"
+            @prev-image="prevImage"
+        />
     </div>
 </template>
 
 <script>
+import Modal from './Modal.vue'
+
 export default {
     data() {
         return {
             selectedImage: this.images[0],
+            modal: {
+                hidden: true,
+            },
         }
     },
     methods: {
@@ -35,8 +49,36 @@ export default {
         largeImageClicked() {
             this.$emit('large-image-clicked', this.selectedImage)
         },
+        showModal(image) {
+            this.modal.hidden = false
+            this.modal.image = image
+        },
+        hideModal() {
+            this.modal.hidden = true
+        },
+        nextImage() {
+            const index = this.images.findIndex(image => image.src === this.selectedImage.src)
+
+            if (index + 1 === this.images.length) {
+                this.selectImage(this.images[0])
+            } else {
+                this.selectImage(this.images[index + 1])
+            }
+        },
+        prevImage() {
+            const index = this.images.findIndex(image => image.src === this.selectedImage.src)
+
+            if (index === 0) {
+                this.selectImage(this.images[this.images.length - 1])
+            } else {
+                this.selectImage(this.images[index - 1])
+            }
+        },
     },
     props: ['images', 'projectTitle'],
+    components: {
+        Modal,
+    },
 }
 </script>
 

@@ -1,10 +1,12 @@
 <template>
-    <section class="modal" :class="{ close: hidden }" @click="close($event)">
+    <section class="modal" :class="{ close: hidden }">
         <img
             :src="`${image.src ? image.src : ''}`"
             alt="Full size project pop up image"
             class="full-screen-image"
         />
+        <button @click.prevent="prevImage">Prev Image</button>
+        <button @click.prevent="nextImage">Next Image</button>
     </section>
 </template>
 
@@ -17,6 +19,12 @@ export default {
             if (event.target.tagName !== 'IMG') {
                 this.$emit('modal-closed')
             }
+        },
+        nextImage() {
+            this.$emit('next-image')
+        },
+        prevImage() {
+            this.$emit('prev-image')
         },
     },
 }
