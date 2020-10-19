@@ -19,7 +19,11 @@
                     <div class="card-body">
                         <p>{{ formatDate(article.createdAt) }}</p>
                         <p v-if="article.description">
-                            {{ article.description }}
+                            {{
+                                article.description.length > 250
+                                    ? article.description.substring(0, 250) + '...'
+                                    : article.description
+                            }}
                         </p>
                     </div>
                     <div class="card-footer">
@@ -104,9 +108,10 @@ p {
 .blog-preview-card {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr min-content;
+    grid-template-rows: 1fr 200px min-content;
     background-color: var(--color-grey-dark-3);
     color: #fff;
+    border-radius: 5px;
 }
 
 .blog-preview-card > * {
@@ -117,6 +122,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .card-header h3 {
