@@ -64,51 +64,6 @@ export const projects = [
         ],
     },
     {
-        title: 'Screen Time Analyzer',
-        subtitle: 'A PHP application for measuring and managing screen time',
-        descriptionParagraphs: [
-            'I built this application in early 2019 to track how I was spending my time while working in front of a computer screen. It is a small app that lets you define and track certain aspects of your computer use, including which monitor(s) you are looking at, what chair you are sitting in, how long you go without taking a break, and what possible symptoms may arise while doing so. You can also define activities such as blogging, coding, gaming, etc. and the app will keep track of how much time you spend on each activity. I still use this application every day to maintain healthy screen habits.',
-            'On the technical side, I built the Screen Time Analyzer with the intention of setting up a simple, well-focused PHP app that would do its job well. I also wanted to focus on improving my understanding of PHP, Laravel, and database structures.',
-        ],
-        links: [
-            {
-                url: 'https://github.com/matt-benton/screen-time-analyzer',
-                text: 'View on Github',
-            },
-        ],
-        images: [
-            {
-                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-dash.png',
-                cloudinaryPublicId: 'mb-personal/screen-time-analyzer-dash-lg_fpve5u',
-            },
-            {
-                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-day.png',
-                cloudinaryPublicId: 'mb-personal/screen-time-analyzer-day-lg_ppnqgf',
-            },
-            {
-                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-activities.png',
-                cloudinaryPublicId: 'mb-personal/screen-time-analyzer-activities-lg_nktdd4',
-            },
-        ],
-    },
-    {
-        title: 'Sprout',
-        subtitle: 'An accounting and inventory system built for the produce industry',
-        descriptionParagraphs: [
-            'Sprout is an application built with Laravel and AngularJS that handles accounting, inventory, shipping, and reporting for produce companies. My contributions to this project have mainly included features for importing and exporting data in the form of CSV and XML files. My focus in this project has been to write modular, reusable, and tested features that can be duplicated and adapted to many similar scenarios. This includes object-oriented classes that are clean, simple, and reusable. It also includes Angular components that can be dropped into an HTML page and reused. This approach saves time and makes maintenance of the project a lot easier.',
-        ],
-        images: [
-            {
-                src: '/img/projects/sprout/sprout.png',
-                cloudinaryPublicId: 'mb-personal/sprout-lg_uggydy',
-            },
-            {
-                src: '/img/projects/sprout/sprout-delivery.png',
-                cloudinaryPublicId: 'mb-personal/sprout-delivery-lg_n5lez4',
-            },
-        ],
-    },
-    {
         title: 'Squizzit',
         subtitle: 'An exquisite app for making, taking, and sharing quizzes.',
         descriptionParagraphs: [
@@ -136,6 +91,51 @@ export const projects = [
             {
                 src: '/img/projects/squizzit/squizzit-results.png',
                 cloudinaryPublicId: 'mb-personal/squizzit-results-lg_y7zzqu',
+            },
+        ],
+    },
+    {
+        title: 'Sprout',
+        subtitle: 'An accounting and inventory system built for the produce industry',
+        descriptionParagraphs: [
+            'Sprout is an application built with Laravel and AngularJS that handles accounting, inventory, shipping, and reporting for produce companies. My contributions to this project have mainly included features for importing and exporting data in the form of CSV and XML files. My focus in this project has been to write modular, reusable, and tested features that can be duplicated and adapted to many similar scenarios. This includes object-oriented classes that are clean, simple, and reusable. It also includes Angular components that can be dropped into an HTML page and reused. This approach saves time and makes maintenance of the project a lot easier.',
+        ],
+        images: [
+            {
+                src: '/img/projects/sprout/sprout.png',
+                cloudinaryPublicId: 'mb-personal/sprout-lg_uggydy',
+            },
+            {
+                src: '/img/projects/sprout/sprout-delivery.png',
+                cloudinaryPublicId: 'mb-personal/sprout-delivery-lg_n5lez4',
+            },
+        ],
+    },
+    {
+        title: 'Screen Time Analyzer',
+        subtitle: 'A PHP application for measuring and managing screen time',
+        descriptionParagraphs: [
+            'I built this application in early 2019 to track how I was spending my time while working in front of a computer screen. It is a small app that lets you define and track certain aspects of your computer use, including which monitor(s) you are looking at, what chair you are sitting in, how long you go without taking a break, and what possible symptoms may arise while doing so. You can also define activities such as blogging, coding, gaming, etc. and the app will keep track of how much time you spend on each activity. I still use this application every day to maintain healthy screen habits.',
+            'On the technical side, I built the Screen Time Analyzer with the intention of setting up a simple, well-focused PHP app that would do its job well. I also wanted to focus on improving my understanding of PHP, Laravel, and database structures.',
+        ],
+        links: [
+            {
+                url: 'https://github.com/matt-benton/screen-time-analyzer',
+                text: 'View on Github',
+            },
+        ],
+        images: [
+            {
+                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-dash.png',
+                cloudinaryPublicId: 'mb-personal/screen-time-analyzer-dash-lg_fpve5u',
+            },
+            {
+                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-day.png',
+                cloudinaryPublicId: 'mb-personal/screen-time-analyzer-day-lg_ppnqgf',
+            },
+            {
+                src: '/img/projects/screen-time-analyzer/screen-time-analyzer-activities.png',
+                cloudinaryPublicId: 'mb-personal/screen-time-analyzer-activities-lg_nktdd4',
             },
         ],
     },
