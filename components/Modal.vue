@@ -76,6 +76,7 @@ export default {
     opacity: 0.6;
     background-color: var(--color-grey-light-3);
     transition: opacity 0.2s;
+    cursor: pointer;
 }
 
 .modal-button:hover {
