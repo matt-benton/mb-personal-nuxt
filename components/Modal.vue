@@ -22,11 +22,6 @@
 
 <script>
 export default {
-    data() {
-        return {
-            buttonsVisible: false,
-        }
-    },
     props: ['hidden', 'image'],
     methods: {
         close(event) {
@@ -104,5 +99,9 @@ export default {
     position: absolute;
     right: 8px;
     top: 47%;
+}
+
+.close {
+    display: none;
 }
 </style>
