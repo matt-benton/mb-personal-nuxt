@@ -4,7 +4,7 @@
             <Header />
             <About />
             <Skills />
-            <Portfolio @large-project-image-clicked="showModal($event)" />
+            <Portfolio />
             <Footer />
         </div>
     </div>

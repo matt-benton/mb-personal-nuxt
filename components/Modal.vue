@@ -1,22 +1,27 @@
 <template>
     <section class="modal" :class="{ close: hidden }">
-        <div class="modal-image-container">
-            <img
-                :src="`${image.src ? image.src : ''}`"
-                alt="Full size project pop up image"
-                class="full-screen-image"
-            />
-            <button class="modal-button" id="prev-image-button" @click.prevent="prevImage">
-                <svg viewBox="0 0 24 24">
-                    <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
-                </svg>
-            </button>
-            <button class="btn modal-button" id="next-image-button" @click.prevent="nextImage">
-                <svg viewBox="0 0 24 24">
-                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                </svg>
-            </button>
-        </div>
+        <img
+            :src="`${image.src ? image.src : ''}`"
+            alt="Full size project pop up image"
+            class="full-screen-image"
+        />
+        <button class="modal-button" id="close-button" @click.prevent="$emit('modal-closed')">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                />
+            </svg>
+        </button>
+        <button class="modal-button" id="prev-image-button" @click.prevent="prevImage">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+            </svg>
+        </button>
+        <button class="btn modal-button" id="next-image-button" @click.prevent="nextImage">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+            </svg>
+        </button>
     </section>
 </template>
 
@@ -24,12 +29,6 @@
 export default {
     props: ['hidden', 'image'],
     methods: {
-        close(event) {
-            // close the modal if the user clicks outside of the image
-            if (event.target.tagName !== 'IMG') {
-                this.$emit('modal-closed')
-            }
-        },
         nextImage() {
             this.$emit('next-image')
         },
@@ -58,12 +57,12 @@ export default {
     display: flex;
     align-items: center;
     position: relative;
-    width: 90%;
-    height: 90%;
 }
 
 .full-screen-image {
     border-radius: 3px;
+    max-height: 90%;
+    max-width: 90%;
 }
 
 .modal-button {
@@ -99,6 +98,12 @@ export default {
     position: absolute;
     right: 8px;
     top: 47%;
+}
+
+#close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
 
 .close {

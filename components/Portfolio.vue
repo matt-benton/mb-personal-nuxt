@@ -6,7 +6,6 @@
                 :key="index"
                 :index="index"
                 :project="project"
-                @large-image-clicked="largeImageClicked($event)"
             />
         </div>
     </section>
@@ -24,11 +23,6 @@ export default {
     },
     components: {
         Project,
-    },
-    methods: {
-        largeImageClicked(image) {
-            this.$emit('large-project-image-clicked', image)
-        },
     },
 }
 </script>

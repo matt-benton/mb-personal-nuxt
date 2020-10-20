@@ -4,7 +4,6 @@
             <ProjectImageGrid
                 :images="project.images"
                 :project-title="project.title"
-                @large-image-clicked="largeImageClicked($event)"
                 v-if="windowWidth > 640"
             />
             <ProjectImageList
@@ -72,11 +71,6 @@ export default {
                 case 2:
                     return 'green'
             }
-        },
-    },
-    methods: {
-        largeImageClicked(image) {
-            this.$emit('large-image-clicked', image)
         },
     },
     props: ['index', 'project'],
