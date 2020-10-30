@@ -23,6 +23,17 @@
                 <p v-for="(paragraph, index) in project.descriptionParagraphs" :key="index">
                     {{ paragraph }}
                 </p>
+                <ul class="references">
+                    <li v-for="(reference, index) in project.references" :key="index">
+                        <a
+                            :href="reference.url"
+                            :class="`text--${highlightColor}`"
+                            target="_blank"
+                            rel="noreferrer"
+                            >{{ reference.text }}</a
+                        >
+                    </li>
+                </ul>
                 <div class="project-links">
                     <a
                         v-for="link in project.links"
@@ -134,6 +145,19 @@ p {
 
 .project-links a:hover {
     background-color: var(--color-grey-dark-5);
+}
+
+.references {
+    margin-bottom: var(--sp-4);
+}
+
+.references li {
+    line-height: 1.3;
+    font-size: var(--text-sm);
+}
+
+.references a {
+    text-decoration: underline;
 }
 
 @media (max-width: 1024px) {

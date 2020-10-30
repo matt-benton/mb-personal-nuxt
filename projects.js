@@ -44,6 +44,14 @@ export const projects = [
                 text: 'Visit Site',
             },
         ],
+        references: [
+            {
+                url:
+                    'https://yellowhammernews.com/alabamas-hi-ed-innovation-depots-newest-member-guiding-students-from-k-12-to-the-workforce/',
+                text:
+                    'Alabama’s Hi.Ed, Innovation Depot’s newest member, guiding students from K-12 to the workforce',
+            },
+        ],
         images: [
             {
                 src: '/img/projects/hi-ed/hi-ed.png',
