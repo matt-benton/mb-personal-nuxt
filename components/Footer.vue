@@ -13,6 +13,7 @@
                 href="https://www.linkedin.com/in/matt-benton-6895951a3/"
                 target="_blank"
                 class="social-link"
+                rel="noreferrer"
             >
                 <cld-image
                     cloudName="dheway9t7"
@@ -22,13 +23,32 @@
                     alt="LinkedIn logo"
                 />
             </a>
-            <a href="https://codepen.io/matt-benton" target="_blank" class="social-link">
+            <a
+                href="https://codepen.io/matt-benton"
+                target="_blank"
+                rel="noreferrer"
+                class="social-link"
+            >
                 <cld-image
                     cloudName="dheway9t7"
                     publicId="mb-personal/logos/codepen_edxrcz"
                     height="30"
                     secure="true"
                     alt="Codepen logo"
+                />
+            </a>
+            <a
+                href="https://github.com/matt-benton"
+                target="_blank"
+                rel="noreferrer"
+                class="social-link"
+            >
+                <cld-image
+                    cloudName="dheway9t7"
+                    publicId="mb-personal/logos/GitHub-Mark-Light-64px_fgvu6x.png"
+                    height="30"
+                    secure="true"
+                    alt="GitHub logo"
                 />
             </a>
         </div>
