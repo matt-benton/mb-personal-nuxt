@@ -41,6 +41,7 @@
                         :class="`text--${highlightColor}`"
                         :href="link.url"
                         target="_blank"
+                        rel="noreferrer"
                         >{{ link.text }}</a
                     >
                 </div>
