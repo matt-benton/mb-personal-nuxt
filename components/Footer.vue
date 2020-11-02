@@ -19,6 +19,7 @@
                     publicId="mb-personal/logos/linkedIn_pt5tr4"
                     height="30"
                     secure="true"
+                    alt="LinkedIn logo"
                 />
             </a>
             <a href="https://codepen.io/matt-benton" target="_blank" class="social-link">
@@ -27,6 +28,7 @@
                     publicId="mb-personal/logos/codepen_edxrcz"
                     height="30"
                     secure="true"
+                    alt="Codepen logo"
                 />
             </a>
         </div>
