@@ -27,6 +27,10 @@ export const projects = [
                 cloudinaryPublicId: 'mb-personal/flow_bill_tracking_bills_dark_n4l1pj.png',
             },
             {
+                src: '/img/projects/flow-bill-tracking/flow_bill_tracking_calendar.png',
+                cloudinaryPublicId: 'mb-personal/flow_bill_tracking_calendar_bunub5.png',
+            },
+            {
                 src: '/img/projects/flow-bill-tracking/flow_bill_tracking_edit.png',
                 cloudinaryPublicId: 'mb-personal/flow_bill_tracking_edit_ds8maa.png',
             },
