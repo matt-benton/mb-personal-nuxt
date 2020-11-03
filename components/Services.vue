@@ -1,13 +1,14 @@
 <template>
-    <section class="services" id="services">
-        <service-card 
-            v-for="card in serviceCards" 
-            :title="card.title" 
-            :body="card.body"
-            :key="card.title">
-        </service-card>
-        
-        <!-- <div class="services__card">
+  <section class="services" id="services">
+    <service-card
+      v-for="card in serviceCards"
+      :title="card.title"
+      :body="card.body"
+      :key="card.title"
+    >
+    </service-card>
+
+    <!-- <div class="services__card">
             <div class="services__card--icon">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 20 20">
@@ -79,7 +80,7 @@
                 code, I consider that a huge win. I strive to find solutions that maintain the simplicity of the product and will resist
                 overcomplicating things unless other options have been exhausted.</div>
         </div> -->
-    </section>
+  </section>
 </template>
 
 <script>
@@ -89,15 +90,15 @@ import Brackets from './icons/Brackets'
 import { serviceCards } from '~/service-text.js'
 
 export default {
-    data() {
-        return {
-            serviceCards: serviceCards,
-        }
-    },
-    components: {
-        'service-card': ServiceCard,
-        'icon-tablet': Tablet,
-        'icon-brackets': Brackets,
+  data() {
+    return {
+      serviceCards: serviceCards,
     }
+  },
+  components: {
+    'service-card': ServiceCard,
+    'icon-tablet': Tablet,
+    'icon-brackets': Brackets,
+  },
 }
 </script>

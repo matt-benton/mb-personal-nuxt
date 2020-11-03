@@ -1,13 +1,13 @@
 <template>
-    <div>
-        <div class="container">
-            <Header />
-            <About />
-            <Skills />
-            <Portfolio />
-            <Footer />
-        </div>
+  <div>
+    <div class="container">
+      <Header />
+      <About />
+      <Skills />
+      <Portfolio />
+      <Footer />
     </div>
+  </div>
 </template>
 
 <script>
@@ -18,12 +18,12 @@ import Portfolio from '~/components/Portfolio.vue'
 import Footer from '~/components/Footer.vue'
 
 export default {
-    components: {
-        Header,
-        About,
-        Skills,
-        Portfolio,
-        Footer,
-    },
+  components: {
+    Header,
+    About,
+    Skills,
+    Portfolio,
+    Footer,
+  },
 }
 </script>

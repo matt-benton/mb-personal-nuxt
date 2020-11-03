@@ -8,9 +8,9 @@ createdAt: '2020-09-16'
 
 ```javascript
 if (someCondition === true) {
-    // do this
+  // do this
 } else {
-    // do something different
+  // do something different
 }
 ```
 
@@ -18,17 +18,17 @@ But "if" statements can get out of hand sometimes. Imagine having to read someth
 
 ```javascript
 if (
-    someCountVariable ||
-    someCountVariable < someArray.length ||
-    (someCountVariable !== someArray.length && parseInt(someOtherVariable > 0))
+  someCountVariable ||
+  someCountVariable < someArray.length ||
+  (someCountVariable !== someArray.length && parseInt(someOtherVariable > 0))
 ) {
-    if (someOtherVariable >= 365) {
-        // do this
-    } else if (someOtherVariable < 365) {
-        // do this instead
-    }
+  if (someOtherVariable >= 365) {
+    // do this
+  } else if (someOtherVariable < 365) {
+    // do this instead
+  }
 } else {
-    // do something else
+  // do something else
 }
 ```
 
@@ -41,26 +41,26 @@ Most of the time we don't mean to write "if" statements like this. But when thin
 Nested if statements are sometimes necessary but they add extra lines and indentations to our code. Consider the following example where we have a function for checking if a pizza is vegetarian. First we are checking to see if the pizza has any toppings, then we are checking to see if those toppings include sausage. We are performing these checks separately, in two different steps, nested inside of each other.
 
 ```javascript
-const isVegetarian = function(pizza) {
-    if (pizza.toppings.length > 0) {
-        if (pizza.toppings.includes('sausage')) {
-            return false
-        }
+const isVegetarian = function (pizza) {
+  if (pizza.toppings.length > 0) {
+    if (pizza.toppings.includes('sausage')) {
+      return false
     }
+  }
 
-    return true
+  return true
 }
 ```
 
 We can make this cleaner by adding both conditions to the parent "if" statement and adding `&&` in between them. Now we have reduced the number of lines of code inside our function from seven to five. We also don't have to try to hold the meaning of the first if statement in our brain while we are reading the second one.
 
 ```javascript
-const isVegetarian = function(pizza) {
-    if (pizza.toppings.length > 0 && pizza.toppings.includes('sausage')) {
-        return false
-    }
+const isVegetarian = function (pizza) {
+  if (pizza.toppings.length > 0 && pizza.toppings.includes('sausage')) {
+    return false
+  }
 
-    return true
+  return true
 }
 ```
 
@@ -76,9 +76,9 @@ In the following example, we are calculating the cost of the toppings on the piz
 let toppingsCost
 
 if (pizza.toppings.length > 2) {
-    toppingsCost = pizza.toppings.length * 0.5
+  toppingsCost = pizza.toppings.length * 0.5
 } else {
-    toppingsCost = 0
+  toppingsCost = 0
 }
 ```
 
@@ -88,7 +88,7 @@ This is fine but we can make it better because the else part is completely unnec
 let toppingsCost = 0
 
 if (pizza.toppings.length > 2) {
-    toppingsCost = pizza.toppings.length * 0.5
+  toppingsCost = pizza.toppings.length * 0.5
 }
 ```
 
@@ -101,12 +101,12 @@ It's much easier to understand the sentence "This is the right way to the beach"
 The bang operator (`!`) allows us to take whatever condition we are looking for in our if statement and reverse it. It can be very convenient to throw a bang in there, but it can be confusing as well. In the following example we are trying to determine if a pizza order has no sides. Try reading the if statement outloud.
 
 ```javascript
-const hasNoSides = function(order) {
-    if (order.drinks.length !== 0 || order.breadsticks.length !== 0) {
-        return false
-    }
+const hasNoSides = function (order) {
+  if (order.drinks.length !== 0 || order.breadsticks.length !== 0) {
+    return false
+  }
 
-    return true
+  return true
 }
 ```
 
@@ -115,10 +115,10 @@ We have a lot of negatives in this whole function. We are checking for _no_ side
 It's pretty confusing and since we are flipping the logic constantly it makes it difficult to be sure that the code is actually doing what it is supposed to do.
 
 ```javascript
-const hasSides = function(order) {
-    if (order.drinks.length > 0 || order.breadsticks.length > 0) {
-        return true
-    }
+const hasSides = function (order) {
+  if (order.drinks.length > 0 || order.breadsticks.length > 0) {
+    return true
+  }
 }
 ```
 
@@ -126,7 +126,7 @@ We can clear this up by first changing the name of the function to `hasSides`. W
 
 ```javascript
 if (hasSides(order)) {
-    // this order has sides
+  // this order has sides
 }
 ```
 
@@ -138,29 +138,29 @@ Sometimes we can get into writing some pretty complicated conditional logic in o
 
 ```javascript
 if (
-    order.pizzas.length <= 2 &&
-    order.drinks.length <= 2 &&
-    order.breadsticks.length <= 1 &&
-    user.coupon.code === 'MONDAYSPECIAL'
+  order.pizzas.length <= 2 &&
+  order.drinks.length <= 2 &&
+  order.breadsticks.length <= 1 &&
+  user.coupon.code === 'MONDAYSPECIAL'
 ) {
-    // this order is for the monday special
+  // this order is for the monday special
 }
 ```
 
 To make this more readable, we can make a new function called `isMondaySpecial`. Then we can copy the conditional and paste it into our function, which will return true if the order meets the criteria. Now in our "if" statement we can call `isMondaySpecial` and know exactly what it is checking because of the descriptive function name. `isMondaySpecial` can also be reused in other parts of our application.
 
 ```javascript
-const isMondaySpecial = function(order) {
-    return (
-        order.pizzas.length <= 2 &&
-        order.drinks.length <= 2 &&
-        order.breadsticks.length <= 1 &&
-        user.coupon.code === 'MONDAYSPECIAL'
-    )
+const isMondaySpecial = function (order) {
+  return (
+    order.pizzas.length <= 2 &&
+    order.drinks.length <= 2 &&
+    order.breadsticks.length <= 1 &&
+    user.coupon.code === 'MONDAYSPECIAL'
+  )
 }
 
 if (isMondaySpecial(order)) {
-    // this order is for the monday special
+  // this order is for the monday special
 }
 ```
 

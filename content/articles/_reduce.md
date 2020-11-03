@@ -20,21 +20,21 @@ Here is an example of using `reduce()` to find the oldest person in a group of u
 
 ```javascript
 let users = [
-    { name: 'Jerry', age: 37 },
-    { name: 'Mike', age: 24 },
-    { name: 'Angela', age: 20 },
+  { name: 'Jerry', age: 37 },
+  { name: 'Mike', age: 24 },
+  { name: 'Angela', age: 20 },
 ]
 ```
 
 Next we are going to define a callback function. We will call this function `compareAges`. The accumulator argument is called `oldestAgeSoFar` and the current element argument is called `currentUser`. Inside the function we compare the the `oldestAgeSoFar` with the `currentUser`'s age, then we return the number that is highest.
 
 ```javascript
-const compareAges = function(oldestAgeSoFar, currentUser) {
-    if (currentUser.age >= oldestAgeSoFar) {
-        return currentUser.age
-    }
+const compareAges = function (oldestAgeSoFar, currentUser) {
+  if (currentUser.age >= oldestAgeSoFar) {
+    return currentUser.age
+  }
 
-    return oldestAgeSoFar
+  return oldestAgeSoFar
 }
 ```
 
@@ -49,9 +49,9 @@ I broke this down into parts to make it easier to understand but you can easily 
 
 ```javascript
 users.reduce(
-    (oldestAgeSoFar, currentUser) =>
-        currentUser.age >= oldestAgeSoFar ? currentUser.age : oldestAgeSoFar,
-    0,
+  (oldestAgeSoFar, currentUser) =>
+    currentUser.age >= oldestAgeSoFar ? currentUser.age : oldestAgeSoFar,
+  0,
 )
 ```
 

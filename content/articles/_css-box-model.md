@@ -20,9 +20,9 @@ To see what manipulating each part of the box model does, we will use a very fam
 
 ```css
 button {
-    padding: 0;
-    margin: 0;
-    border: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 ```
 
@@ -52,9 +52,9 @@ Now that we have our content, let's add some padding.
 
 ```css
 button {
-    padding: 10px 17px;
-    margin: 0;
-    border: 0;
+  padding: 10px 17px;
+  margin: 0;
+  border: 0;
 }
 ```
 
@@ -81,10 +81,10 @@ Right now we don't have a border, so why don't we add one?
 
 ```css
 button {
-    padding: 10px 17px;
-    margin: 0;
-    border: 2px solid forestgreen;
-    border-radius: 5px;
+  padding: 10px 17px;
+  margin: 0;
+  border: 2px solid forestgreen;
+  border-radius: 5px;
 }
 ```
 
@@ -130,10 +130,10 @@ These buttons are right up next to each other and it would be nice if we could s
 
 ```css
 button {
-    padding: 10px 17px;
-    border: 2px solid forestgreen;
-    border-radius: 5px;
-    margin: 0 3px;
+  padding: 10px 17px;
+  border: 2px solid forestgreen;
+  border-radius: 5px;
+  margin: 0 3px;
 }
 ```
 
@@ -161,10 +161,10 @@ Below we have two standard div elements that each represent a card. They have be
 
 ```css
 .card {
-    height: 200px;
-    width: 40%;
-    padding: 15px;
-    border: 10px solid blue;
+  height: 200px;
+  width: 40%;
+  padding: 15px;
+  border: 10px solid blue;
 }
 ```
 
@@ -203,11 +203,11 @@ As you can see, despite having the same height of `200px`, the same padding of `
 
 ```css
 .card:first-of-type {
-    box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .card:last-of-type {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 ```
 
