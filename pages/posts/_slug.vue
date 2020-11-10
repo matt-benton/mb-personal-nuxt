@@ -107,6 +107,13 @@ article {
   color: var(--color-blue);
 }
 
+.nuxt-content ol {
+  font-family: var(--font-secondary);
+  color: #fff;
+  padding-left: var(--sp-6);
+  margin-bottom: var(--sp-4);
+}
+
 .nuxt-content-highlight span {
   font-family: 'Roberto Mono', monospace;
 }
