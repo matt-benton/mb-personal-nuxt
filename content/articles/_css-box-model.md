@@ -2,6 +2,7 @@
 title: Understanding the CSS Box Model
 description: The CSS box model determines how HTML elements are laid out on a page.  Any displayable element you can think of adheres to the box model.  For this reason the box model is a fundamental part of CSS. Understanding it will help you place HTML elements more precisely.  It will also make debugging a lot easier.
 createdAt: '2020-08-14'
+tags: ['css']
 ---
 
 ## <a href="#what-is-it-why-is-it-important" id="what-is-it-why-is-it-important">What is it? Why is it important?</a>
@@ -195,7 +196,7 @@ Below we have two standard div elements that each represent a card. They have be
         <div class="example-card">
             <h3>Card Header</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Nullam eget felis eget nunc lobortis mattis aliquam faucibus.</p>
-        </div> 
+        </div>
     </div>   
 </html>
 

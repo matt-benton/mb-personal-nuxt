@@ -13,18 +13,27 @@
         <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
           <div class="card-header">
             <nuxt-link :to="`/posts/${article.slug}`">
-              <h3>{{ article.title }}</h3>
+              <h3>
+                {{
+                  article.title.length > 40 ? article.title.substring(0, 40) + '...' : article.title
+                }}
+              </h3>
             </nuxt-link>
           </div>
           <div class="card-body">
-            <p>{{ formatDate(article.createdAt) }}</p>
-            <p v-if="article.description">
-              {{
-                article.description.length > 250
-                  ? article.description.substring(0, 250) + '...'
-                  : article.description
-              }}
-            </p>
+            <div>
+              <p>{{ formatDate(article.createdAt) }}</p>
+              <p v-if="article.description">
+                {{
+                  article.description.length > 250
+                    ? article.description.substring(0, 250) + '...'
+                    : article.description
+                }}
+              </p>
+            </div>
+            <div class="tags" v-if="article.tags">
+              <span class="tag" v-for="tag in article.tags">{{ tag }}</span>
+            </div>
           </div>
           <div class="card-footer">
             <nuxt-link :to="`/posts/${article.slug}`">
@@ -104,7 +113,7 @@ p {
 .blog-preview-card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 200px min-content;
+  grid-template-rows: min-content 2fr min-content;
   background-color: var(--color-grey-dark-3);
   color: #fff;
   border-radius: 5px;
@@ -141,6 +150,9 @@ p {
 .card-body {
   padding-left: var(--sp-7);
   padding-right: var(--sp-7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-footer {
@@ -166,6 +178,23 @@ svg {
   height: var(--text-lg);
   width: var(--text-lg);
   fill: var(--color-blue);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--sp-3);
+}
+
+.tag {
+  background-color: var(--color-grey-dark-4);
+  margin-left: var(--sp-1);
+  border-radius: 15px;
+  padding: 0rem 0.9rem;
+}
+
+.tag:first-of-type {
+  margin-left: 0;
 }
 
 @media (max-width: 1024px) {

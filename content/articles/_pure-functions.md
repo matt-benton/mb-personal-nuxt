@@ -2,6 +2,7 @@
 title: Pure Functions
 description: Pure functions are typically simple functions that take in some input, process it, and return a result as output. More importantly, if the input is the same, the output of a pure function will always be the same. These functions are small building blocks for our application and we rely on them as we structure larger, more complicated features. They help us because they don't manipulate the state of our application and they don't cause side-effects, which effectively makes our code more reliable.
 createdAt: '2020-11-10'
+tags: ['javascript', 'functional programming']
 ---
 
 Have you ever had a bug in your application that was the result of a function doing too much? Was it manipulating variables outside of its scope and changing the state of the application every time it ran? I have had bugs like this and they can be very hard to track down and fix.

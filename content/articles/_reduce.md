@@ -2,6 +2,7 @@
 title: Reduce Lines of Code with JavaScript's reduce() Method
 description: JavaScript arrays have tons of functions that allow you to manipulate them. You can flatten them, map them, push, pop, and sort them. To be honest, I still don't know exactly what some of these methods do. Recently I learned about reduce(), which is a method that has taken me a long time to understand.  It's not that it's very complicated, I just never ran into a scenario where I thought I needed it.  You probably don't have to use it.  It turns out it's pretty useful, so in this post I'm going to share with you what reduce() does, when to use it, and how it can improve your code.
 createdAt: '2020-10-07'
+tags: ['javascript']
 ---
 
 JavaScript arrays have tons of functions that allow you to manipulate them. You can flatten them, map them, push, pop, and sort them. Recently I learned about `reduce()`, which is a method that has taken me a long time to understand. It's not that it's very complicated, I just never ran into a scenario where I thought I needed it. It's possible to achieve the same results with a simple loop. However, since learning it, I have found that `reduce()` allows me to write less code that will get the same results as a loop. Here I will share what `reduce()` does, when to use it, and how it can improve your code.
