@@ -9,8 +9,11 @@
         I'm still trying things, but I'm excited to see what it turns into. Follow along and find
         out with me.
       </p>
+      <div class="tags">
+        <span class="tag" v-for="tag in activeTags" @click="removeActiveTag(tag)">{{ tag }}</span>
+      </div>
       <div class="blog-card-container">
-        <div class="blog-preview-card" v-for="article in articles" :key="article.slug">
+        <div class="blog-preview-card" v-for="article in displayedArticles" :key="article.slug">
           <div class="card-header">
             <nuxt-link :to="`/posts/${article.slug}`">
               <h3>
@@ -32,7 +35,9 @@
               </p>
             </div>
             <div class="tags" v-if="article.tags">
-              <span class="tag" v-for="tag in article.tags">{{ tag }}</span>
+              <span class="tag" v-for="tag in article.tags" @click="addActiveTag(tag)">{{
+                tag
+              }}</span>
             </div>
           </div>
           <div class="card-footer">
@@ -68,9 +73,35 @@ export default {
       articles,
     }
   },
+  data() {
+    return {
+      activeTags: [],
+    }
+  },
+  computed: {
+    displayedArticles() {
+      if (this.activeTags.length !== 0) {
+        return this.articles.filter(article => {
+          return this.activeTags.some(tag => article.tags && article.tags.includes(tag))
+        })
+      }
+
+      return this.articles
+    },
+  },
   methods: {
     formatDate(dateString) {
       return format(new Date(dateString), 'MMMM d, yyyy')
+    },
+    addActiveTag(tag) {
+      if (!this.activeTags.includes(tag)) {
+        this.activeTags.push(tag)
+      }
+    },
+    removeActiveTag(tag) {
+      const index = this.activeTags.findIndex(activeTag => activeTag === tag)
+
+      this.activeTags.splice(index, 1)
     },
   },
   components: {
@@ -188,9 +219,11 @@ svg {
 
 .tag {
   background-color: var(--color-grey-dark-4);
+  color: #fff;
   margin-left: var(--sp-1);
   border-radius: 15px;
   padding: 0rem 0.9rem;
+  cursor: pointer;
 }
 
 .tag:first-of-type {
