@@ -97,7 +97,10 @@ export default {
     },
     topics() {
       return new Set(
-        this.articles.flatMap(article => article.tags).filter(topic => topic !== undefined),
+        this.articles
+          .flatMap(article => article.tags)
+          .filter(topic => topic !== undefined)
+          .sort(),
       )
     },
   },
