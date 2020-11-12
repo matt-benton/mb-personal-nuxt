@@ -1,59 +1,71 @@
 <template>
   <div class="component-body">
     <blog-nav />
-    <div class="section-container">
-      <p>
+    <div class="layout">
+      <p class="welcome-message">
         Welcome to my blog. This is where I post helpful articles about web development. The purpose
         of this blog is to share what I know about JavaScript, CSS, PHP, and other tools in web dev.
         I aim to explore many different topics as the blog evolves. It is very young right now and
         I'm still trying things, but I'm excited to see what it turns into. Follow along and find
         out with me.
       </p>
-    </div>
-    <div class="blog-card-container">
-      <div class="tags">
-        <span class="tag tag-close" v-for="tag in activeTags" @click="removeActiveTag(tag)">
-          {{ tag }}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+      <div class="topics">
+        <h5>TOPICS</h5>
+        <ul>
+          <li
+            v-for="topic in topics"
+            @click="addActiveTag(topic)"
+            :class="{ bold: activeTags.includes(topic) }"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </span>
+            {{ topic }}
+          </li>
+        </ul>
       </div>
-      <div class="blog-preview-card" v-for="article in displayedArticles" :key="article.slug">
-        <div class="card-header">
-          <nuxt-link :to="`/posts/${article.slug}`">
-            <h2>
-              {{
-                article.title.length > 40 ? article.title.substring(0, 40) + '...' : article.title
-              }}
-            </h2>
-          </nuxt-link>
+      <div class="blog-card-container">
+        <div class="tags" v-show="activeTags.length > 0">
+          <span class="tag tag-close" v-for="tag in activeTags" @click="removeActiveTag(tag)">
+            {{ tag }}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </span>
         </div>
-        <div class="card-body">
-          <div>
-            <p>{{ formatDate(article.createdAt) }}</p>
-            <p v-if="article.description">
-              {{
-                article.description.length > 250
-                  ? article.description.substring(0, 250) + '...'
-                  : article.description
-              }}
-            </p>
+        <div class="blog-preview-card" v-for="article in displayedArticles" :key="article.slug">
+          <div class="card-header">
+            <nuxt-link :to="`/posts/${article.slug}`">
+              <h2>
+                {{
+                  article.title.length > 40 ? article.title.substring(0, 40) + '...' : article.title
+                }}
+              </h2>
+            </nuxt-link>
           </div>
-          <div class="tags" v-if="article.tags">
-            <span class="tag" v-for="tag in article.tags" @click="addActiveTag(tag)">{{
-              tag
-            }}</span>
+          <div class="card-body">
+            <div>
+              <p>{{ formatDate(article.createdAt) }}</p>
+              <p v-if="article.description">
+                {{
+                  article.description.length > 250
+                    ? article.description.substring(0, 250) + '...'
+                    : article.description
+                }}
+              </p>
+            </div>
+            <div class="tags" v-if="article.tags">
+              <span class="tag" v-for="tag in article.tags" @click="addActiveTag(tag)">{{
+                tag
+              }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -90,6 +102,11 @@ export default {
 
       return this.articles
     },
+    topics() {
+      return new Set(
+        this.articles.flatMap(article => article.tags).filter(topic => topic !== undefined),
+      )
+    },
   },
   methods: {
     formatDate(dateString) {
@@ -124,12 +141,46 @@ p {
   max-width: 600px;
 }
 
-.section-container > p {
+.layout {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: 20% 80%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 var(--sp-3);
+}
+
+.layout > p {
+  width: 100%;
   margin: var(--sp-5) auto;
   font-weight: 300;
   color: var(--color-grey-light-1);
   padding: var(--sp-7);
   background-color: var(--color-grey-dark-3);
+}
+
+.welcome-message {
+  grid-column: span 2;
+}
+
+.topics > h5 {
+  color: var(--color-grey-light-5);
+  margin-bottom: var(--sp-2);
+}
+
+.topics > ul {
+  padding-left: var(--sp-2);
+}
+
+.topics li {
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: var(--sp-2);
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .blog-card-container {
@@ -138,7 +189,6 @@ p {
   justify-content: center;
   grid-gap: var(--sp-4);
   grid-auto-row: 1fr;
-  max-width: 600px;
   margin: 0 auto 200px auto;
 }
 
@@ -229,29 +279,22 @@ p {
   margin-left: 0;
 }
 
-@media (max-width: 1024px) {
-  .section-container {
-    margin-top: 0;
-    padding-top: 0;
-  }
-}
-
 @media (max-width: 640px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
   .blog-preview-card > * {
-    padding: var(--sp-4);
-  }
-
-  .section-container {
-    padding: 0 5% var(--sp-7) 5%;
-  }
-
-  .section-container > p {
     padding: var(--sp-4);
   }
 
   .blog-card-container {
     grid-gap: var(--sp-1);
     margin: 0 var(--sp-2);
+  }
+
+  .topics {
+    display: none;
   }
 }
 </style>
