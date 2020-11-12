@@ -11,6 +11,11 @@
             :class="{ bold: activeTags.includes(topic) }"
           >
             {{ topic }}
+            <small
+              >({{
+                articles.filter(article => article.tags && article.tags.includes(topic)).length
+              }})</small
+            >
           </li>
         </ul>
       </div>
