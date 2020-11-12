@@ -10,7 +10,22 @@
         out with me.
       </p>
       <div class="tags">
-        <span class="tag" v-for="tag in activeTags" @click="removeActiveTag(tag)">{{ tag }}</span>
+        <span class="tag tag-close" v-for="tag in activeTags" @click="removeActiveTag(tag)">
+          {{ tag }}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </span>
       </div>
       <div class="blog-card-container">
         <div class="blog-preview-card" v-for="article in displayedArticles" :key="article.slug">
@@ -202,7 +217,7 @@ p {
   padding-right: var(--sp-5);
 }
 
-svg {
+.card-footer svg {
   position: absolute;
   right: 0;
   top: 6px;
@@ -214,16 +229,28 @@ svg {
 .tags {
   display: flex;
   flex-wrap: wrap;
-  margin-top: var(--sp-3);
+  margin: var(--sp-3) 0;
 }
 
 .tag {
+  position: relative;
   background-color: var(--color-grey-dark-4);
   color: #fff;
   margin-left: var(--sp-1);
   border-radius: 15px;
   padding: 0rem 0.9rem;
   cursor: pointer;
+}
+
+.tag svg {
+  position: relative;
+  height: var(--text-lg);
+  width: var(--text-lg);
+  top: 3px;
+}
+
+.tag-close {
+  padding-right: var(--sp-2) !important;
 }
 
 .tag:first-of-type {
