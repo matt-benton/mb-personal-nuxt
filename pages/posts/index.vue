@@ -2,13 +2,6 @@
   <div class="component-body">
     <blog-nav />
     <div class="layout">
-      <p class="welcome-message">
-        Welcome to my blog. This is where I post helpful articles about web development. The purpose
-        of this blog is to share what I know about JavaScript, CSS, PHP, and other tools in web dev.
-        I aim to explore many different topics as the blog evolves. It is very young right now and
-        I'm still trying things, but I'm excited to see what it turns into. Follow along and find
-        out with me.
-      </p>
       <div class="topics">
         <h5>TOPICS</h5>
         <ul>
@@ -143,24 +136,17 @@ p {
 
 .layout {
   display: grid;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: 1fr;
   grid-template-columns: 20% 80%;
   max-width: 850px;
   margin: 0 auto;
-  padding: 0 var(--sp-3);
+  padding: var(--sp-5) var(--sp-3);
 }
 
-.layout > p {
-  width: 100%;
-  margin: var(--sp-5) auto;
-  font-weight: 300;
-  color: var(--color-grey-light-1);
-  padding: var(--sp-7);
-  background-color: var(--color-grey-dark-3);
-}
-
-.welcome-message {
-  grid-column: span 2;
+.topics {
+  position: sticky;
+  top: 70px;
+  max-height: 50vh;
 }
 
 .topics > h5 {
@@ -173,7 +159,7 @@ p {
 }
 
 .topics li {
-  color: #fff;
+  color: var(--color-grey-light-2);
   line-height: 1.15;
   margin-bottom: var(--sp-2);
   cursor: pointer;
@@ -197,7 +183,7 @@ p {
   grid-template-columns: 1fr;
   grid-template-rows: min-content 2fr min-content;
   background-color: var(--color-grey-dark-3);
-  color: #fff;
+  color: var(--color-grey-light-2);
   border-radius: 5px;
   padding: var(--sp-5);
 }

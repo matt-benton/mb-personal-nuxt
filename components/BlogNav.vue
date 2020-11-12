@@ -7,6 +7,9 @@
 
 <style scoped>
 ul {
+  position: sticky;
+  top: 0;
+  z-index: 5555;
   display: flex;
   justify-content: center;
   background: linear-gradient(to left, var(--color-blue) 10%, 30%, var(--color-blue-dark) 90%);

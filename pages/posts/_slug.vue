@@ -97,7 +97,7 @@ article {
 .nuxt-content p {
   font-family: var(--font-secondary);
   font-weight: 300;
-  color: #fff;
+  color: var(--color-grey-light-2);
   margin-bottom: var(--sp-4);
   line-height: 1.8;
   font-size: var(--font-small);
