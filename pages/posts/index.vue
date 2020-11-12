@@ -129,6 +129,9 @@ export default {
 <style scoped>
 .component-body {
   background-color: var(--color-grey-dark-2);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 p {
@@ -139,11 +142,12 @@ p {
 
 .layout {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: min-content;
   grid-template-columns: 20% 80%;
   max-width: 850px;
   margin: 0 auto;
   padding: var(--sp-5) var(--sp-3);
+  flex-grow: 10;
 }
 
 .topics {
@@ -178,7 +182,7 @@ p {
   justify-content: center;
   grid-gap: var(--sp-4);
   grid-auto-row: 1fr;
-  margin: 0 auto 200px auto;
+  margin: 0 auto;
 }
 
 .blog-preview-card {
