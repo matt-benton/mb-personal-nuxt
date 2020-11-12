@@ -200,10 +200,6 @@ p {
   padding: var(--sp-5);
 }
 
-.blog-preview-card > * {
-  padding: var(--sp-4);
-}
-
 .card-header {
   display: flex;
   align-items: center;
@@ -213,6 +209,7 @@ p {
 
 .card-header h2 {
   color: var(--color-blue);
+  padding-bottom: var(--sp-2);
 }
 
 .card-body {
@@ -280,10 +277,6 @@ p {
 @media (max-width: 640px) {
   .layout {
     grid-template-columns: 1fr;
-  }
-
-  .blog-preview-card > * {
-    padding: var(--sp-4);
   }
 
   .blog-card-container {
