@@ -9,6 +9,8 @@
         I'm still trying things, but I'm excited to see what it turns into. Follow along and find
         out with me.
       </p>
+    </div>
+    <div class="blog-card-container">
       <div class="tags">
         <span class="tag tag-close" v-for="tag in activeTags" @click="removeActiveTag(tag)">
           {{ tag }}
@@ -27,46 +29,31 @@
           </svg>
         </span>
       </div>
-      <div class="blog-card-container">
-        <div class="blog-preview-card" v-for="article in displayedArticles" :key="article.slug">
-          <div class="card-header">
-            <nuxt-link :to="`/posts/${article.slug}`">
-              <h3>
-                {{
-                  article.title.length > 40 ? article.title.substring(0, 40) + '...' : article.title
-                }}
-              </h3>
-            </nuxt-link>
+      <div class="blog-preview-card" v-for="article in displayedArticles" :key="article.slug">
+        <div class="card-header">
+          <nuxt-link :to="`/posts/${article.slug}`">
+            <h2>
+              {{
+                article.title.length > 40 ? article.title.substring(0, 40) + '...' : article.title
+              }}
+            </h2>
+          </nuxt-link>
+        </div>
+        <div class="card-body">
+          <div>
+            <p>{{ formatDate(article.createdAt) }}</p>
+            <p v-if="article.description">
+              {{
+                article.description.length > 250
+                  ? article.description.substring(0, 250) + '...'
+                  : article.description
+              }}
+            </p>
           </div>
-          <div class="card-body">
-            <div>
-              <p>{{ formatDate(article.createdAt) }}</p>
-              <p v-if="article.description">
-                {{
-                  article.description.length > 250
-                    ? article.description.substring(0, 250) + '...'
-                    : article.description
-                }}
-              </p>
-            </div>
-            <div class="tags" v-if="article.tags">
-              <span class="tag" v-for="tag in article.tags" @click="addActiveTag(tag)">{{
-                tag
-              }}</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <nuxt-link :to="`/posts/${article.slug}`">
-              <span>Read More</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1"
-                viewBox="0 0 24 24"
-              >
-                <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
-              </svg>
-            </nuxt-link>
+          <div class="tags" v-if="article.tags">
+            <span class="tag" v-for="tag in article.tags" @click="addActiveTag(tag)">{{
+              tag
+            }}</span>
           </div>
         </div>
       </div>
@@ -137,12 +124,8 @@ p {
   max-width: 600px;
 }
 
-.section-container {
-  padding-bottom: var(--sp-7);
-}
-
 .section-container > p {
-  margin: var(--sp-7) auto;
+  margin: var(--sp-5) auto;
   font-weight: 300;
   color: var(--color-grey-light-1);
   padding: var(--sp-7);
@@ -151,9 +134,12 @@ p {
 
 .blog-card-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  grid-gap: var(--sp-7);
+  grid-template-columns: 1fr;
+  justify-content: center;
+  grid-gap: var(--sp-4);
+  grid-auto-row: 1fr;
+  max-width: 600px;
+  margin: 0 auto 200px auto;
 }
 
 .blog-preview-card {
@@ -163,6 +149,7 @@ p {
   background-color: var(--color-grey-dark-3);
   color: #fff;
   border-radius: 5px;
+  padding: var(--sp-5);
 }
 
 .blog-preview-card > * {
@@ -171,31 +158,16 @@ p {
 
 .card-header {
   display: flex;
-  justify-content: center;
   align-items: center;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.card-header h3 {
-  color: #fff;
-}
-
-.blog-preview-card:nth-of-type(3n + 1) .card-header {
-  background: linear-gradient(to left, var(--color-pink), var(--color-pink-dark));
-}
-
-.blog-preview-card:nth-of-type(3n + 2) .card-header {
-  background: linear-gradient(to left, var(--color-blue), var(--color-blue-dark));
-}
-
-.blog-preview-card:nth-of-type(3n + 3) .card-header {
-  background: linear-gradient(to left, var(--color-green), var(--color-green-dark));
+.card-header h2 {
+  color: var(--color-blue);
 }
 
 .card-body {
-  padding-left: var(--sp-7);
-  padding-right: var(--sp-7);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -229,7 +201,6 @@ p {
 .tags {
   display: flex;
   flex-wrap: wrap;
-  margin: var(--sp-3) 0;
 }
 
 .tag {
@@ -237,6 +208,7 @@ p {
   background-color: var(--color-grey-dark-4);
   color: #fff;
   margin-left: var(--sp-1);
+  margin-bottom: var(--sp-1);
   border-radius: 15px;
   padding: 0rem 0.9rem;
   cursor: pointer;
@@ -262,10 +234,6 @@ p {
     margin-top: 0;
     padding-top: 0;
   }
-
-  .blog-card-container {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 640px) {
@@ -282,7 +250,8 @@ p {
   }
 
   .blog-card-container {
-    grid-gap: var(--sp-4);
+    grid-gap: var(--sp-1);
+    margin: 0 var(--sp-2);
   }
 }
 </style>
