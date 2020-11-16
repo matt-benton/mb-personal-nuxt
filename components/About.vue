@@ -41,7 +41,7 @@ img {
   border-radius: 50%;
   float: left;
   shape-outside: circle();
-  margin: var(--sp-3);
+  margin: var(--sp-2);
   border: 2px solid white;
   filter: saturate(1.2);
 }
