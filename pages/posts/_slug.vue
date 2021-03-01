@@ -94,6 +94,10 @@ article {
   color: var(--color-blue);
 }
 
+.nuxt-content h4 a {
+  color: var(--color-blue);
+}
+
 .nuxt-content p {
   font-family: var(--font-secondary);
   color: var(--color-grey-light-2);
