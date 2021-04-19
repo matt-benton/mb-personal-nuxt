@@ -2,7 +2,7 @@
 title: Using Eloquent to Relate Data in Laravel
 description: It is very common for data to be related to other data in the database. Eloquent is helpful here because it sits on top of our database and helps us easily manage these relationships. This saves us from having to do unnecessary work. And when your database starts getting complicated, having these tasks taken care of for you is a luxury.
 createdAt: '2021-04-19'
-tags: ['laravel', 'eloquent']
+tags: ['laravel', 'eloquent', 'php']
 ---
 
 Laravel's Eloquent is a great tool that makes managing related data much easier. It is very common for data to be related to other data in the database. For instance, if we were building a to-do list app we might have tasks and subtasks. Every subtask would need to be related to its parent task. When we insert and query data about our tasks and subtasks we would most likely be dealing with both because of the relationship between the two.
