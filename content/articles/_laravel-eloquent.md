@@ -174,7 +174,7 @@ $album->artist;
 $album->artist->name; // "Shania Twain"
 ```
 
-Eloquent also provides several methods for inserting, updating and deleting related data as well but I'm not going to go into them all here. Instead I will refer you to <a href="https://laravel.com/docs/8.x/eloquent#inserting-and-updating-models">Laravel's documentation</a>.
+Eloquent also provides several methods for inserting, updating and deleting related data as well but I'm not going to go into them all here. Instead I will refer you to <a href="https://laravel.com/docs/8.x/eloquent#inserting-and-updating-models" target="_blank" rel="noreferrer">Laravel's documentation</a>.
 
 So far we have only talked about one type of relationship, one-to-many. This one is very common but a more complicated relationship exists that we also need to talk about - many-to-many. In our 90's country music catalog example let's say we have a tracks table but we also want to keep up with what instruments are played on each track. This means that we need an instruments table and a way to relate instruments to tracks. Here a track has many instruments but additionally an instrument can be used in multiple tracks.
 
@@ -350,4 +350,4 @@ foreach ($track->instrument as $instrument) {
 }
 ```
 
-Eloquent is great and really saves you a lot of extra work when having to manage these relationships. This post explains the essentials of using Eloquent and setting up relational data but I would refer you once again to <a href="https://laravel.com/docs/8.x/eloquent-relationships">the documentation</a> when you are ready to do more. This is a guide that I wish I had when I was starting out because I remember stumbling a lot when trying to figure out how Eloquent worked. Hopefully this will clear things up and help you get through anything that you get stuck on.
+Eloquent is great and really saves you a lot of extra work when having to manage these relationships. This post explains the essentials of using Eloquent and setting up relational data but I would refer you once again to <a href="https://laravel.com/docs/8.x/eloquent-relationships" target="_blank" rel="noreferrer">the documentation</a> when you are ready to do more. This is a guide that I wish I had when I was starting out because I remember stumbling a lot when trying to figure out how Eloquent worked. Hopefully this will clear things up and help you get through anything that you get stuck on.
