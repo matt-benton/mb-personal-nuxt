@@ -1,9 +1,9 @@
 export const projects = [
   {
     title: 'Flow Bill Tracking',
-    subtitle: 'A web app for tracking monthly and annually recurring bills',
+    subtitle: 'A web app for tracking recurring bills',
     descriptionParagraphs: [
-      'Flow Bill Tracking is a web application for helping people keep up with their bills. Users can store all of their recurring expenses and track if they have been paid yet or not.  In addition, Flow helps keep up with the total amount of spending from month to month.  It also tracks how much is still owed after some bills have been paid.',
+      'Flow Bill Tracking is a web application for helping people keep up with their bills. Users can store all of their recurring expenses and track if they have been paid yet.  In addition, Flow helps keep up with the total amount of spending from month to month.  It also tracks how much is still owed after some bills have been paid.',
       'Users of Flow should find they have a better understanding of their money flow, from due dates to amounts to whether or not a bill is automatically deducted from their bank account.',
       'I built Flow using Laravel and Vue.  I designed and styled it using plain CSS.',
     ],
@@ -15,24 +15,24 @@ export const projects = [
     ],
     images: [
       {
-        src: '/img/projects/flow-bill-tracking/flow_bill_tracking_landing.png',
-        cloudinaryPublicId: 'mb-personal/flow-landing-page_lh95wg.png',
+        src: '/img/projects/flow-bill-tracking/flow-welcome.png',
+        cloudinaryPublicId: 'mb-personal/flow-welcome_gje82q',
       },
       {
-        src: '/img/projects/flow-bill-tracking/flow_bill_tracking_bills.png',
-        cloudinaryPublicId: 'mb-personal/flow_bill_tracking_bills',
+        src: '/img/projects/flow-bill-tracking/flow-light.png',
+        cloudinaryPublicId: 'mb-personal/flow-light_n0tu34',
       },
       {
-        src: '/img/projects/flow-bill-tracking/flow_bill_tracking_bills_dark.png',
-        cloudinaryPublicId: 'mb-personal/flow_bill_tracking_bills_dark_n4l1pj.png',
+        src: '/img/projects/flow-bill-tracking/flow-dark.png',
+        cloudinaryPublicId: 'mb-personal/flow-dark_ms0skw',
       },
       {
-        src: '/img/projects/flow-bill-tracking/flow_bill_tracking_calendar.png',
-        cloudinaryPublicId: 'mb-personal/flow_bill_tracking_calendar_bunub5.png',
+        src: '/img/projects/flow-bill-tracking/flow-calendar.png',
+        cloudinaryPublicId: 'mb-personal/flow-calendar_q5zedu',
       },
       {
-        src: '/img/projects/flow-bill-tracking/flow_bill_tracking_edit.png',
-        cloudinaryPublicId: 'mb-personal/flow_bill_tracking_edit_ds8maa.png',
+        src: '/img/projects/flow-bill-tracking/flow-edit.png',
+        cloudinaryPublicId: 'mb-personal/flow-edit_dlcpik',
       },
     ],
   },
