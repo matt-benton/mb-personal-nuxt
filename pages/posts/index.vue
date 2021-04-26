@@ -7,6 +7,7 @@
         <ul>
           <li
             v-for="topic in topics"
+            :key="topic"
             @click="addActiveTag(topic)"
             :class="{ bold: activeTags.includes(topic) }"
           >
@@ -168,6 +169,7 @@ p {
 
 .topics > ul {
   padding-left: var(--sp-2);
+  padding-right: var(--sp-2);
 }
 
 .topics li {
