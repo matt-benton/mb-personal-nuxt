@@ -7,7 +7,8 @@
             I am a <b>JavaScript</b> and <b>PHP</b> developer with experience using various
             frameworks and libraries. I really love using <b>Vue.js</b> and <b>Laravel</b> for my
             projects. I enjoy writing plain <b>CSS</b>, but I have also used CSS libraries such as
-            <b>Bootstrap</b> and <b>TailwindCSS</b>. For testing I use <b>Cypress</b>.
+            <b>Bootstrap</b> and <b>TailwindCSS</b>. For end to end testing I prefer to use
+            <b>Cypress</b>.
           </p>
         </div>
         <div class="skills-right">
