@@ -49,14 +49,14 @@ header {
 .hero {
   display: flex;
   flex-direction: column;
-  padding: var(--sp-8) 0;
+  padding: var(--sp-10) 0;
   max-width: 750px;
   margin: 0 auto;
 }
 
 header h1 {
   font-size: var(--text-5xl);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: var(--sp-5);
   line-height: 1.3;
 }
@@ -77,6 +77,7 @@ header h2 {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  border-radius: 8px;
 }
 
 .btn:hover {

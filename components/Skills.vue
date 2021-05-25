@@ -103,6 +103,12 @@ section {
   margin: var(--sp-2);
   border-radius: 5px;
   color: var(--color-grey-dark-2);
+  transition: transform .4s, box-shadow .4s;
+}
+
+.skills-grid-item:hover {
+  transform: rotate(-6deg);
+  box-shadow: 5px 5px 5px var(--color-grey-light-5);
 }
 
 .skills-grid-item:nth-of-type(3n + 1) {
