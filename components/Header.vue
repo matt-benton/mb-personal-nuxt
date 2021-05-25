@@ -49,7 +49,7 @@ header {
 .hero {
   display: flex;
   flex-direction: column;
-  padding: var(--sp-8) 0;
+  padding: var(--sp-10) 0;
   max-width: 750px;
   margin: 0 auto;
 }
