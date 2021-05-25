@@ -1,7 +1,9 @@
 <template>
   <section id="about">
     <div class="about-container">
-      <img src="/img/matt-benton.jpg" alt="Photo of myself" />
+      <div class="image-wrap">
+        <img src="/img/matt-benton.jpg" alt="Photo of myself" />
+      </div>
       <p>
         When I originally finished college I was headed for a career in the field of education as a
         teacher. I had enthusiasm for learning as well as a passion for crafting experiences that
@@ -22,7 +24,8 @@ export default {}
 
 <style scoped>
 section {
-  background: linear-gradient(to right, var(--color-blue), var(--color-blue-dark));
+  /* background: linear-gradient(to right, var(--color-blue), var(--color-blue-dark)); */
+  background-color: var(--color-grey-dark-1);
   color: var(--color-grey-light-1);
   font-size: var(--text-lg);
   line-height: 2.4rem;
@@ -32,35 +35,36 @@ section {
 }
 
 .about-container {
-  width: 750px;
+  width: 810px;
+}
+
+.image-wrap {
+  height: 29rem;
+  width: 29rem;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, var(--color-pink-dark), var(--color-pink));
+  padding: 3px;
+  shape-outside: circle();
+  float: left;
+  margin-right: var(--sp-4);
 }
 
 img {
-  height: 28rem;
-  width: 28rem;
   border-radius: 50%;
-  float: left;
-  shape-outside: circle();
-  margin: var(--sp-2);
-  border: 2px solid white;
   filter: saturate(1.2);
+  border: none;
 }
 
 @media (max-width: 1024px) {
-  img {
-    height: 18rem;
-    width: 18rem;
+  .image-wrap {
+    height: 19rem;
+    width: 19rem;
   }
 }
 
 @media (max-width: 768px) {
   section {
     padding: var(--sp-8) 5%;
-  }
-
-  img {
-    height: 18rem;
-    width: 18rem;
   }
 }
 </style>
