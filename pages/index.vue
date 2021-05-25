@@ -3,6 +3,7 @@
     <div class="container">
       <Header />
       <About />
+      <Services />
       <Skills />
       <Portfolio />
       <Footer />
@@ -16,6 +17,7 @@ import About from '~/components/About.vue'
 import Skills from '~/components/Skills.vue'
 import Portfolio from '~/components/Portfolio.vue'
 import Footer from '~/components/Footer.vue'
+import Services from '~/components/Services.vue'
 
 export default {
   components: {
@@ -24,6 +26,7 @@ export default {
     Skills,
     Portfolio,
     Footer,
+    Services,
   },
 }
 </script>
