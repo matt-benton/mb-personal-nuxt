@@ -39,9 +39,8 @@ export default {
 
 <style scoped>
 header {
-  background-image: url('/img/shape-bg.svg');
-  background-size: cover;
-  color: var(--color-grey-dark-1);
+  background-color: var(--color-grey-dark-1);
+  color: var(--color-grey-light-1);
   display: grid;
   grid-template-rows: min-content 1fr;
 }
@@ -49,7 +48,7 @@ header {
 .hero {
   display: flex;
   flex-direction: column;
-  padding: var(--sp-10) 0;
+  padding: var(--sp-9) 0 var(--sp-5) 0;
   max-width: 750px;
   margin: 0 auto;
 }
@@ -63,7 +62,7 @@ header h1 {
 
 header h2 {
   font-size: var(--text-3xl);
-  color: var(--text-muted);
+  color: var(--color-grey-light-4);
   font-weight: 300;
   margin-bottom: var(--sp-5);
   line-height: 1.2;

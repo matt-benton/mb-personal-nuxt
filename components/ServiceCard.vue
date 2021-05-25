@@ -25,8 +25,6 @@ export default {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: min-content;
-  background-color: #fff;
-  border-radius: 72px;
 }
 
 .service-icon {

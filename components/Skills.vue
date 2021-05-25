@@ -103,7 +103,7 @@ section {
   margin: var(--sp-2);
   border-radius: 5px;
   color: var(--color-grey-dark-2);
-  transition: transform .4s, box-shadow .4s;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .skills-grid-item:hover {
