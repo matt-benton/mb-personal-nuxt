@@ -76,7 +76,7 @@ header h2 {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .btn:hover {

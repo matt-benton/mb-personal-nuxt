@@ -14,10 +14,10 @@
     </div>
     <div class="project-container project-container-text">
       <div>
-        <h3 :class="`text--${highlightColor}`">
+        <h3>
           {{ project.title }}
         </h3>
-        <h4 :class="`text--${highlightColor}`">
+        <h4>
           {{ project.subtitle }}
         </h4>
         <p v-for="(paragraph, index) in project.descriptionParagraphs" :key="index">
@@ -25,20 +25,13 @@
         </p>
         <ul class="references">
           <li v-for="(reference, index) in project.references" :key="index">
-            <a
-              :href="reference.url"
-              :class="`text--${highlightColor}`"
-              target="_blank"
-              rel="noreferrer"
-              >{{ reference.text }}</a
-            >
+            <a :href="reference.url" target="_blank" rel="noreferrer">{{ reference.text }}</a>
           </li>
         </ul>
         <div class="project-links">
           <a
             v-for="link in project.links"
             :key="link.title"
-            :class="`text--${highlightColor}`"
             :href="link.url"
             target="_blank"
             rel="noreferrer"
@@ -63,28 +56,6 @@ export default {
   mounted() {
     this.windowWidth = window.innerWidth
   },
-  computed: {
-    highlightColor() {
-      /**
-       * the purpose of this function is to ensure that every 3rd
-       * project is the same color
-       */
-      let i = this.index
-
-      while (i - 3 > -1) {
-        i = i - 3
-      }
-
-      switch (i) {
-        case 0:
-          return 'pink'
-        case 1:
-          return 'blue'
-        case 2:
-          return 'green'
-      }
-    },
-  },
   props: ['index', 'project'],
   components: {
     ProjectImageGrid,
@@ -96,14 +67,12 @@ export default {
 <style scoped>
 .project {
   display: flex;
-  border-bottom: 1px solid var(--color-grey-dark-2);
 }
 
 .project-container {
   display: flex;
   flex-direction: column;
   padding: var(--sp-7);
-  background-color: var(--color-grey-dark-3);
   flex: 1;
 }
 
@@ -113,8 +82,11 @@ export default {
 }
 
 h3 {
+  background: -webkit-linear-gradient(45deg, var(--color-blue), var(--color-blue-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: var(--text-4xl);
-  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-4);
 }
 
 h4 {
@@ -137,15 +109,18 @@ p {
 
 .project-links a {
   border-radius: 5px;
-  padding: 10px 25px;
-  background-color: var(--color-grey-dark-1);
-  border: 0;
+  padding: 8px 24px;
+  border: 2px solid var(--color-blue);
   cursor: pointer;
   margin-right: var(--sp-2);
+  color: var(--color-blue);
+  transition: background-color 0.3s, border-color 0.1s;
 }
 
 .project-links a:hover {
-  background-color: var(--color-grey-dark-5);
+  background-color: var(--color-pink-dark);
+  border-color: var(--color-grey-dark-1);
+  color: var(--color-grey-light-1);
 }
 
 .references {
@@ -159,13 +134,13 @@ p {
 
 .references a {
   text-decoration: underline;
+  color: var(--color-blue);
 }
 
 @media (max-width: 1024px) {
   .project {
     flex-direction: column;
     margin: 0 0;
-    border-bottom: 1px solid var(--color-grey-dark-3);
   }
 
   .project-container-text {
@@ -180,14 +155,6 @@ p {
 }
 
 @media (max-width: 768px) {
-  .project-container {
-    background-color: var(--color-grey-dark-2);
-  }
-
-  .project:last-of-type {
-    border-bottom: none;
-  }
-
   .project:last-of-type > .project-container-image {
     padding-bottom: 0;
   }

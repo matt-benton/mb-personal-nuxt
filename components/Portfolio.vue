@@ -29,9 +29,8 @@ export default {
 
 <style scoped>
 section {
-  background-color: var(--color-grey-dark-2);
+  background-color: var(--color-grey-dark-1);
   color: var(--color-grey-light-1);
-  z-index: 50;
   padding: var(--sp-7) 0;
 }
 
