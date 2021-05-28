@@ -54,7 +54,7 @@ export default {}
 
 <style scoped>
 section {
-  background-color: var(--color-grey-light-1);
+  background-color: var(--color-grey-dark-1);
   justify-content: space-evenly;
   font-size: var(--text-lg);
   line-height: var(--line-height-medium);
@@ -62,7 +62,6 @@ section {
 
 .skills-container {
   display: flex;
-  background-color: #fff;
   padding: var(--sp-7);
   margin: var(--sp-7) 0;
 }
@@ -78,7 +77,7 @@ section {
 }
 
 .left-text {
-  color: var(--color-grey-dark-3);
+  color: var(--color-grey-light-1);
   font-weight: 300;
 }
 
@@ -89,38 +88,28 @@ section {
 }
 
 .skills-grid {
-  display: grid;
+  display: flex;
   width: 100%;
-  grid-template-columns: 50% 50%;
-  grid-auto-rows: 1fr;
+  flex-wrap: wrap;
 }
 
 .skills-grid-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
   margin: var(--sp-2);
-  border-radius: 5px;
-  color: var(--color-grey-dark-2);
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 45px;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+  color: var(--color-grey-light-1);
   transition: transform 0.4s, box-shadow 0.4s;
+  background: linear-gradient(to bottom right, var(--color-blue), var(--color-blue-dark));
 }
 
 .skills-grid-item:hover {
-  transform: rotate(-6deg);
-  box-shadow: 5px 5px 5px var(--color-grey-light-5);
-}
-
-.skills-grid-item:nth-of-type(3n + 1) {
-  background-color: var(--color-pink-transparent);
-}
-
-.skills-grid-item:nth-of-type(3n + 2) {
-  background-color: var(--color-blue-transparent);
-}
-
-.skills-grid-item:nth-of-type(3n + 3) {
-  background-color: var(--color-green-transparent);
+  transform: translateX(-8px);
 }
 
 img {
@@ -141,7 +130,6 @@ img {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background-color: var(--color-grey-light-1);
   }
 
   .skills-container > div {
