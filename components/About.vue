@@ -28,11 +28,6 @@ section {
   line-height: 2.4rem;
   display: flex;
   justify-content: center;
-  padding: var(--sp-8) 0;
-}
-
-.about-container {
-  width: 810px;
 }
 
 .image-wrap {
@@ -56,12 +51,6 @@ img {
   .image-wrap {
     height: 19rem;
     width: 19rem;
-  }
-}
-
-@media (max-width: 768px) {
-  section {
-    padding: var(--sp-8) 5%;
   }
 }
 </style>

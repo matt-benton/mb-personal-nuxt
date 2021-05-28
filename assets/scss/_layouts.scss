@@ -1,22 +1,28 @@
 .container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  padding-top: var(--sp-10);
+  grid-template-rows: 1fr;
+  grid-row-gap: var(--sp-10);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-// This is a container intended to be used in each section to maintain spacing and width consistency
-.section-container {
-  margin: 0 auto;
-  max-width: 1000px;
-
-  @media (max-width: 1024px) {
-    margin: 6rem 2rem;
+@media (max-width: 1024px) {
+  .container {
+    padding: var(--sp-9) var(--sp-5) 0 var(--sp-5);
+    grid-row-gap: var(--sp-9);
   }
+}
 
-  @media (max-width: 768px) {
-    margin: 4rem 4rem;
+@media (max-width: 768px) {
+  .container {
+    padding: var(--sp-7) var(--sp-3) 0 var(--sp-3);
+    grid-row-gap: var(--sp-8);
   }
+}
 
-  @media (max-width: 640px) {
-    margin: 0 0;
+@media (max-width: 640px) {
+  .container {
+    padding: var(--sp-6) var(--sp-3) 0 var(--sp-3);
   }
 }

@@ -1,35 +1,33 @@
 <template>
   <section id="skills">
-    <div class="section-container">
-      <div class="skills-grid">
-        <div class="skills-grid-item">
-          <img src="/img/logos/html-5-logo-png-transparent-min.png" alt="html5 logo" />
-          html
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/css-3-logo-png-transparent-min.png" alt="css3 logo" />
-          css
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/javascript-logo-png-transparent-min.png" alt="javascript logo" />
-          javascript
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/vue-9-logo-png-transparent-min.png" alt="vue logo" />
-          vue
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/php-1-logo-png-transparent-min.png" alt="php logo" />
-          php
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/mysql-5-logo-png-transparent-min.png" alt="mysql logo" />
-          mysql
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/laravel-1-logo-png-transparent-min.png" alt="laravel logo" />
-          laravel
-        </div>
+    <div class="skills-grid">
+      <div class="skills-grid-item">
+        <img src="/img/logos/html-5-logo-png-transparent-min.png" alt="html5 logo" />
+        html
+      </div>
+      <div class="skills-grid-item">
+        <img src="/img/logos/css-3-logo-png-transparent-min.png" alt="css3 logo" />
+        css
+      </div>
+      <div class="skills-grid-item">
+        <img src="/img/logos/javascript-logo-png-transparent-min.png" alt="javascript logo" />
+        javascript
+      </div>
+      <div class="skills-grid-item">
+        <img src="/img/logos/vue-9-logo-png-transparent-min.png" alt="vue logo" />
+        vue
+      </div>
+      <div class="skills-grid-item">
+        <img src="/img/logos/php-1-logo-png-transparent-min.png" alt="php logo" />
+        php
+      </div>
+      <div class="skills-grid-item">
+        <img src="/img/logos/mysql-5-logo-png-transparent-min.png" alt="mysql logo" />
+        mysql
+      </div>
+      <div class="skills-grid-item">
+        <img src="/img/logos/laravel-1-logo-png-transparent-min.png" alt="laravel logo" />
+        laravel
       </div>
     </div>
   </section>

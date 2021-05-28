@@ -1,27 +1,25 @@
 <template>
   <header>
-    <div class="section-container">
-      <div class="hero">
-        <h1>
-          Hi, my name is
-          <b>Matt Benton</b> and I'm a <b>web developer</b> from Birmingham, Alabama
-        </h1>
-        <h2>
-          I create web applications with clean interfaces, intuitive user experiences, and
-          reliability.
-        </h2>
-        <div class="button-container">
-          <a href="#work" @click.prevent="scrollTo('#work')"
-            ><button class="btn">Check Out My Portfolio</button></a
-          >
-          <nuxt-link to="/posts"><button class="btn">Read My Blog</button></nuxt-link>
-          <a href="#skills" @click.prevent="scrollTo('#skills')"
-            ><button class="btn">See My Skills</button></a
-          >
-          <a href="#footer" @click.prevent="scrollTo('#footer')"
-            ><button class="btn">Contact Me</button></a
-          >
-        </div>
+    <div class="hero">
+      <h1>
+        Hi, my name is
+        <b>Matt Benton</b> and I'm a <b>web developer</b> from Birmingham, Alabama
+      </h1>
+      <h2>
+        I create web applications with clean interfaces, intuitive user experiences, and
+        reliability.
+      </h2>
+      <div class="button-container">
+        <a href="#work" @click.prevent="scrollTo('#work')"
+          ><button class="btn">Check Out My Portfolio</button></a
+        >
+        <nuxt-link to="/posts"><button class="btn">Read My Blog</button></nuxt-link>
+        <a href="#skills" @click.prevent="scrollTo('#skills')"
+          ><button class="btn">See My Skills</button></a
+        >
+        <a href="#footer" @click.prevent="scrollTo('#footer')"
+          ><button class="btn">Contact Me</button></a
+        >
       </div>
     </div>
   </header>
@@ -46,7 +44,6 @@ header {
 .hero {
   display: flex;
   flex-direction: column;
-  padding: var(--sp-9) 0 var(--sp-5) 0;
   max-width: 750px;
   margin: 0 auto;
 }
@@ -82,23 +79,12 @@ header h2 {
 }
 
 @media (max-width: 1024px) {
-  .hero {
-    padding: var(--sp-6) 3%;
-  }
-
   .btn {
-    width: 100%;
     margin-bottom: var(--sp-2);
   }
 }
 
 @media (max-width: 768px) {
-  header {
-    background-image: url('/img/shape-bg-768.svg');
-  }
-}
-
-@media (max-width: 640px) {
   header h1 {
     font-size: var(--text-4xl);
   }
@@ -106,9 +92,11 @@ header h2 {
   header h2 {
     font-size: var(--text-2xl);
   }
+}
 
-  .hero {
-    padding: var(--sp-8) 5%;
+@media (max-width: 640px) {
+  .btn {
+    width: 100%;
   }
 }
 </style>

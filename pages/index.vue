@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <div class="container">
-      <Header />
-      <Services />
-      <About />
-      <Skills />
-      <Portfolio />
-      <Footer />
-    </div>
+  <div class="container">
+    <Header />
+    <Services />
+    <About />
+    <Skills />
+    <Portfolio />
+    <Footer />
   </div>
 </template>
 
