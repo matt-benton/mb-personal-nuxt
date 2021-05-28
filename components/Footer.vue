@@ -44,15 +44,12 @@
 </template>
 
 <script>
-import { cldImage } from 'cloudinary-vue'
 export default {}
 </script>
 
 <style scoped>
 footer {
   font-size: var(--text-base);
-  color: var(--color-grey-light-1);
-  background-color: var(--color-grey-dark-1);
   padding: 6%;
   border-top: 1px solid var(--color-grey-dark-5);
   display: flex;

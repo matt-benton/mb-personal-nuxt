@@ -39,8 +39,6 @@ export default {
 
 <style scoped>
 header {
-  background-color: var(--color-grey-dark-1);
-  color: var(--color-grey-light-1);
   display: grid;
   grid-template-rows: min-content 1fr;
 }

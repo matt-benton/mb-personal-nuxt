@@ -41,7 +41,6 @@ export default {}
 
 <style scoped>
 section {
-  background-color: var(--color-grey-dark-1);
   justify-content: space-evenly;
   font-size: var(--text-lg);
   line-height: var(--line-height-medium);
@@ -62,7 +61,6 @@ section {
   border-bottom-right-radius: 45px;
   border-top-left-radius: 45px;
   border-bottom-left-radius: 45px;
-  color: var(--color-grey-light-1);
   transition: transform 0.4s, box-shadow 0.4s;
   background: linear-gradient(to bottom right, var(--color-blue), var(--color-blue-dark));
 }

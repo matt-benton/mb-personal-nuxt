@@ -124,10 +124,6 @@ export default {
 </script>
 
 <style scoped>
-.services {
-  background-color: var(--color-grey-dark-1);
-  color: #fff;
-}
 .services-container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

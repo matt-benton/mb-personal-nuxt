@@ -24,9 +24,6 @@ export default {}
 
 <style scoped>
 section {
-  /* background: linear-gradient(to right, var(--color-blue), var(--color-blue-dark)); */
-  background-color: var(--color-grey-dark-1);
-  color: var(--color-grey-light-1);
   font-size: var(--text-lg);
   line-height: 2.4rem;
   display: flex;
