@@ -1,5 +1,5 @@
 <template>
-  <div class="post-bg">
+  <div>
     <Navbar />
     <div>
       <article>
@@ -50,10 +50,6 @@ export default {
 
 <style>
 /* IMPORTANT: NUXT WILL NOT ALLOW THESE TO BE SCOPED */
-.post-bg {
-  background-color: var(--color-grey-dark-2);
-}
-
 .nuxt-content-container {
   margin-bottom: var(--sp-7);
 }
@@ -61,7 +57,6 @@ export default {
 article {
   margin: 0 auto;
   width: 900px;
-  background-color: var(--color-grey-dark-3);
   padding: var(--sp-7) var(--sp-8);
 }
 

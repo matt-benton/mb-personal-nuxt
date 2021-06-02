@@ -134,7 +134,6 @@ export default {
 
 <style scoped>
 .component-body {
-  background-color: var(--color-grey-dark-2);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -196,7 +195,6 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content 2fr min-content;
-  background-color: var(--color-grey-dark-3);
   color: var(--color-grey-light-2);
   border-radius: 5px;
   padding: var(--sp-5);
