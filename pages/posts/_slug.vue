@@ -1,6 +1,6 @@
 <template>
   <div class="post-bg">
-    <blog-nav />
+    <Navbar />
     <div>
       <article>
         <h1 class="title">{{ article.title }}</h1>
@@ -15,7 +15,7 @@
 
 <script>
 import { format } from 'date-fns'
-import BlogNav from '../../components/BlogNav.vue'
+import Navbar from '../../components/Navbar.vue'
 import PrevNext from '../../components/PrevNext.vue'
 import Footer from '../../components/Footer.vue'
 
@@ -41,7 +41,7 @@ export default {
     },
   },
   components: {
-    'blog-nav': BlogNav,
+    Navbar,
     'prev-next': PrevNext,
     Footer,
   },

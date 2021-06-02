@@ -1,6 +1,6 @@
 <template>
   <div class="component-body">
-    <blog-nav />
+    <Navbar />
     <div class="layout">
       <div class="topics">
         <h5>TOPICS</h5>
@@ -75,7 +75,7 @@
 
 <script>
 import { format } from 'date-fns'
-import BlogNav from '../../components/BlogNav.vue'
+import Navbar from '../../components/Navbar.vue'
 import Footer from '~/components/Footer.vue'
 
 export default {
@@ -126,7 +126,7 @@ export default {
     },
   },
   components: {
-    'blog-nav': BlogNav,
+    Navbar,
     Footer,
   },
 }

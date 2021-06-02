@@ -1,31 +1,46 @@
 <template>
-  <div class="header__nav">
-    <div class="header__nav--mobile-icon" id="mobile-nav-icon">
-      <svg
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M17.5 6h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
-        ></path>
-        <path
-          d="M17.5 11h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
-        ></path>
-        <path
-          d="M17.5 16h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
-        ></path>
-      </svg>
+  <nav>
+    <div>
+      <nuxt-link :to="'/'" as="a">mattbenton.io</nuxt-link>
     </div>
-    <ul class="header__nav--list">
-      <li class="header__nav--item"><a href="#about">About</a></li>
-      <li class="header__nav--item"><a href="#services">Services</a></li>
-      <li class="header__nav--item"><a href="#skills">Skills</a></li>
-      <li class="header__nav--item"><a href="#work">Work</a></li>
-      <li class="header__nav--item"><a href="#footer">Contact</a></li>
+    <ul>
+      <li><nuxt-link :to="'/#services'" as="a">Services</nuxt-link></li>
+      <li><nuxt-link :to="'/#work'" as="a">Projects</nuxt-link></li>
+      <li><nuxt-link :to="'/posts'" as="a">Blog</nuxt-link></li>
+      <li><nuxt-link :to="'/#about'">About</nuxt-link></li>
+      <li><nuxt-link :to="'/#footer'">Contact</nuxt-link></li>
     </ul>
-  </div>
+  </nav>
 </template>
+
+<style scoped>
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 5555;
+  background: linear-gradient(to right, var(--color-blue) 10%, 30%, var(--color-blue-dark) 90%);
+  font-weight: 400;
+  font-size: var(--text-base);
+  padding: var(--sp-2) var(--sp-6);
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  padding-left: var(--sp-5);
+  text-align: center;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  font-weight: 700;
+}
+</style>
