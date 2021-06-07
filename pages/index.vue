@@ -3,8 +3,8 @@
     <Navbar />
     <div class="container">
       <Header />
-      <Services />
       <About />
+      <Services />
       <Skills />
       <Portfolio />
       <Footer />

@@ -1,5 +1,6 @@
 <template>
   <section id="work">
+    <h4 class="section-header">Projects</h4>
     <Project
       v-for="(project, index) in projectContent"
       :key="index"

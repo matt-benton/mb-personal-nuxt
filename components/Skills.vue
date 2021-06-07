@@ -1,5 +1,6 @@
 <template>
   <section id="skills">
+    <h4 class="section-header">Skills</h4>
     <div class="skills-grid">
       <div class="skills-grid-item">
         <img src="/img/logos/html-5-logo-png-transparent-min.png" alt="html5 logo" />
@@ -39,32 +40,20 @@ export default {}
 
 <style scoped>
 section {
-  justify-content: space-evenly;
   font-size: var(--text-lg);
   line-height: var(--line-height-medium);
 }
 
 .skills-grid {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
 }
 
 .skills-grid-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: var(--sp-2) var(--sp-4);
   margin: var(--sp-2);
-  border-top-right-radius: 45px;
-  border-bottom-right-radius: 45px;
-  border-top-left-radius: 45px;
-  border-bottom-left-radius: 45px;
-  transition: transform 0.4s, box-shadow 0.4s;
-  background: linear-gradient(to bottom right, var(--color-blue), var(--color-blue-dark));
-}
-
-.skills-grid-item:hover {
-  transform: translateX(-8px);
+  border-radius: 5px;
 }
 
 img {

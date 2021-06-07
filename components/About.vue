@@ -24,10 +24,7 @@ export default {}
 
 <style scoped>
 section {
-  font-size: var(--text-lg);
   line-height: 2.4rem;
-  display: flex;
-  justify-content: center;
 }
 
 .image-wrap {
