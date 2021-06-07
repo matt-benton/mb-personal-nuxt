@@ -31,8 +31,8 @@ section {
   height: 29rem;
   width: 29rem;
   border-radius: 50%;
-  background: linear-gradient(-45deg, var(--color-pink-dark), var(--color-pink));
-  padding: 3px;
+  background: linear-gradient(-45deg, var(--color-blue-dark), var(--color-blue));
+  padding: 2px;
   shape-outside: circle();
   float: left;
   margin-right: var(--sp-4);

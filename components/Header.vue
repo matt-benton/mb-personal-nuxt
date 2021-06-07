@@ -63,18 +63,21 @@ header h2 {
 }
 
 .btn {
-  background-color: var(--color-blue-dark);
-  color: white;
+  border: 2px solid var(--color-blue);
+  color: var(--color-blue);
   font-size: var(--text-lg);
   padding: var(--sp-4) var(--sp-5);
-  border: none;
   cursor: pointer;
   transition: background-color 0.3s;
   border-radius: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.1s;
 }
 
 .btn:hover {
   background-color: var(--color-pink-dark);
+  border-color: var(--color-grey-dark-1);
+  color: var(--color-grey-light-1);
 }
 
 @media (max-width: 1024px) {

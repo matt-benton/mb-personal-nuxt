@@ -21,7 +21,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 5555;
-  background: linear-gradient(to right, var(--color-blue) 10%, 30%, var(--color-blue-dark) 90%);
+  background: var(--color-grey-dark-2);
   font-weight: 400;
   font-size: var(--text-base);
   padding: var(--sp-2) var(--sp-6);
