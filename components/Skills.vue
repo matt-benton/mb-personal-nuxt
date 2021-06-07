@@ -45,21 +45,23 @@ section {
 }
 
 .skills-grid {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  grid-auto-rows: 1fr;
 }
 
 .skills-grid-item {
-  padding: var(--sp-2) var(--sp-4);
-  margin: var(--sp-2);
+  padding: var(--sp-5);
   border-radius: 5px;
+  display: flex;
+  font-size: var(--text-2xl);
+  align-items: center;
 }
 
 img {
-  max-height: var(--text-2xl);
-  max-width: var(--text-2xl);
-  margin-right: var(--sp-3);
+  max-height: var(--text-4xl);
+  max-width: var(--text-4xl);
+  margin-right: var(--sp-5);
   border: none;
 }
 </style>
