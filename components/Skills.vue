@@ -46,7 +46,7 @@ section {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
   grid-auto-rows: 1fr;
 }
 
