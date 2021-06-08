@@ -47,7 +47,7 @@ export default {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +73,7 @@ export default {
   align-items: center;
   justify-content: center;
   border: none;
-  opacity: 0.6;
+  opacity: 0.8;
   background-color: var(--color-grey-light-3);
   transition: opacity 0.2s;
   cursor: pointer;
