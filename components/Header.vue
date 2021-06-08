@@ -39,7 +39,7 @@ export default {
 header {
   display: grid;
   grid-template-rows: min-content 1fr;
-  padding: var(--sp-9) 0 var(--sp-8) 0;
+  padding: var(--sp-9) 0 var(--sp-7) 0;
 }
 
 .hero {
