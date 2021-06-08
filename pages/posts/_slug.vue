@@ -101,10 +101,6 @@ article {
   font-size: var(--font-small);
 }
 
-.nuxt-content p a {
-  color: var(--color-blue);
-}
-
 .nuxt-content ol {
   font-family: var(--font-secondary);
   color: #fff;
