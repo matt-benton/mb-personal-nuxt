@@ -5,14 +5,19 @@
         <img src="/img/matt-benton.jpg" alt="Photo of myself" />
       </div>
       <p>
-        When I originally finished college I was headed for a career in the field of education as a
-        teacher. I had enthusiasm for learning as well as a passion for crafting experiences that
-        would enhance the knowledge of my students. However not everything about education was for
-        me and instead I spent several years learning to write code. I returned to school to earn a
-        CS degree. Now, instead of learning pedagogy I have become a lifetime learner of frameworks,
-        libraries, and coding languages. I absolutely love it - I write code almost every day and I
-        hope to one day achieve the momentous goal of creating the perfect pizza tracker. Aside from
-        programming I enjoy hiking, music, books, videogames and riding my bike.
+        Formerly in the field of education, I moved into web development and started building
+        websites for clients in 2016. Since then I have nurtured an enjoyment for building
+        applications that has motivated me to continue growing and developing my skills.
+      </p>
+      <p>
+        My goal when developing is to deliver simple, easy-to-use solutions that are as intuitive as
+        possible. I focus on delivering the best experience to the user. Additionally, I write tests
+        in order ensure reliability and make sure that the project is easily maintainable for the
+        long-term.
+      </p>
+      <p>
+        In addition to web development I also hike, ride my bike, and enjoy videogames in my free
+        time.
       </p>
     </div>
   </section>
@@ -24,7 +29,12 @@ export default {}
 
 <style scoped>
 section {
-  line-height: 2.4rem;
+  line-height: 2.6rem;
+  font-size: var(--text-lg);
+}
+
+p {
+  margin-bottom: var(--sp-3);
 }
 
 .image-wrap {
@@ -35,7 +45,7 @@ section {
   padding: 2px;
   shape-outside: circle();
   float: left;
-  margin-right: var(--sp-4);
+  margin-right: var(--sp-6);
 }
 
 img {
