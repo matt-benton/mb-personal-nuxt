@@ -137,7 +137,7 @@ p {
   color: var(--color-blue);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .project {
     flex-direction: column;
     margin: 0 0;
@@ -152,9 +152,7 @@ p {
     order: 2;
     padding-top: var(--sp-5);
   }
-}
 
-@media (max-width: 768px) {
   .project-container {
     padding-left: 0;
     padding-right: 0;
