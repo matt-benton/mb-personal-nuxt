@@ -41,6 +41,6 @@ a {
 }
 
 a:hover {
-  font-weight: 700;
+  color: var(--color-blue);
 }
 </style>
