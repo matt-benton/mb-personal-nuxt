@@ -58,3 +58,9 @@ p a {
   color: var(--color-grey-light-5);
   text-transform: uppercase;
 }
+
+@media (max-width: 576px) {
+  .section-header {
+    margin-bottom: var(--sp-3);
+  }
+}

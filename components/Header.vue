@@ -105,6 +105,7 @@ header h2 {
 
   .btn {
     width: 100%;
+    padding: var(--sp-3);
   }
 }
 </style>

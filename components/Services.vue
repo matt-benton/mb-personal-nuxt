@@ -133,7 +133,7 @@ export default {
 @media (max-width: 768px) {
   .services-container {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, min-content);
   }
 }
 </style>

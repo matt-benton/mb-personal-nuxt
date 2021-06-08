@@ -72,7 +72,7 @@ export default {
 .project-container {
   display: flex;
   flex-direction: column;
-  padding: var(--sp-7);
+  padding: 0 var(--sp-7);
   flex: 1;
 }
 

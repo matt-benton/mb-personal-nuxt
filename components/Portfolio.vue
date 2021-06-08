@@ -1,12 +1,14 @@
 <template>
   <section id="work">
     <h4 class="section-header">Projects</h4>
-    <Project
-      v-for="(project, index) in projectContent"
-      :key="index"
-      :index="index"
-      :project="project"
-    />
+    <div class="projects">
+      <Project
+        v-for="(project, index) in projectContent"
+        :key="index"
+        :index="index"
+        :project="project"
+      />
+    </div>
   </section>
 </template>
 
@@ -25,3 +27,12 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, min-content);
+  grid-gap: var(--sp-7);
+}
+</style>
