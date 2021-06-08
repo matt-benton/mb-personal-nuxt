@@ -155,17 +155,22 @@ p {
 }
 
 @media (max-width: 768px) {
-  .project:last-of-type > .project-container-image {
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width: 640px) {
   .project-container {
     padding-left: 0;
     padding-right: 0;
   }
 
+  .project:last-of-type > .project-container-image {
+    padding-bottom: 0;
+  }
+
+  .project-container-text > div {
+    max-width: none;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
   h3 {
     font-size: var(--text-3xl);
   }

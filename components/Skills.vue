@@ -87,7 +87,7 @@ img {
   border: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .skills-body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;

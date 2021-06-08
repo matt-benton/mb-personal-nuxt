@@ -110,4 +110,11 @@ export default {
   cursor: pointer;
   box-shadow: 0 2px 10px var(--color-grey-dark-2);
 }
+
+@media (max-width: 768px) {
+  .project-large-image {
+    height: auto;
+    width: 100%;
+  }
+}
 </style>
