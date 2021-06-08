@@ -89,15 +89,20 @@ header h2 {
 
 @media (max-width: 768px) {
   header h1 {
-    font-size: var(--text-4xl);
+    font-size: var(--text-3xl);
   }
 
   header h2 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
   }
 }
 
 @media (max-width: 640px) {
+  header {
+    padding-top: var(--sp-5);
+    padding-bottom: var(--sp-5);
+  }
+
   .btn {
     width: 100%;
   }

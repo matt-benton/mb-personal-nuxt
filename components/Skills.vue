@@ -86,4 +86,11 @@ img {
   margin-right: var(--sp-4);
   border: none;
 }
+
+@media (max-width: 640px) {
+  .skills-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
 </style>
