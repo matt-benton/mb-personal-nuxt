@@ -10,16 +10,10 @@
         reliability.
       </h2>
       <div class="button-container">
-        <a href="#work" @click.prevent="scrollTo('#work')"
-          ><button class="btn">Check Out My Portfolio</button></a
-        >
-        <nuxt-link to="/posts"><button class="btn">Read My Blog</button></nuxt-link>
-        <a href="#skills" @click.prevent="scrollTo('#skills')"
-          ><button class="btn">See My Skills</button></a
-        >
-        <a href="#footer" @click.prevent="scrollTo('#footer')"
-          ><button class="btn">Contact Me</button></a
-        >
+        <a href="#work" class="btn" @click.prevent="scrollTo('#work')">Check Out My Portfolio</a>
+        <nuxt-link class="btn" to="/posts">Read My Blog</nuxt-link>
+        <a href="#skills" class="btn" @click.prevent="scrollTo('#skills')">See My Skills</a>
+        <a href="#footer" class="btn" @click.prevent="scrollTo('#footer')">Contact Me</a>
       </div>
     </div>
   </header>
@@ -64,6 +58,8 @@ header h2 {
 }
 
 .btn {
+  display: inline-block;
+  text-align: center;
   border: 2px solid var(--color-blue);
   color: var(--color-blue);
   font-size: var(--text-lg);
