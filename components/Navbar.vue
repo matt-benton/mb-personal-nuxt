@@ -113,7 +113,7 @@ svg {
   background-color: var(--color-blue-dark);
   width: 60vw;
   height: 100vh;
-  padding: var(--sp-2) var(--sp-6);
+  padding: var(--sp-2) var(--sp-3) var(--sp-2) var(--sp-7);
 }
 
 .mobile-menu > div:first-child {
@@ -128,6 +128,10 @@ svg {
 }
 
 @media (max-width: 640px) {
+  nav {
+    padding-left: var(--sp-3);
+    padding-right: var(--sp-3);
+  }
   .nav-links {
     display: none;
   }
