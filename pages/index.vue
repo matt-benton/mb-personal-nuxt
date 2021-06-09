@@ -1,14 +1,16 @@
 <template>
   <div>
     <Navbar />
-    <div class="container">
-      <Header />
-      <Services />
-      <About />
-      <Skills />
-      <Portfolio />
-      <Footer />
-    </div>
+    <main>
+      <div class="container">
+        <Header />
+        <Services />
+        <About />
+        <Skills />
+        <Portfolio />
+        <Footer />
+      </div>
+    </main>
   </div>
 </template>
 
