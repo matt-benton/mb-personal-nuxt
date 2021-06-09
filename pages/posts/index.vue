@@ -10,7 +10,9 @@
             v-for="topic in topics"
             :key="topic"
             @click="addActiveTag(topic)"
+            @keydown.enter="addActiveTag(topic)"
             :class="{ highlighted: activeTags.includes(topic) }"
+            tabindex="0"
           >
             {{ topic }}
             <small
@@ -23,7 +25,13 @@
       </div>
       <div class="blog-card-container">
         <div class="tags" v-show="activeTags.length > 0">
-          <span class="tag tag-close" v-for="tag in activeTags" @click="removeActiveTag(tag)">
+          <span
+            class="tag tag-close"
+            v-for="tag in activeTags"
+            @click="removeActiveTag(tag)"
+            @keydown.enter="removeActiveTag(tag)"
+            tabindex="0"
+          >
             {{ tag }}
             <svg
               xmlns="http://www.w3.org/2000/svg"
