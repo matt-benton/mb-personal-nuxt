@@ -1,6 +1,6 @@
 <template>
   <section id="work">
-    <h4 class="section-header">Projects</h4>
+    <h3 class="section-header">Projects</h3>
     <div class="projects">
       <Project
         v-for="(project, index) in projectContent"

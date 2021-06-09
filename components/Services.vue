@@ -1,6 +1,6 @@
 <template>
   <section class="services" id="services">
-    <h4 class="section-header">Services</h4>
+    <h3 class="section-header">Services</h3>
     <div class="services-container">
       <service-card
         :title="serviceCards[0].title"
