@@ -1,14 +1,14 @@
 <template>
   <div>
     <Navbar />
-    <div>
+    <main>
       <article>
         <h1 class="title">{{ article.title }}</h1>
         <h5 class="date-text">{{ formatDate(article.createdAt) }}</h5>
         <nuxt-content :document="article"></nuxt-content>
         <prev-next :prev="prev" :next="next" />
       </article>
-    </div>
+    </main>
     <Footer />
   </div>
 </template>
