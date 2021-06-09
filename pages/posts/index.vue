@@ -1,15 +1,16 @@
 <template>
   <div class="component-body">
     <Navbar />
-    <div class="layout">
+    <main class="layout">
+      <h1>mattbenton.io blog</h1>
       <div class="topics">
-        <h5>TOPICS</h5>
+        <h2 class="section-header">TOPICS</h2>
         <ul>
           <li
             v-for="topic in topics"
             :key="topic"
             @click="addActiveTag(topic)"
-            :class="{ bold: activeTags.includes(topic) }"
+            :class="{ highlighted: activeTags.includes(topic) }"
           >
             {{ topic }}
             <small
@@ -68,7 +69,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <Footer />
   </div>
 </template>
@@ -147,12 +148,16 @@ p {
 
 .layout {
   display: grid;
-  grid-template-rows: min-content;
+  grid-template-rows: min-content min-content;
   grid-template-columns: 20% 80%;
   max-width: 850px;
   margin: 0 auto;
   padding: var(--sp-5) var(--sp-3);
   flex-grow: 10;
+}
+
+h1 {
+  grid-column: span 2;
 }
 
 .topics {
@@ -161,8 +166,7 @@ p {
   max-height: 50vh;
 }
 
-.topics > h5 {
-  color: var(--color-grey-light-5);
+.section-header {
   margin-bottom: var(--sp-2);
 }
 
@@ -178,15 +182,15 @@ p {
   cursor: pointer;
 }
 
-.bold {
-  font-weight: bold;
+.highlighted {
+  color: var(--color-blue) !important;
 }
 
 .blog-card-container {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  grid-gap: var(--sp-4);
+  grid-gap: var(--sp-6);
   grid-auto-row: 1fr;
   margin: 0 auto;
 }
@@ -197,7 +201,6 @@ p {
   grid-template-rows: min-content 2fr min-content;
   color: var(--color-grey-light-2);
   border-radius: 5px;
-  padding: var(--sp-5);
 }
 
 .card-header {
@@ -277,11 +280,6 @@ p {
 @media (max-width: 640px) {
   .layout {
     grid-template-columns: 1fr;
-  }
-
-  .blog-card-container {
-    grid-gap: var(--sp-1);
-    margin: 0 var(--sp-2);
   }
 
   .topics {
