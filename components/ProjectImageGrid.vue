@@ -118,8 +118,8 @@ export default {
 
 @media (max-width: 768px) {
   .project-large-image {
-    height: auto;
-    width: 100%;
+    height: 36rem;
+    max-width: 100%;
   }
 }
 </style>
