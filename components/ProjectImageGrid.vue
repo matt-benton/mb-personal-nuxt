@@ -6,6 +6,11 @@
         :alt="`${projectTitle} large screen shot`"
         class="project-large-image"
         @click="showModal(selectedImage)"
+        @keydown.enter="showModal(selectedImage)"
+        @keydown.right="nextImage"
+        @keydown.left="prevImage"
+        @keydown.esc="hideModal"
+        tabindex="0"
       />
       <div class="project-thumbnails">
         <div v-for="(image, index) in images" :key="index" @click="selectImage(image)">
