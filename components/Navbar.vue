@@ -4,8 +4,12 @@
       <nuxt-link :to="'/'" as="a">mattbenton.io</nuxt-link>
     </div>
     <ul class="nav-links">
-      <li><nuxt-link :to="'/#services'" as="a">Services</nuxt-link></li>
-      <li><nuxt-link :to="'/#work'" as="a">Projects</nuxt-link></li>
+      <li>
+        <nuxt-link :to="'/#services'" as="a">Services</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link :to="'/#work'" as="a">Projects</nuxt-link>
+      </li>
       <li><nuxt-link :to="'/posts'" as="a">Blog</nuxt-link></li>
       <li><nuxt-link :to="'/#about'">About</nuxt-link></li>
       <li><nuxt-link :to="'/#footer'">Contact</nuxt-link></li>
@@ -44,11 +48,19 @@
           </svg>
         </div>
         <ul class="mobile-links">
-          <li><nuxt-link :to="'/#services'" as="a">Services</nuxt-link></li>
-          <li><nuxt-link :to="'/#work'" as="a">Projects</nuxt-link></li>
+          <li @click="mobileMenuVisible = false">
+            <nuxt-link :to="'/#services'" as="a">Services</nuxt-link>
+          </li>
+          <li @click="mobileMenuVisible = false">
+            <nuxt-link :to="'/#work'" as="a">Projects</nuxt-link>
+          </li>
           <li><nuxt-link :to="'/posts'" as="a">Blog</nuxt-link></li>
-          <li><nuxt-link :to="'/#about'">About</nuxt-link></li>
-          <li><nuxt-link :to="'/#footer'">Contact</nuxt-link></li>
+          <li @click="mobileMenuVisible = false">
+            <nuxt-link :to="'/#about'" @click="mobileMenuVisible = false">About</nuxt-link>
+          </li>
+          <li @click="mobileMenuVisible = false">
+            <nuxt-link :to="'/#footer'" @click="mobileMenuVisible = false">Contact</nuxt-link>
+          </li>
         </ul>
       </div>
     </transition>
