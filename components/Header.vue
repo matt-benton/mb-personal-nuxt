@@ -57,13 +57,19 @@ header h2 {
   line-height: 1.2;
 }
 
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1);
+}
+
 .btn {
   display: inline-block;
   text-align: center;
   border: 2px solid var(--color-blue);
   color: var(--color-blue);
   font-size: var(--text-lg);
-  padding: var(--sp-4) var(--sp-5);
+  padding: var(--sp-3) var(--sp-4);
   cursor: pointer;
   transition: background-color 0.3s;
   border-radius: 5px;
@@ -75,12 +81,6 @@ header h2 {
   background-color: var(--color-pink-dark);
   border-color: var(--color-grey-dark-1);
   color: var(--color-grey-light-1);
-}
-
-@media (max-width: 1024px) {
-  .btn {
-    margin-bottom: var(--sp-2);
-  }
 }
 
 @media (max-width: 640px) {
@@ -97,9 +97,8 @@ header h2 {
     font-size: var(--text-xl);
   }
 
-  .btn {
-    width: 100%;
-    padding: var(--sp-3);
+  .button-container {
+    flex-direction: column;
   }
 }
 </style>
