@@ -102,12 +102,12 @@ export default {
           listItems: [
             'Applications that fit your organization',
             'Solve your business problems',
-            "User-friendly design making employees' jobs easier",
+            'User-friendly design',
           ],
         },
         {
           title: 'E-commerce',
-          listItems: ['Put your store on the web', 'Sell your product online', 'Collect payments'],
+          listItems: ['Put your store on the web', 'Sell products online', 'Collect payments'],
         },
         {
           title: 'HTML / CSS',
