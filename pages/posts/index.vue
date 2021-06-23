@@ -63,8 +63,8 @@
               <p>{{ formatDate(article.createdAt) }}</p>
               <p v-if="article.description">
                 {{
-                  article.description.length > 250
-                    ? article.description.substring(0, 250) + '...'
+                  article.description.length > 325
+                    ? article.description.substring(0, 325) + '...'
                     : article.description
                 }}
               </p>
