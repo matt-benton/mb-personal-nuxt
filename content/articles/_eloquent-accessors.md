@@ -16,7 +16,7 @@ This is accomplished by writing the following method in the Triangle model:
 ```php
 class Triangle extends Model
 {
-    function getAreaAttribute()
+    public function getAreaAttribute()
     {
         return $this->height * $this->base / 2;
     }
@@ -44,5 +44,21 @@ Triangle::where('area', '>', 10)->get();
 ```
 
 So if it is important to be able to query based on the accessor field, it would probably be better to try another approach.
+
+Another thing to keep in mind is that if we want our computed values to be available when the model is converted to JSON, we need to do one extra step. For JSON or array conversions, we have to add the name of the computed value to the `$appends` property on the model. So in our triangles example, the Triangle model would now look like this:
+
+```php
+class Triangle extends Model
+{
+    protected $appends = ['area'];
+
+    public function getAreaAttribute()
+    {
+        return $this->height * $this->base / 2;
+    }
+}
+```
+
+So if you are writing an accessor for an API and you need these values to be available to the frontend via a fetch request, you will have to set up the `$appends` property. For more on the `$appends` property check out <a href="https://laravel.com/docs/8.x/eloquent-serialization#appending-values-to-json" target="_blank" rel="noreferrer">Laravel's documentation.</a>
 
 Accessors are great. I am really surprised I've been a Laravel developer for five years without using them and I wish I became aware of them sooner. I can easily predict they will make my life a lot easier very often in the future.
