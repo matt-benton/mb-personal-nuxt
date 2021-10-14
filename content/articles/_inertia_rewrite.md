@@ -35,7 +35,7 @@ Another frustration of building SPA's is client-side state management. Not only 
 
 Once again, Inertia eliminates the need for client-side state management by automatically fetching the data from the server when the user visits a new page. Rather than sending the full html document, the server sends the data as a json response and that data is passed in as props to the components. This happens every time a user navigates to a new page, so it is similar to refreshing the application's state each time, except without having to fully refresh the whole page.
 
-#### <a href="#passing-data-to-components" id="passing-data-to-components>Passing Data to Components</a>
+#### <a href="#passing-data-to-components" id="passing-data-to-components">Passing Data to Components</a>
 
 Another tricky problem with building SPA's is having to fetch data from the server to use in your components. On the server-side you have to write an API for handling those requests and sending that data back to the client. On the client-side you have to write the fetch requests that will request the data and then assign it to variables or handle errors.
 
