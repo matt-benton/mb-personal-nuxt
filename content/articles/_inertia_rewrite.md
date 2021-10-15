@@ -41,7 +41,7 @@ Another tricky problem with building SPA's is having to fetch data from the serv
 
 Inertia makes it easy to pass data from Laravel into your components. It works the same way as it does when you are passing data to a Blade view. Just use a `->with()` in your controller function when returning a response and the data inside will be passed to your component as a prop. Because these are props, you may still have to register the prop in your component depending on how that works in your frontend framework.
 
-#### <a href="#the-power-of-frontend-frameworks" id="the-power-of-frontend-frameworkds">The Power of Frontend Frameworks
+#### <a href="#the-power-of-frontend-frameworks" id="the-power-of-frontend-frameworkds">The Power of Frontend Frameworks</a>
 
 The biggest difference between a standard Laravel application and one with Inertia is that Blade is essentially replaced by the frontend framework you choose. Inertia has adapters for React, Vue, and Svelte. And while Blade is great, it just doesn't have the capabilities of these JavaScript frameworks. Inertia allows you to utilize the power of a modern frontend framework for building better UI's with great features such as data binding, scoped CSS, events, and more.
 
