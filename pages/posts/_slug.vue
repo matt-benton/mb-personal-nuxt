@@ -94,7 +94,6 @@ article {
 }
 
 .nuxt-content p {
-  font-family: var(--font-secondary);
   color: var(--color-grey-light-2);
   margin-bottom: var(--sp-4);
   line-height: 1.8;
@@ -102,7 +101,6 @@ article {
 }
 
 .nuxt-content ol {
-  font-family: var(--font-secondary);
   color: #fff;
   padding-left: var(--sp-6);
   margin-bottom: var(--sp-4);
