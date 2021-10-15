@@ -52,9 +52,7 @@
           <div class="card-header">
             <nuxt-link :to="`/posts/${article.slug}`">
               <h2>
-                {{
-                  article.title.length > 40 ? article.title.substring(0, 40) + '...' : article.title
-                }}
+                {{ article.title }}
               </h2>
             </nuxt-link>
           </div>
