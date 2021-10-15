@@ -197,9 +197,9 @@ h1 {
 .blog-card-container {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: min-content;
   justify-content: center;
   grid-gap: var(--sp-6);
-  grid-auto-row: 1fr;
   margin: 0 auto;
 }
 
@@ -226,7 +226,6 @@ h1 {
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .card-footer {
