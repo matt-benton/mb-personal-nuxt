@@ -106,8 +106,30 @@ article {
   margin-bottom: var(--sp-4);
 }
 
+.nuxt-content ul {
+  list-style-type: disc;
+  padding-left: var(--sp-5);
+}
+
 .nuxt-content-highlight span {
   font-family: 'Roberto Mono', monospace;
+}
+
+.nuxt-content table {
+  display: block;
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: scroll;
+}
+
+.nuxt-content th,
+.nuxt-content td {
+  border: 1px solid var(--color-grey-light-3);
+  padding: var(--sp-1) var(--sp-2);
+}
+
+.nuxt-content table a {
+  color: var(--color-blue);
 }
 
 @media (max-width: 1024px) {

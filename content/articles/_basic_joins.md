@@ -37,12 +37,12 @@ Like with the example query above, if you ever need all the rows from one table 
 
 This also works in a one-to-many relationship. For example if we have an table of songs and a related table of artists they might be setup like this:
 
-artists
+#### artists
 
 - id
 - name
 
-songs
+#### songs
 
 - id
 - title
