@@ -35,7 +35,7 @@ In my experience I have found that if I ever need to write extra code _after_ I 
 
 Like with the example query above, if you ever need all the rows from one table but you want to grab some extra data from an additional table to add on, you can use a join. We grabbed all users but to get the names and ages of those users we had to join profiles.
 
-This also works in a one-to-many relationship. For example if we have an table of songs and a related table of artists they might be setup like this:
+This also works in a one-to-many relationship. For example if we have a table of songs and a related table of artists they might be setup like this:
 
 #### artists
 
