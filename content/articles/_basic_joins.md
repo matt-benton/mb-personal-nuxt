@@ -2,7 +2,7 @@
 title: Basic Joins in SQL
 description: Joins is one of those programming concepts that took me a while to understand.  I have without a doubt written plenty of inefficient code because I didn't know how to get data out of the database the way I needed it.  As it turns out, joins are not a very complicated concept.  They are a little harder to understand than basic queries but once you understand what SQL is doing, they make a lot of sense.  Now that I have a better understanding of joins I use them all the time.
 createdAt: '2021-12-28'
-tags: ['sql', 'mysql']
+tags: ['sql', 'mysql', 'postgresql']
 ---
 
 Joins is one of those programming concepts that took me a while to understand. I have without a doubt written plenty of inefficient code because I didn't know how to get data out of the database the way I needed it. As it turns out, joins are not a very complicated concept. They are a little harder to understand than basic queries but once you understand what SQL is doing, they make a lot of sense. Now that I have a better understanding of joins I use them all the time.
