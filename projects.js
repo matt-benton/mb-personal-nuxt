@@ -124,30 +124,27 @@ export const projects = [
     ],
   },
   {
-    title: 'Screen Time Analyzer',
-    subtitle: 'A PHP application for measuring and managing screen time',
-    descriptionParagraphs: [
-      'I built this application in early 2019 to track how I was spending my time while working in front of a computer screen. It is a small app that lets you define and track certain aspects of your computer use, including which monitor(s) you are looking at, what chair you are sitting in, how long you go without taking a break, and what possible symptoms may arise while doing so. You can also define activities such as blogging, coding, gaming, etc. and the app will keep track of how much time you spend on each activity. I still use this application every day to maintain healthy screen habits.',
-      'On the technical side, I built the Screen Time Analyzer with the intention of setting up a simple, well-focused PHP app that would do its job well. I also wanted to focus on improving my understanding of PHP, Laravel, and database structures.',
-    ],
+    title: 'Budgeter',
+    subtitle: 'A Laravel application for tracking and categorizing expenses',
+    descriptionParagraphs: ['Description paragraphs for Budgeter'],
     links: [
       {
-        url: 'https://github.com/matt-benton/screen-time-analyzer',
+        url: 'https://github.com/matt-benton/budgeter',
         text: 'View on Github',
       },
     ],
     images: [
       {
-        src: '/img/projects/screen-time-analyzer/screen-time-analyzer-dash.png',
-        cloudinaryPublicId: 'mb-personal/screen-time-analyzer-dash-lg_fpve5u',
+        src: '/img/projects/budgeter/budgeter-dashboard.png',
+        cloudinaryPublicId: 'mb-personal/budgeter-dashboard_z6matj.png',
       },
       {
-        src: '/img/projects/screen-time-analyzer/screen-time-analyzer-day.png',
-        cloudinaryPublicId: 'mb-personal/screen-time-analyzer-day-lg_ppnqgf',
+        src: '/img/projects/budgeter/budgeter-categories.png',
+        cloudinaryPublicId: 'mb-personal/budgeter-categories_j56nqm.png',
       },
       {
-        src: '/img/projects/screen-time-analyzer/screen-time-analyzer-activities.png',
-        cloudinaryPublicId: 'mb-personal/screen-time-analyzer-activities-lg_nktdd4',
+        src: '/img/projects/budgeter/budgeter-vendors.png',
+        cloudinaryPublicId: 'mb-personal/budgeter-vendors_puzrzv.png',
       },
     ],
   },
