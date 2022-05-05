@@ -20,6 +20,9 @@
         <h4>
           {{ project.subtitle }}
         </h4>
+        <ul class="features">
+          <li v-for="(feature, index) in project.features">{{ feature }}</li>
+        </ul>
         <p v-for="(paragraph, index) in project.descriptionParagraphs" :key="index">
           {{ paragraph }}
         </p>
@@ -73,6 +76,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 0 var(--sp-7);
+  margin-bottom: var(--sp-5);
   flex: 1;
 }
 
@@ -121,6 +125,17 @@ p {
   background-color: var(--color-pink-dark);
   border-color: var(--color-grey-dark-1);
   color: var(--color-grey-light-1);
+}
+
+.features {
+  list-style-type: disc;
+  line-height: var(--line-height-smaller);
+  padding-left: var(--sp-5);
+  margin-bottom: var(--sp-5);
+}
+
+.features li {
+  margin-bottom: var(--sp-3);
 }
 
 .references {

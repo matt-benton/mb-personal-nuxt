@@ -2,11 +2,12 @@ export const projects = [
   {
     title: 'Flow Bill Tracking',
     subtitle: 'A web app for tracking recurring bills',
-    descriptionParagraphs: [
-      'Flow Bill Tracking is a web application for helping people keep up with their bills. Users can store all of their recurring expenses and track if they have been paid yet.  In addition, Flow helps keep up with the total amount of spending from month to month.  It also tracks how much is still owed after some bills have been paid.',
-      'Users of Flow should find they have a better understanding of their money flow, from due dates to amounts to whether or not a bill is automatically deducted from their bank account.',
-      'I built Flow using Laravel and Vue.  I designed and styled it using plain CSS.',
+    features: [
+      'Store recurring expenses and check them off as you pay them',
+      'See how much you still owe and how much you already paid each month',
+      'Track bills of various intervals such as monthly, weekly, yearly',
     ],
+    descriptionParagraphs: ['Built using Laravel, Vue, and Inertia'],
     links: [
       {
         url: 'https://flowbilltracking.com',
@@ -38,10 +39,13 @@ export const projects = [
   },
   {
     title: 'Hi.Ed Student Portal',
-    subtitle: 'A PHP application for tracking student grades and displaying NCAA eligibility',
-    descriptionParagraphs: [
-      'The Hi.Ed Student Portal was built starting in 2016 for Walker Enterprises as an application for tracking student grade progress and NCAA eligibility. It has interfaces for school system administrators, principals, and teachers to input and view student grades. For students and parents, a transcript is generated indicating student progress toward graduation and NCAA eligibility. Other features of this application include a marketplace for teachers to list and trade school supplies as well as a Virtual Life game that helps students manage bills and expenses.',
+    subtitle: 'An application for tracking student grades and displaying NCAA eligibility',
+    features: [
+      'Help students stay on track for graduation or NCAA eligibility',
+      'Play a Virtual Life game that teaches money management',
+      'Exchange school supplies and other items on the marketplace',
     ],
+    descriptionParagraphs: ['Built using Laravel and Bootstrap'],
     links: [
       {
         url: 'https://hi-ed.walkerenterprisesala.com',
@@ -77,10 +81,9 @@ export const projects = [
   },
   {
     title: 'Squizzit',
-    subtitle: 'An exquisite app for making, taking, and sharing quizzes.',
-    descriptionParagraphs: [
-      'This project is a single page app that I built using Vue.  It uses Vuex for state management as well as TailwindCSS for styling.  The intent for this project was to practice and improve my JavaScript skills.  With Squizzit, you can create quizzes and share them with people you know.  They can log in, take the quiz, and see their results.',
-    ],
+    subtitle: 'An exquisite quiz app for making, taking, and sharing quizzes.',
+    features: ['Make multiple choice quizzes', 'Share your quizzes with others', 'View results'],
+    descriptionParagraphs: ['Single page application built using Vue, Vuex, Tailwind, and Laravel'],
     links: [
       {
         url: 'https://github.com/matt-benton/squizzit',
@@ -109,9 +112,12 @@ export const projects = [
   {
     title: 'Sprout',
     subtitle: 'An accounting and inventory system built for the produce industry',
-    descriptionParagraphs: [
-      'Sprout is an application built with Laravel and AngularJS that handles accounting, inventory, shipping, and reporting for produce companies. My contributions to this project have mainly included features for importing and exporting data in the form of CSV and XML files. My focus in this project has been to write modular, reusable, and tested features that can be duplicated and adapted to many similar scenarios. This includes object-oriented classes that are clean, simple, and reusable. It also includes Angular components that can be dropped into an HTML page and reused. This approach saves time and makes maintenance of the project a lot easier.',
+    features: [
+      'Manage sales, inventory, and shipping',
+      'Import and export data',
+      'Automated packing and shipping',
     ],
+    descriptionParagraphs: ['Built with Laravel, Angular, and Bootstrap'],
     images: [
       {
         src: '/img/projects/sprout/sprout.png',
@@ -125,8 +131,14 @@ export const projects = [
   },
   {
     title: 'Budgeter',
-    subtitle: 'A Laravel application for tracking and categorizing expenses',
-    descriptionParagraphs: ['Description paragraphs for Budgeter'],
+    subtitle: 'An application to help with budgeting and money management',
+    features: [
+      'Categorize and track expenses',
+      'See monthly totals and averages per category',
+      'Create budgets and compare them with actual spending',
+      'Add vendors, track how much you buy from them and how much you spend',
+    ],
+    descriptionParagraphs: ['Budgeter was built using Laravel, Vue, Inertia, and Halfmoon'],
     links: [
       {
         url: 'https://github.com/matt-benton/budgeter',
