@@ -86,9 +86,7 @@ export default {
 }
 
 h3 {
-  background: -webkit-linear-gradient(45deg, var(--color-blue), var(--color-blue-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-blue);
   font-size: var(--text-4xl);
   padding-bottom: var(--sp-4);
 }
