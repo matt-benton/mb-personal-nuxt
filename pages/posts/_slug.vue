@@ -35,6 +35,12 @@ export default {
       next,
     }
   },
+  head() {
+    return {
+      title: `${this.article.title} | Matt Benton`,
+      meta: [{ hid: 'description', name: 'description', content: this.article.description }],
+    }
+  },
   methods: {
     formatDate(dateString) {
       return format(new Date(dateString), 'MMMM d, yyyy')
