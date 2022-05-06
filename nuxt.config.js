@@ -15,7 +15,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'I am a full stack web developer from Birmingham, Alabama.  I create web applications in JavaScript, Vue, PHP and Laravel that focus on clean interfaces, intuitive user experiences and reliability.',
+          'I am a full stack web developer from Huntsville, Alabama.  I create web applications using Laravel and Vue that focus on clean interfaces, intuitive user experiences and reliability.',
       },
     ],
     link: [
