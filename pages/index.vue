@@ -7,7 +7,6 @@
         <Services />
         <About />
         <Skills />
-        <Approach />
         <Portfolio />
         <Footer />
       </div>
@@ -23,7 +22,6 @@ import Skills from '~/components/Skills.vue'
 import Portfolio from '~/components/Portfolio.vue'
 import Footer from '~/components/Footer.vue'
 import Services from '~/components/Services.vue'
-import Approach from '~/components/Approach.vue'
 
 export default {
   components: {
@@ -34,7 +32,6 @@ export default {
     Portfolio,
     Footer,
     Services,
-    Approach,
   },
 }
 </script>
