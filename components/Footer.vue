@@ -13,39 +13,35 @@
         class="social-link"
         rel="noreferrer"
       >
-        <cld-image
-          cloudName="dheway9t7"
-          publicId="mb-personal/logos/linkedIn_pt5tr4"
-          height="30"
+        <CldImage
+          src="mb-personal/logos/linkedIn_pt5tr4"
+          height="60"
+          width="60"
           secure="true"
           alt="LinkedIn logo"
         />
       </a>
       <a href="https://codepen.io/matt-benton" target="_blank" rel="noreferrer" class="social-link">
-        <cld-image
-          cloudName="dheway9t7"
-          publicId="mb-personal/logos/codepen_edxrcz"
-          height="30"
+        <CldImage
+          src="mb-personal/logos/codepen_edxrcz"
+          height="60"
+          width="200"
           secure="true"
           alt="Codepen logo"
         />
-      </a>
+      </a>   
       <a href="https://github.com/matt-benton" target="_blank" rel="noreferrer" class="social-link">
-        <cld-image
-          cloudName="dheway9t7"
-          publicId="mb-personal/logos/GitHub-Mark-Light-64px_fgvu6x.png"
-          height="30"
+        <CldImage
+          src="mb-personal/logos/GitHub-Mark-Light-64px_fgvu6x.png"
+          height="60"
+          width="60"
           secure="true"
-          alt="GitHub logo"
+          alt="Github logo"
         />
       </a>
     </div>
   </footer>
 </template>
-
-<script>
-export default {}
-</script>
 
 <style scoped>
 footer {

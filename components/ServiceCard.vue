@@ -40,7 +40,7 @@ export default {
   padding: 0 var(--sp-5);
 }
 
-.service-card svg {
+.service-card :deep(svg) {
   height: var(--text-5xl);
   width: var(--text-5xl);
 }

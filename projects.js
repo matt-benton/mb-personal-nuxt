@@ -18,22 +18,27 @@ export const projects = [
       {
         src: '/img/projects/flow-bill-tracking/flow-welcome.png',
         cloudinaryPublicId: 'mb-personal/flow-welcome_gje82q',
+        alt: 'Flow Bill tracking screen shot',
       },
       {
         src: '/img/projects/flow-bill-tracking/flow-light.png',
         cloudinaryPublicId: 'mb-personal/flow-light_n0tu34',
+        alt: 'Flow Bill tracking screen shot',
       },
       {
         src: '/img/projects/flow-bill-tracking/flow-dark.png',
         cloudinaryPublicId: 'mb-personal/flow-dark_ms0skw',
+        alt: 'Flow Bill tracking screen shot',
       },
       {
         src: '/img/projects/flow-bill-tracking/flow-calendar.png',
         cloudinaryPublicId: 'mb-personal/flow-calendar_q5zedu',
+        alt: 'Flow Bill tracking screen shot',
       },
       {
         src: '/img/projects/flow-bill-tracking/flow-edit.png',
         cloudinaryPublicId: 'mb-personal/flow-edit_dlcpik',
+        alt: 'Flow Bill tracking screen shot',
       },
     ],
   },
@@ -64,18 +69,22 @@ export const projects = [
       {
         src: '/img/projects/hi-ed/hi-ed.png',
         cloudinaryPublicId: 'mb-personal/hi-ed-lg_wm0z80',
+        alt: 'Hi.Ed Student Portal screen shot',
       },
       {
         src: '/img/projects/hi-ed/hi-ed-house.png',
         cloudinaryPublicId: 'mb-personal/hi-ed-house-lg_lfarwz',
+        alt: 'Hi.Ed Student Portal screen shot',
       },
       {
         src: '/img/projects/hi-ed/hi-ed-vl-profile.png',
         cloudinaryPublicId: 'mb-personal/hi-ed-vl-profile-lg_om9jau',
+        alt: 'Hi.Ed Student Portal screen shot',
       },
       {
         src: '/img/projects/hi-ed/hi-ed-registration-checklist.png',
         cloudinaryPublicId: 'mb-personal/hi-ed-registration-checklist-lg_phirmr',
+        alt: 'Hi.Ed Student Portal screen shot',
       },
     ],
   },
@@ -94,18 +103,22 @@ export const projects = [
       {
         src: '/img/projects/squizzit/squizzit-landing.png',
         cloudinaryPublicId: 'mb-personal/squizzit-landing-lg_svo2jh',
+        alt: 'Squizzit screen shot',
       },
       {
         src: '/img/projects/squizzit/squizzit-edit.png',
         cloudinaryPublicId: 'mb-personal/squizzit-edit-lg_neukpy',
+        alt: 'Squizzit screen shot',
       },
       {
         src: '/img/projects/squizzit/squizzit-take.png',
         cloudinaryPublicId: 'mb-personal/squizzit-take-lg_gjfvrh',
+        alt: 'Squizzit screen shot',
       },
       {
         src: '/img/projects/squizzit/squizzit-results.png',
         cloudinaryPublicId: 'mb-personal/squizzit-results-lg_y7zzqu',
+        alt: 'Squizzit screen shot',
       },
     ],
   },
@@ -122,10 +135,12 @@ export const projects = [
       {
         src: '/img/projects/sprout/sprout.png',
         cloudinaryPublicId: 'mb-personal/sprout-lg_uggydy',
+        alt: 'Sprout screen shot',
       },
       {
         src: '/img/projects/sprout/sprout-delivery.png',
         cloudinaryPublicId: 'mb-personal/sprout-delivery-lg_n5lez4',
+        alt: 'Sprout screen shot',
       },
     ],
   },
@@ -149,14 +164,17 @@ export const projects = [
       {
         src: '/img/projects/budgeter/budgeter-dashboard.png',
         cloudinaryPublicId: 'mb-personal/budgeter-dashboard_z6matj.png',
+        alt: 'Budgeter screen shot',
       },
       {
         src: '/img/projects/budgeter/budgeter-categories.png',
         cloudinaryPublicId: 'mb-personal/budgeter-categories_j56nqm.png',
+        alt: 'Budgeter screen shot',
       },
       {
         src: '/img/projects/budgeter/budgeter-vendors.png',
         cloudinaryPublicId: 'mb-personal/budgeter-vendors_puzrzv.png',
+        alt: 'Budgeter screen shot',
       },
     ],
   },

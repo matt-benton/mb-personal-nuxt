@@ -1,9 +1,10 @@
-export default {
+export default defineNuxtConfig({
   mode: 'universal',
+
   /*
    ** Headers of the page
    */
-  head: {
+  meta: {
     htmlAttrs: {
       lang: 'en',
     },
@@ -50,26 +51,32 @@ export default {
       { rel: 'shortcut icon', href: '/img/favicons/favicon.ico' },
     ],
   },
+
   /*
    ** Customize the progress-bar color
    */
   loading: { color: '#5ed0fa' },
+
   /*
    ** Global CSS
    */
-  css: ['@/assets/scss/main.scss'],
+  css: ['~/assets/css/main.css'],
+
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-lazyload', '~/plugins/cloudinary-vue'],
+  plugins: [],
+
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [],
+
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', "@nuxtjs/cloudinary", 'nuxt-lazy-load'],
+
   /*
    ** Build configuration
    */
@@ -79,11 +86,36 @@ export default {
      */
     extend(config, ctx) {},
   },
+
   content: {
-    markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-nord.css',
+    highlight: {
+      theme: {
+        default: 'nord',
       },
+      langs: ['sql', 'php', 'javascript', 'css', 'bash', 'html'],
     },
   },
-}
+
+  lazyLoad: {
+    images: false,
+    videos: false,
+    audios: false,
+    iframes: false,
+    native: false,
+    directiveOnly: true,
+    
+    // Default image must be in the public folder
+    // defaultImage: '/images/default-image.jpg',
+  
+    // To remove class set value to false
+    loadingClass: 'isLoading',
+    loadedClass: 'isLoaded',
+    appendClass: 'lazyLoad',
+    
+    observerConfig: {
+      // See IntersectionObserver documentation
+    }
+  },
+
+  compatibilityDate: '2024-12-23',
+})

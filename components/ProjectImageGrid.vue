@@ -2,7 +2,7 @@
   <div>
     <div class="project-image-grid">
       <img
-        v-lazy="`${selectedImage.src}`"
+        :src="`${selectedImage.src}`"
         :alt="`${projectTitle} large screen shot`"
         class="project-large-image"
         @click="showModal(selectedImage)"
@@ -11,14 +11,15 @@
         @keydown.left="prevImage"
         @keydown.esc="hideModal"
         tabindex="0"
+        v-lazy-load
       />
       <div class="project-thumbnails">
         <div v-for="(image, index) in images" :key="index" @click="selectImage(image)">
-          <cldImage
+          <CldImage
             class="thumbnail-image"
-            :publicId="image.cloudinaryPublicId"
-            height="70"
-            width="70"
+            :src="image.cloudinaryPublicId"
+            height="100"
+            width="100"
             crop="fill"
             :alt="`${projectTitle} screen shot thumbnail`"
           />
@@ -107,6 +108,7 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 8px;
+  gap: 4px;
 }
 
 .thumbnail-image {

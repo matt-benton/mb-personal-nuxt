@@ -17,7 +17,7 @@
             {{ topic }}
             <small
               >({{
-                articles.filter(article => article.tags && article.tags.includes(topic)).length
+                onlyTopics.filter(article => article.tags && article.tags.includes(topic)).length
               }})</small
             >
           </li>
@@ -48,95 +48,84 @@
             </svg>
           </span>
         </div>
-        <div class="blog-preview-card" v-for="article in displayedArticles" :key="article.slug">
-          <div class="card-header">
-            <nuxt-link :to="`/posts/${article.slug}`">
-              <h2>
-                {{ article.title }}
-              </h2>
-            </nuxt-link>
-          </div>
-          <div class="card-body">
-            <div>
+        <ContentList :query="query" v-slot="{ list }">
+          <div v-for="article in list" :key="article._path" class="blog-preview-card">
+            <NuxtLink class="card-header" :to="article._path">
+              <h2>{{ article.title }}</h2>
+            </NuxtLink>
+            <div class="card-body">
               <p>{{ formatDate(article.createdAt) }}</p>
-              <p v-if="article.description">
-                {{
-                  article.description.length > 325
-                    ? article.description.substring(0, 325) + '...'
-                    : article.description
-                }}
+              <p>
+                  {{
+                    article.description.length > 325
+                      ? article.description.substring(0, 325) + '...'
+                      : article.description
+                  }}
               </p>
-            </div>
-            <div class="tags" v-if="article.tags">
-              <span class="tag" v-for="tag in article.tags" @click="addActiveTag(tag)">{{
-                tag
-              }}</span>
+              <div class="tags" v-if="article.tags">
+                <span class="tag" v-for="tag in article.tags" @click="addActiveTag(tag)">{{
+                  tag
+                }}</span>
+              </div>
             </div>
           </div>
-        </div>
+        </ContentList>
       </div>
     </main>
     <Footer />
   </div>
 </template>
 
-<script>
+<script setup>
 import { format } from 'date-fns'
 import Navbar from '../../components/Navbar.vue'
 import Footer from '~/components/Footer.vue'
 
-export default {
-  async asyncData({ $content }) {
-    const articles = await $content('articles').sortBy('createdAt', 'desc').fetch()
+  const activeTags = ref([])
 
-    return {
-      articles,
-    }
-  },
-  data() {
-    return {
-      activeTags: [],
-    }
-  },
-  computed: {
-    displayedArticles() {
-      if (this.activeTags.length !== 0) {
-        return this.articles.filter(article => {
-          return this.activeTags.some(tag => article.tags && article.tags.includes(tag))
-        })
+  const query = computed(() => {
+      let val = { 
+        path: '/posts', 
+        sort: { createdAt: -1 },
       }
 
-      return this.articles
-    },
-    topics() {
-      return new Set(
-        this.articles
+      if (activeTags.value.length > 0) {
+        val.where = { tags: { $in: activeTags.value }}
+      }
+
+      return val
+  })
+
+  const { data: onlyTopics } = await useAsyncData('topics', 
+    () => queryContent('posts')
+      .only('tags')
+      .find()
+  )
+
+  const topics = computed(() => {
+    return new Set(
+        onlyTopics.value
           .flatMap(article => article.tags)
           .filter(topic => topic !== undefined)
           .sort(),
       )
-    },
-  },
-  methods: {
-    formatDate(dateString) {
+  })
+  
+    function formatDate(dateString) {
       return format(new Date(dateString), 'MMMM d, yyyy')
-    },
-    addActiveTag(tag) {
+    }
+
+    function addActiveTag(tag) {
       if (!this.activeTags.includes(tag)) {
         this.activeTags.push(tag)
       }
-    },
-    removeActiveTag(tag) {
+    }
+
+    function removeActiveTag(tag) {
       const index = this.activeTags.findIndex(activeTag => activeTag === tag)
 
       this.activeTags.splice(index, 1)
-    },
-  },
-  components: {
-    Navbar,
-    Footer,
-  },
-}
+    }
 </script>
 
 <style scoped>
