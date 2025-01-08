@@ -6,12 +6,25 @@
                 <h1 class="title">{{ doc.title }}</h1>
                 <h5 class="date-text">{{ formatDate(doc.createdAt) }}</h5>
                 <ContentRenderer :value="doc" />
+                <PrevNext :prev="prevPost" :next="nextPost" />
             </article>
         </ContentDoc>
     </main>
+    <Footer />
 </template>
 <script setup>
+import { computed } from 'vue'
 import { format } from 'date-fns'
+
+const { data: navigation } = await useAsyncData('navigation', () => queryContent().sort({ createdAt: 1 }).find())
+
+const currentPostIndex = computed(() => {
+  return navigation.value.findIndex(child => child._path === useRoute().path)
+})
+
+const prevPost = computed(() => navigation.value[currentPostIndex.value - 1])
+
+const nextPost = computed(() => navigation.value[currentPostIndex.value + 1])
 
 function formatDate(dateString) {
     return format(new Date(dateString), 'MMMM d, yyyy')

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink v-if="prev" :to="`/posts/${prev.slug}`">
+    <NuxtLink v-if="prev" :to="prev._path">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -16,11 +16,15 @@
       <span class="brief-title">{{
         prev.title.length > 35 ? prev.title.substring(0, 35) + '...' : prev.title
       }}</span>
-      <span class="full-title">{{ prev.title }}</span>
+      <span class="full-title">
+        {{ prev.title.length > 35 ? prev.title.substring(0, 35) + '...' : prev.title }}
+      </span>
     </NuxtLink>
     <span v-else>&nbsp;</span>
-    <NuxtLink v-if="next" :to="`/posts/${next.slug}`">
-      <span class="full-title">{{ next.title }}</span>
+    <NuxtLink v-if="next" :to="next._path">
+      <span class="full-title">
+        {{ next.title.length > 35 ? next.title.substring(0, 35) + '...' : next.title }}
+      </span>
       <span class="brief-title">{{
         next.title.length > 35 ? next.title.substring(0, 35) + '...' : next.title
       }}</span>
