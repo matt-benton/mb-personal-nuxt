@@ -54,21 +54,15 @@ function formatDate(dateString) {
   margin-top: var(--sp-6);
 }
 
-.article h2 a {
-  color: var(--color-blue);
+.article h2 a,
+.article h3 a,
+.article h4 a {
+  color: var(--color-grey-light-2);
 }
 
 .article h3 {
   margin-bottom: var(--sp-2);
   margin-top: var(--sp-5);
-}
-
-.article h3 a {
-  color: var(--color-blue);
-}
-
-.article h4 a {
-  color: var(--color-blue);
 }
 
 .article p {
