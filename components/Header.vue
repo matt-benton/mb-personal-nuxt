@@ -1,20 +1,22 @@
 <template>
-  <header>
+  <header id="header">
     <div class="hero">
-      <h1>
+      <h1 class="h1">
         Hi, my name is
-        <b>Matt Benton</b> and I'm a <b>web developer</b> from Birmingham, Alabama
+        <b>Matt Benton</b> and I'm a <a href="http://www.laravel.com" class="laravel-link" target="_blank" rel="noreferrer">
+          Laravel
+        </a> developer from Birmingham, Alabama
       </h1>
-      <h2>
-        I create web applications with clean interfaces, intuitive user experiences, and
-        reliability.
-      </h2>
-      <div class="button-container">
-        <a href="#work" class="btn" @click.prevent="scrollTo('#work')">Check Out My Portfolio</a>
-        <nuxt-link class="btn" to="/posts">Read My Blog</nuxt-link>
-        <a href="#skills" class="btn" @click.prevent="scrollTo('#skills')">See My Skills</a>
-        <a href="#footer" class="btn" @click.prevent="scrollTo('#footer')">Contact Me</a>
+      <div class="dot-row">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
+      <h2 class="h2">tested software, user-friendly design, thoughtful code <span class="pink-text">since 2016</span></h2>
     </div>
   </header>
 </template>
@@ -30,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-header {
+#header {
   display: grid;
   grid-template-rows: min-content 1fr;
   padding: var(--sp-9) 0 var(--sp-7) 0;
@@ -42,63 +44,80 @@ header {
   margin: 0 auto;
 }
 
-header h1 {
+.h1 {
   font-size: var(--text-5xl);
   font-weight: 400;
-  margin-bottom: var(--sp-5);
+  margin-bottom: var(--sp-7);
   line-height: 1.3;
+  text-align: center;
 }
 
-header h2 {
+.h2 {
   font-size: var(--text-3xl);
   color: var(--color-grey-light-4);
   font-weight: 300;
   margin-bottom: var(--sp-5);
   line-height: 1.2;
-}
-
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-1);
-}
-
-.btn {
-  display: inline-block;
   text-align: center;
-  border: 2px solid var(--color-blue);
-  color: var(--color-blue);
-  font-size: var(--text-lg);
-  padding: var(--sp-3) var(--sp-4);
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border-radius: 5px;
-  background-color: transparent;
-  transition: background-color 0.3s, border-color 0.1s;
 }
 
-.btn:hover {
-  background-color: var(--color-pink-dark);
-  border-color: var(--color-grey-dark-1);
-  color: var(--color-grey-light-1);
+.pink-text {
+  color: var(--color-pink);
+}
+
+.dot-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--sp-7);
+}
+
+.dot {
+  height: var(--text-lg);
+  width: var(--text-lg);
+  border-radius: 35px;
+  display: inline-block;
+  margin: var(--sp-2);
+  background-color: var(--color-blue-dark);
+  opacity: .2;
+}
+
+.dot:nth-of-type(2) {
+  height: var(--text-2xl);
+}
+
+.dot:nth-of-type(3) {
+  height: var(--text-3xl);
+}
+
+.dot:nth-of-type(4) {
+  height: var(--text-4xl);
+}
+
+.dot:nth-of-type(5) {
+  height: var(--text-3xl);
+}
+
+.dot:nth-of-type(6) {
+  height: var(--text-2xl);
+}
+
+.laravel-link {
+  color: var(--color-laravel-red);
 }
 
 @media (max-width: 640px) {
-  header {
+  #header {
     padding-top: var(--sp-5);
     padding-bottom: var(--sp-5);
   }
 
-  header h1 {
+  .h1 {
     font-size: var(--text-3xl);
   }
 
-  header h2 {
+  .h2 {
     font-size: var(--text-xl);
-  }
-
-  .button-container {
-    flex-direction: column;
   }
 }
 </style>

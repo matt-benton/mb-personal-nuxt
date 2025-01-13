@@ -20,11 +20,12 @@
   --color-grey-light-4: #9aa5b1;
   --color-grey-light-5: #7b8794;
 
-  --color-grey-dark-1: #1f2933;
-  --color-grey-dark-2: #323f4b;
-  --color-grey-dark-3: #3e4c59;
-  --color-grey-dark-4: #52606d;
-  --color-grey-dark-5: #616e7c;
+  --color-grey-dark-1: #131c27;
+  --color-grey-dark-2: #1f2933;
+  --color-grey-dark-3: #323f4b;
+  --color-grey-dark-4: #3e4c59;
+  --color-grey-dark-5: #52606d;
+  --color-grey-dark-6: #616e7c;
 
   --color-pink: #f58b8b;
   --color-pink-dark: rgb(209, 47, 74);
@@ -37,6 +38,8 @@
   --color-green: #81be72;
   --color-green-dark: #79a36f;
   --color-green-transparent: hsla(108, 37%, 60%, 0.8);
+
+  --color-laravel-red: rgb(249 50 44);
 
   --sp-0: 0;
   --sp-1: 0.4rem;
