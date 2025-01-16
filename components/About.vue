@@ -1,6 +1,6 @@
 <template>
   <section id="about">
-    <h3 class="section-header">About Me</h3>
+    <h3 class="section-header">A little about  myself</h3>
     <div class="about-container">
       <div class="image-wrap">
         <img src="/img/matt-benton.jpg" alt="Photo of myself" />

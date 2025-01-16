@@ -51,9 +51,8 @@ p a {
 
 .section-header {
   margin-bottom: var(--sp-5);
-  color: var(--color-grey-light-4);
-  text-transform: uppercase;
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
+  text-align: center;
 }
 
 @media (max-width: 576px) {

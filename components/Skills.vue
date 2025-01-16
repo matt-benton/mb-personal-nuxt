@@ -1,96 +1,161 @@
 <template>
   <section id="skills">
-    <h3 class="section-header">Skills</h3>
-    <div class="skills-body">
-      <div class="skills-caption">
-        <p>
-          I use the following technology to build web applications. To see posts about these topics
-          and more check out my <nuxt-link to="/posts">blog</nuxt-link>.
-        </p>
-      </div>
-      <div class="skills-grid">
-        <div class="skills-grid-item">
-          <img src="/img/logos/html-5-logo-png-transparent-min.png" alt="html5 logo" />
-          html
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/css-3-logo-png-transparent-min.png" alt="css3 logo" />
-          css
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/javascript-logo-png-transparent-min.png" alt="javascript logo" />
-          javascript
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/vue-9-logo-png-transparent-min.png" alt="vue logo" />
-          vue
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/php-1-logo-png-transparent-min.png" alt="php logo" />
-          php
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/mysql-5-logo-png-transparent-min.png" alt="mysql logo" />
-          mysql
-        </div>
-        <div class="skills-grid-item">
-          <img src="/img/logos/laravel-1-logo-png-transparent-min.png" alt="laravel logo" />
-          laravel
+    <div>
+      <h3 class="section-header">Tools that I work with</h3>
+      <div class="skills-body">
+        <div
+          v-for="(skill, index) in shuffledSkills"
+          :key="index"
+          class="pill"
+          :class="{ 'bright': skill.prio === 1, 'half-dim': skill.prio === 2, 'dim': skill.prio === 3, }"
+        >
+          {{ skill.name }}
         </div>
       </div>
+    </div>
+    <div>
+      <h3 class="section-header"><s>Not so</s> recent posts from my blog</h3>
+      <ul id="posts-list">
+        <li v-for="post in recentPosts" :key="post._path">
+          <NuxtLink :to="post._path">{{ post.title }}</NuxtLink>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
 
-<script>
-export default {}
+<script setup>
+const { data: recentPosts } = await useAsyncData('posts', () => queryContent('/posts').sort({ createdAt: -1 }).limit(5).find())
+
+const shuffledSkills = useState('shuffledSkills', () => {
+  const skills = [
+    {
+      name: 'css',
+      prio: 2,
+    },
+    {
+      name: 'html',
+      prio: 2,
+    },
+    {
+      name: 'typescript',
+      prio: 3,
+    },
+    {
+      name: 'javascript',
+      prio: 2,
+    },
+    {
+      name: 'vue',
+      prio: 1,
+    },
+    {
+      name: 'tailwind',
+      prio: 3,
+    },
+    {
+      name: 'php',
+      prio: 2,
+    },
+    {
+      name: 'mysql',
+      prio: 1,
+    },
+    {
+      name: 'laravel',
+      prio: 1,
+    },
+    {
+      name: 'inertia',
+      prio: 2,
+    },
+    {
+      name: 'git',
+      prio: 2,
+    },
+    {
+      name: 'nuxt',
+      prio: 2,
+    },
+    {
+      name: 'rest api',
+      prio: 3,
+    },
+    {
+      name: 'dusk',
+      prio: 2,
+    },
+    {
+      name: 'phpunit',
+      prio: 3,
+    },
+  ]
+
+  let shuffled = [...skills];
+  
+  for (let i = shuffled.length - 1; i > 0; i--) {
+      // Generate random index
+      const j = Math.floor(Math.random() * (i + 1));
+      // Swap elements
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  
+  return shuffled;
+})
 </script>
 
 <style scoped>
-section {
-  font-size: var(--text-lg);
+#skills {
+  font-size: var(--text-xl);
   line-height: var(--line-height-medium);
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.pill {
+  background-color: var(--color-blue-dark);
+  border-radius: 25px;
+  padding: var(--sp-1) var(--sp-3);
+}
+
+.bright {
+  zoom: 125%;
+  background: linear-gradient(to right, var(--color-blue-dark) 80%, var(--color-blue));
+}
+
+.half-dim {
+  background-color: rgb(18, 128, 191, 0.5);
+}
+
+.dim {
+  background-color: rgb(18, 128, 191, 0.2);
+  zoom: 85%;
 }
 
 .skills-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-.skills-caption {
-  display: flex;
-  align-items: center;
-  font-size: var(--text-xl);
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-3);
-}
-
-.skills-grid-item {
-  padding: var(--sp-2) var(--sp-3);
   display: flex;
   justify-content: center;
-  border-radius: 45px;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(to bottom right, var(--color-blue), var(--color-blue-dark));
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  width: var(--sp-12);
+  margin: 0 auto;
 }
 
-img {
-  max-height: var(--text-2xl);
-  max-width: var(--text-2xl);
-  margin-right: var(--sp-4);
-  border: none;
+#posts-list {
+  list-style-type: disc;
+  padding-left: var(--sp-5);
+}
+
+#posts-list a {
+  font-size: var(--text-base);
+  color: var(--color-blue);
 }
 
 @media (max-width: 768px) {
-  .skills-body {
+  #skills {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: var(--sp-9);
   }
 }
 </style>
