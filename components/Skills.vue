@@ -14,7 +14,7 @@
       </div>
     </div>
     <div>
-      <h3 class="section-header"><s>Not so</s> recent posts from my blog</h3>
+      <h3 class="section-header"><s>Recent</s> posts from my blog</h3>
       <ul id="posts-list">
         <li v-for="post in recentPosts" :key="post._path">
           <NuxtLink :to="post._path">{{ post.title }}</NuxtLink>
